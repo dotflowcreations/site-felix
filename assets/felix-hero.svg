@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091424" />
+      <stop offset="40%" stop-color="#0f233a" />
+      <stop offset="70%" stop-color="#142c48" />
+      <stop offset="100%" stop-color="#0a1829" />
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4facfe" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="vialGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.1" />
+      <stop offset="75%" stop-color="#0284c7" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
+    </linearGradient>
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="50%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+    <linearGradient id="cyanCap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <radialGradient id="labLight" cx="60%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25" />
+      <stop offset="60%" stop-color="#0284c7" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="benchReflection" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.1" />
+    </pattern>
+    <pattern id="hexGrid" width="60" height="104" patternUnits="userSpaceOnUse" patternTransform="scale(0.8)">
+      <path d="M 30 0 L 60 17.3 L 60 52 L 30 69.3 L 0 52 L 0 17.3 Z" fill="none" stroke="#00f2fe" stroke-width="0.75" stroke-opacity="0.08" />
+      <path d="M 30 69.3 L 60 86.6 L 60 121.3 L 30 138.6 L 0 121.3 L 0 86.6 Z" fill="none" stroke="#00f2fe" stroke-width="0.75" stroke-opacity="0.08" />
+    </pattern>
+  </defs>
+
+  <!-- Dark biotech background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)" />
+  <rect width="1200" height="675" fill="url(#labLight)" />
+  <rect width="1200" height="675" fill="url(#gridPattern)" />
+  <rect width="1200" height="675" fill="url(#hexGrid)" />
+
+  <!-- Bench Surface -->
+  <path d="M 0 480 L 1200 480 L 1200 675 L 0 675 Z" fill="#0b1726" />
+  <line x1="0" y1="480" x2="1200" y2="480" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.4" />
+  <rect x="0" y="480" width="1200" height="195" fill="url(#benchReflection)" />
+
+  <!-- Background blurred vials and lab equipment -->
+  <g opacity="0.35" filter="blur(4px)">
+    <rect x="220" y="240" width="70" height="230" rx="10" fill="url(#vialGlass)" />
+    <rect x="215" y="225" width="80" height="20" rx="3" fill="url(#capGrad)" />
+    <rect x="910" y="260" width="80" height="210" rx="12" fill="url(#vialGlass)" />
+    <rect x="905" y="245" width="90" height="22" rx="4" fill="url(#cyanCap)" />
+  </g>
+
+  <!-- Midground peptide vial 1 (Left) -->
+  <g transform="translate(380, 200)">
+    <!-- Vial shadow -->
+    <ellipse cx="65" cy="285" rx="55" ry="12" fill="#0284c7" opacity="0.3" />
+    <!-- Vial body -->
+    <rect x="15" y="55" width="100" height="225" rx="14" fill="#0e2a47" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5" />
+    <rect x="15" y="55" width="100" height="225" rx="14" fill="url(#vialGlass)" />
+    <!-- Liquid / Cake level -->
+    <path d="M 18 200 Q 65 195 112 200 L 112 265 Q 65 275 18 265 Z" fill="#f8fafc" fill-opacity="0.85" />
+    <!-- Vial neck & crimp cap -->
+    <rect x="35" y="30" width="60" height="30" rx="4" fill="#1e293b" />
+    <rect x="25" y="8" width="80" height="25" rx="4" fill="url(#cyanCap)" stroke="#38bdf8" stroke-width="1" />
+    <!-- Flip off button -->
+    <rect x="38" y="2" width="54" height="8" rx="3" fill="#0284c7" />
+    <!-- Specimen Label -->
+    <rect x="22" y="100" width="86" height="85" rx="3" fill="#ffffff" fill-opacity="0.92" />
+    <text x="65" y="125" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">FELIX</text>
+    <text x="65" y="140" font-family="sans-serif" font-size="8" fill="#0284c7" text-anchor="middle">RESEARCH ONLY</text>
+    <line x1="30" y1="150" x2="100" y2="150" stroke="#cbd5e1" stroke-width="1" />
+    <text x="65" y="165" font-family="monospace" font-size="7" fill="#64748b" text-anchor="middle">LOT #FLX-2026</text>
+  </g>
+
+  <!-- Foreground Main peptide vial 2 (Center-Right, Hero Focus) -->
+  <g transform="translate(560, 150)">
+    <!-- Vial glow & reflection -->
+    <ellipse cx="80" cy="335" rx="75" ry="16" fill="#00f2fe" opacity="0.35" />
+    <!-- Vial body -->
+    <rect x="20" y="70" width="120" height="260" rx="16" fill="#091b2e" fill-opacity="0.5" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.8" />
+    <rect x="20" y="70" width="120" height="260" rx="16" fill="url(#vialGlass)" />
+    <!-- Lyophilized research cake -->
+    <path d="M 24 240 Q 80 235 136 240 L 136 315 Q 80 326 24 315 Z" fill="#ffffff" fill-opacity="0.95" />
+    <path d="M 28 245 Q 80 240 132 245 L 132 250 Q 80 245 28 250 Z" fill="#e2e8f0" />
+    <!-- Neck & aluminum seal -->
+    <rect x="45" y="40" width="70" height="35" rx="4" fill="#334155" />
+    <rect x="32" y="12" width="96" height="30" rx="5" fill="url(#capGrad)" stroke="#cbd5e1" stroke-width="1.5" />
+    <!-- Cyan seal ring -->
+    <rect x="46" y="5" width="68" height="10" rx="3" fill="#06b6d4" />
+    <!-- Glass Highlights -->
+    <path d="M 28 85 L 28 310" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+    <path d="M 132 85 L 132 310" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" opacity="0.4" />
+    <!-- High-tech research label -->
+    <rect x="30" y="115" width="100" height="105" rx="4" fill="#ffffff" fill-opacity="0.96" stroke="#0ea5e9" stroke-width="1" />
+    <circle cx="50" cy="138" r="8" fill="#0284c7" />
+    <text x="50" y="142" font-family="sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">F</text>
+    <text x="64" y="138" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0f172a">FELIX</text>
+    <text x="64" y="147" font-family="sans-serif" font-size="7" fill="#64748b">CHEMICAL SUPPLY</text>
+    <line x1="38" y1="155" x2="122" y2="155" stroke="#e2e8f0" stroke-width="1" />
+    <text x="80" y="172" font-family="sans-serif" font-size="10" font-weight="bold" fill="#0284c7" text-anchor="middle">RESEARCH GRADE</text>
+    <text x="80" y="186" font-family="sans-serif" font-size="8" fill="#475569" text-anchor="middle">NOT FOR HUMAN USE</text>
+    <text x="80" y="202" font-family="monospace" font-size="7" fill="#94a3b8" text-anchor="middle">BATCH: FLX-2026-US</text>
+  </g>
+
+  <!-- Midground peptide vial 3 (Right) -->
+  <g transform="translate(740, 210)">
+    <ellipse cx="60" cy="275" rx="50" ry="12" fill="#0284c7" opacity="0.3" />
+    <rect x="15" y="55" width="90" height="215" rx="12" fill="#0e2a47" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.5" />
+    <rect x="15" y="55" width="90" height="215" rx="12" fill="url(#vialGlass)" />
+    <!-- Powder cake -->
+    <path d="M 18 195 Q 60 190 102 195 L 102 255 Q 60 265 18 255 Z" fill="#e0f2fe" fill-opacity="0.9" />
+    <!-- Cap -->
+    <rect x="32" y="32" width="56" height="28" rx="4" fill="#1e293b" />
+    <rect x="24" y="12" width="72" height="22" rx="4" fill="url(#cyanCap)" stroke="#38bdf8" stroke-width="1" />
+    <rect x="36" y="6" width="48" height="7" rx="3" fill="#0284c7" />
+    <!-- Label -->
+    <rect x="22" y="95" width="76" height="80" rx="3" fill="#ffffff" fill-opacity="0.92" />
+    <text x="60" y="120" font-family="sans-serif" font-size="9" font-weight="bold" fill="#0f172a" text-anchor="middle">FELIX</text>
+    <text x="60" y="135" font-family="sans-serif" font-size="7" fill="#0284c7" text-anchor="middle">BIO-REGULATOR</text>
+    <text x="60" y="155" font-family="monospace" font-size="6.5" fill="#64748b" text-anchor="middle">LABORATORY USE</text>
+  </g>
+
+  <!-- Scientific overlays and glowing particle strands -->
+  <path d="M 150 160 Q 400 80 750 140 T 1150 100" fill="none" stroke="url(#cyanGlow)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.5" />
+  <circle cx="350" cy="108" r="4" fill="#00f2fe" opacity="0.8" />
+  <circle cx="750" cy="140" r="3" fill="#38bdf8" opacity="0.7" />
+  <circle cx="980" cy="115" r="5" fill="#00f2fe" opacity="0.9" />
+
+  <!-- HUD / Scientific interface annotations -->
+  <g font-family="monospace" font-size="10" fill="#38bdf8" opacity="0.75">
+    <text x="50" y="60">// FELIX CHEMICAL SUPPLY — RESEARCH INVENTORY</text>
+    <text x="50" y="80">STATUS: VERIFIED SPECIMEN CATALOG [USA WAREHOUSE]</text>
+    <text x="1000" y="60" text-anchor="end">PURITY TARGET: &gt;99% HPLC</text>
+    <text x="1000" y="80" text-anchor="end">SYS.REF: 2026.Q1-SPEC</text>
+  </g>
+
+  <!-- Corner framing lines -->
+  <path d="M 30 50 L 30 30 L 70 30" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M 1170 50 L 1170 30 L 1130 30" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M 30 625 L 30 645 L 70 645" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M 1170 625 L 1170 645 L 1130 645" stroke="#00f2fe" stroke-width="2" fill="none" opacity="0.6" />
+</svg>
