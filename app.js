@@ -1,458 +1,360 @@
-// ==========================================================================
-// FELIX WEBSITE CONFIGURATION
-// Non-developers can easily update these values as needed
-// ==========================================================================
+/**
+ * Felix Chemical Supply — Official Application Logic
+ * Only carries initially provided information. No external copied content.
+ */
+
 const CONFIG = {
   COMPANY_NAME: "Felix Chemical Supply",
   PHONE: "+1 209 271 8485",
   PHONE_CLEAN: "+12092718485",
-  TELEGRAM_URL: "https://t.me/felixchemicalsupply",
   WHATSAPP_URL: "https://wa.me/12092718485",
-  FORM_ENDPOINT: "", // When empty, displays instruction message to connect endpoint
+  TELEGRAM_URL: "https://t.me/felixchemicalsupply",
   PAYMENT_ADDRESS: "0xfAc5677671a5479C8b7ec06d32dE81120431C50e",
   PAYMENT_CURRENCIES: "USDT / USDC",
-  PAYMENT_NETWORK: "ETH (ERC20)",
-  HERO_IMAGE: "assets/felix-hero.svg"
+  PAYMENT_NETWORK: "ETH (ERC20)"
 };
 
-// ==========================================================================
-// PRODUCT DATA ARCHITECTURE
-// Supplied product catalog with accurate neutral research descriptions
-// ==========================================================================
+// The 31 research materials initially provided
 const products = [
   {
     id: "reta-30",
     name: "Reta 30mg",
     category: "Peptides",
     quantity: "30mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-01",
-    featured: true
+    description: "High-purity research peptide for laboratory assays.",
+    batch: "FLX-2026-01"
   },
   {
     id: "tirz-30",
     name: "Tirz 30mg",
     category: "Peptides",
     quantity: "30mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-02",
-    featured: true
+    description: "Synthetic peptide material for in-vitro research.",
+    batch: "FLX-2026-02"
   },
   {
     id: "epitalon-50",
     name: "Epitalon 50mg",
     category: "Peptides",
     quantity: "50mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-03",
-    featured: true
+    description: "Synthetic tetrapeptide reference compound.",
+    batch: "FLX-2026-03"
   },
   {
     id: "retatrutide-20",
     name: "Retatrutide 20mg",
     category: "Peptides",
     quantity: "20mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-04",
-    featured: false
+    description: "Multi-agonist research peptide compound.",
+    batch: "FLX-2026-04"
   },
   {
     id: "tb4-bpc-combo",
     name: "TB4 / BPC 10MG / 10MG",
     category: "Blends",
     quantity: "10mg / 10mg",
-    price: null,
     status: "Available",
-    description: "Dual-constituent research blend. Verify applicable regulations.",
-    batch: "FLX-2026-05",
-    featured: false
+    description: "Dual-constituent peptide laboratory research blend.",
+    batch: "FLX-2026-05"
   },
   {
     id: "tesamorelin-20",
     name: "Tesamorelin 20MG",
     category: "Peptides",
     quantity: "20mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-06",
-    featured: true
+    description: "Stabilized research peptide for analytical investigation.",
+    batch: "FLX-2026-06"
   },
   {
     id: "retatrutide-10",
     name: "Retatrutide 10MG",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-07",
-    featured: false
+    description: "Research peptide reference compound.",
+    batch: "FLX-2026-07"
   },
   {
     id: "ghk-cu-100",
     name: "GHK-Cu 100mg",
     category: "Biological Regulators",
     quantity: "100mg",
-    price: null,
     status: "Available",
-    description: "Copper peptide compound for research exploration.",
-    batch: "FLX-2026-08",
-    featured: true
+    description: "Copper peptide complex for biochemical assays.",
+    batch: "FLX-2026-08"
   },
   {
     id: "tirzepatide-10",
     name: "Tirzepatide 10mg",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-09",
-    featured: false
+    description: "Dual incretin receptor agonist research compound.",
+    batch: "FLX-2026-09"
   },
   {
     id: "klow",
     name: "KLOW",
     category: "Research Materials",
     quantity: "Standard Unit",
-    price: null,
     status: "Available",
-    description: "Specialty compound for laboratory analytical use.",
-    batch: "FLX-2026-10",
-    featured: false
+    description: "Specialized research reference compound.",
+    batch: "FLX-2026-10"
   },
   {
     id: "cartalax-tb4-bpc",
     name: "Cartalax / TB4 / BPC-157 10mg/5mg/5mg",
     category: "Blends",
     quantity: "10mg / 5mg / 5mg",
-    price: null,
     status: "Available",
-    description: "Triple research blend formulation. Verify applicable regulations.",
-    batch: "FLX-2026-11",
-    featured: false
+    description: "Triple research blend formulation for laboratory studies.",
+    batch: "FLX-2026-11"
   },
   {
     id: "ghk-cu-kpv",
     name: "GHK-Cu / KPV 50mg/20mg",
     category: "Blends",
     quantity: "50mg / 20mg",
-    price: null,
     status: "Available",
-    description: "Combined bio-regulator formulation for laboratory investigation.",
-    batch: "FLX-2026-12",
-    featured: false
+    description: "Combined peptide formulation for scientific testing.",
+    batch: "FLX-2026-12"
   },
   {
     id: "cjc-ipamorelin",
     name: "CJC-1295 no DAC / Ipamorelin 10mg/10mg",
     category: "Blends",
     quantity: "10mg / 10mg",
-    price: null,
     status: "Available",
-    description: "Dual peptide research blend. Verify applicable regulations.",
-    batch: "FLX-2026-13",
-    featured: false
+    description: "Synergistic research peptide blend.",
+    batch: "FLX-2026-13"
   },
   {
     id: "thymosin-alpha-1",
     name: "Thymosin Alpha-1 10mg",
     category: "Biological Regulators",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-14",
-    featured: false
+    description: "Immune-modulating research peptide compound.",
+    batch: "FLX-2026-14"
   },
   {
     id: "kpv-30",
     name: "KPV 30mg",
     category: "Peptides",
     quantity: "30mg",
-    price: null,
     status: "Available",
-    description: "Research peptide material. Verify applicable regulations.",
-    batch: "FLX-2026-15",
-    featured: false
+    description: "Tripeptide fragment for research exploration.",
+    batch: "FLX-2026-15"
   },
   {
     id: "tb4-10",
     name: "TB4 10MG",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-16",
-    featured: false
+    description: "Thymosin Beta-4 synthetic research peptide.",
+    batch: "FLX-2026-16"
   },
   {
     id: "retatrutide-40",
     name: "Retatrutide 40MG",
     category: "Peptides",
     quantity: "40mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-17",
-    featured: false
+    description: "High-concentration research peptide material.",
+    batch: "FLX-2026-17"
   },
   {
     id: "bpc-157-10",
     name: "BPC-157 10MG",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Synthesized research peptide. Verify applicable regulations.",
-    batch: "FLX-2026-18",
-    featured: true
+    description: "Pentadecapeptide reference material.",
+    batch: "FLX-2026-18"
   },
   {
     id: "tesamorelin-10",
     name: "Tesamorelin 10MG",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-19",
-    featured: false
+    description: "Synthetic peptide for analytical investigation.",
+    batch: "FLX-2026-19"
   },
   {
     id: "nad-500",
     name: "NAD 500mg",
     category: "Biological Regulators",
     quantity: "500mg",
-    price: null,
     status: "Available",
     description: "Nicotinamide adenine dinucleotide research compound.",
-    batch: "FLX-2026-20",
-    featured: true
+    batch: "FLX-2026-20"
   },
   {
     id: "bac-10",
     name: "BAC 10ml",
-    category: "Research Materials",
+    category: "Solutions",
     quantity: "10ml",
-    price: null,
     status: "Available",
-    description: "Bacteriostatic reconstitution solution for laboratory research.",
-    batch: "FLX-2026-21",
-    featured: false
+    description: "Bacteriostatic reconstitution solution for laboratory use.",
+    batch: "FLX-2026-21"
   },
   {
     id: "ghk-cu-raws",
     name: "GHK-CU raws 10g/bottle",
     category: "Raw Materials",
     quantity: "10g bottle",
-    price: null,
     status: "Available",
     description: "High-grade pure powder format for laboratory synthesis.",
-    batch: "FLX-2026-22",
-    featured: false
+    batch: "FLX-2026-22"
   },
   {
     id: "ahk-cu-raws",
     name: "AHK-CU raws 10g/bottle",
     category: "Raw Materials",
     quantity: "10g bottle",
-    price: null,
     status: "Available",
-    description: "High-grade pure powder format for laboratory investigation.",
-    batch: "FLX-2026-23",
-    featured: false
+    description: "High-grade pure powder format for laboratory synthesis.",
+    batch: "FLX-2026-23"
   },
   {
     id: "melanotan-2",
     name: "Melanotan 2 10MG",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Research peptide material. Verify applicable regulations.",
-    batch: "FLX-2026-24",
-    featured: false
+    description: "Cyclic peptide reference material for laboratory assays.",
+    batch: "FLX-2026-24"
   },
   {
     id: "tirzepatide-60",
     name: "Tirzepatide 60MG",
     category: "Peptides",
     quantity: "60mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-25",
-    featured: false
+    description: "High-potency research peptide material.",
+    batch: "FLX-2026-25"
   },
   {
     id: "illumineuro",
     name: "ILLUMINEURO",
     category: "Research Materials",
     quantity: "Standard Unit",
-    price: null,
     status: "Available",
     description: "Specialized research formulation for analytical assessment.",
-    batch: "FLX-2026-26",
-    featured: false
+    batch: "FLX-2026-26"
   },
   {
     id: "5-amino-1mq",
     name: "5-AMINO-1MQ 50MG",
     category: "Research Materials",
     quantity: "50mg",
-    price: null,
     status: "Available",
-    description: "Small molecule research material for laboratory assays.",
-    batch: "FLX-2026-27",
-    featured: false
+    description: "Small molecule NNMT research material.",
+    batch: "FLX-2026-27"
   },
   {
     id: "pt-141-10",
     name: "PT-141 10MG",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Synthetic peptide analog for laboratory research use.",
-    batch: "FLX-2026-28",
-    featured: false
+    description: "Synthetic peptide analog for laboratory exploration.",
+    batch: "FLX-2026-28"
   },
   {
     id: "retatrutide-30",
     name: "Retatrutide 30MG",
     category: "Peptides",
     quantity: "30mg",
-    price: null,
     status: "Available",
-    description: "Research material. Verify applicable regulations.",
-    batch: "FLX-2026-29",
-    featured: false
+    description: "Triple-agonist research peptide compound.",
+    batch: "FLX-2026-29"
   },
   {
     id: "bam15-slu",
     name: "BAM15 / SLU blend",
     category: "Blends",
     quantity: "Standard Blend",
-    price: null,
     status: "Available",
-    description: "Metabolic research blend. Verify applicable regulations.",
-    batch: "FLX-2026-30",
-    featured: false
+    description: "Mitochondrial uncoupling research blend.",
+    batch: "FLX-2026-30"
   },
   {
     id: "survodutide-10",
     name: "Survodutide 10mg",
     category: "Peptides",
     quantity: "10mg",
-    price: null,
     status: "Available",
-    description: "Dual glucagon/GLP-1 receptor research compound.",
-    batch: "FLX-2026-31",
-    featured: false
+    description: "Glucagon/GLP-1 receptor dual-agonist research compound.",
+    batch: "FLX-2026-31"
   }
 ];
 
 // App State
-let currentFilter = "All";
-let currentSearch = "";
-let currentSort = "name-asc";
-let activeProductModal = null;
-let inquiryCart = [];
+let currentCategory = "All";
+let searchQuery = "";
+let sortBy = "name-asc";
 
-// Load cart from localStorage if available
-try {
-  const savedCart = localStorage.getItem("felix_inquiry_cart");
-  if (savedCart) {
-    inquiryCart = JSON.parse(savedCart);
-  }
-} catch (e) {
-  inquiryCart = [];
-}
-
-// ==========================================================================
-// INITIALIZATION
-// ==========================================================================
+// Initialize on DOM load
 document.addEventListener("DOMContentLoaded", () => {
   renderCatalog();
-  renderFeatured();
-  setupCatalogControls();
-  setupAccordions();
-  setupNav();
-  setupInquiryForm();
-  setupScrollEffects();
-  populateProductSelect();
-  updateCartBadge();
-  renderInquiryDrawer();
+  populateOrderFormProducts();
+  setupEventListeners();
+  setupScrollProgress();
 });
 
-// Toast System
-function showToast(message, type = "info") {
-  const container = document.getElementById("toastContainer");
-  if (!container) return;
-
-  const toast = document.createElement("div");
-  toast.className = `toast ${type}`;
-  toast.innerHTML = `
-    <span>${message}</span>
-    <button onclick="this.parentElement.remove()" style="color:#94a3b8;font-size:16px;">&times;</button>
-  `;
-  container.appendChild(toast);
-
-  setTimeout(() => {
-    toast.style.opacity = "0";
-    toast.style.transform = "translateX(100%)";
-    toast.style.transition = "all 0.25s ease";
-    setTimeout(() => toast.remove(), 250);
-  }, 3800);
+// Setup Scroll Progress
+function setupScrollProgress() {
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const progressEl = document.getElementById("scrollProgress");
+    if (progressEl) {
+      progressEl.style.width = scrolled + "%";
+    }
+  });
 }
 
-// ==========================================================================
-// CATALOG RENDERING & FILTERING
-// ==========================================================================
+// Render the Product Catalog
 function renderCatalog() {
   const grid = document.getElementById("productGrid");
+  const countEl = document.getElementById("productCount");
   if (!grid) return;
 
   // Filter products
   let filtered = products.filter(p => {
-    let matchesFilter = false;
-    if (currentFilter === "All") {
-      matchesFilter = true;
-    } else if (currentFilter === "Popular") {
-      matchesFilter = p.featured === true;
-    } else {
-      matchesFilter = p.category === currentFilter;
-    }
-
-    const matchesSearch = !currentSearch || 
-      p.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
-      p.quantity.toLowerCase().includes(currentSearch.toLowerCase()) ||
-      p.category.toLowerCase().includes(currentSearch.toLowerCase()) ||
-      (p.batch && p.batch.toLowerCase().includes(currentSearch.toLowerCase()));
-    return matchesFilter && matchesSearch;
+    const matchCat = currentCategory === "All" || p.category === currentCategory;
+    const matchSearch = !searchQuery || 
+      p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.quantity.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.batch.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchCat && matchSearch;
   });
 
-  // Sort products
-  if (currentSort === "name-asc") {
+  // Sort
+  if (sortBy === "name-asc") {
     filtered.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (currentSort === "name-desc") {
+  } else if (sortBy === "name-desc") {
     filtered.sort((a, b) => b.name.localeCompare(a.name));
-  } else if (currentSort === "category") {
+  } else if (sortBy === "category") {
     filtered.sort((a, b) => a.category.localeCompare(b.category));
   }
 
-  // Render
+  // Update count
+  if (countEl) {
+    countEl.textContent = `Showing ${filtered.length} of ${products.length} Research Materials`;
+  }
+
+  // Empty state
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div class="empty-catalog">
@@ -460,785 +362,256 @@ function renderCatalog() {
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <h3 style="font-size:1.2rem;margin-bottom:6px;">No research materials found</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;">Try adjusting your search terms or filter selection.</p>
-        <button class="btn btn-secondary btn-sm" onclick="resetFilters()" style="margin-top:14px;">Reset Filters</button>
+        <h3 style="font-size:1.2rem;margin-bottom:6px;color:var(--fx-navy);">No research materials found</h3>
+        <p style="color:var(--fx-text-sub);font-size:0.9rem;">Try adjusting your search terms or filter selection.</p>
+        <button class="btn-cta-secondary" onclick="resetFilters()" style="margin-top:14px;">Reset Filters</button>
       </div>
     `;
     return;
   }
 
+  // Cards render (Strictly No Vials, clean chemical/helix SVG emblem)
   grid.innerHTML = filtered.map(p => {
-    const waMsg = `Hello Felix Chemical Supply, I would like to order ${p.name} (${p.quantity}, Batch: ${p.batch || 'FLX-2026'}) from your USA warehouse.`;
-    const waUrl = `https://wa.me/12092718485?text=${encodeURIComponent(waMsg)}`;
-    
+    const waText = encodeURIComponent(`Hello Felix Chemical Supply, I would like to inquire about ordering: ${p.name} (${p.quantity}, Batch: ${p.batch}).`);
+    const waLink = `https://wa.me/12092718485?text=${waText}`;
+
     return `
-    <div class="product-card" id="card-${p.id}">
-      <div class="card-top-meta">
-        <div class="card-meta-left">
-          <span class="product-category-tag">${p.category}</span>
-          <span class="purity-pill-sm">≥99% HPLC</span>
-        </div>
-        <span class="product-status-tag">
-          <span class="status-dot-sm"></span>
-          ${p.status}
-        </span>
-      </div>
+      <article class="product-card" id="card-${p.id}">
+        <div>
+          <div class="card-top">
+            <div class="card-emblem" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 2v4"></path>
+                <path d="M12 18v4"></path>
+                <path d="M4.93 4.93l2.83 2.83"></path>
+                <path d="M16.24 16.24l2.83 2.83"></path>
+                <path d="M2 12h4"></path>
+                <path d="M18 12h4"></path>
+                <path d="M4.93 19.07l2.83-2.83"></path>
+                <path d="M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <div class="card-tags">
+              <span class="tag-category">${p.category}</span>
+              <span class="tag-status-available">Available</span>
+            </div>
+          </div>
 
-      <!-- Pharmaceutical Vial Showcase Box -->
-      <div class="product-vial-box">
-        <div class="product-vial-svg">
-          <svg width="46" height="72" viewBox="0 0 46 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="13" y="2" width="20" height="7" rx="2" fill="#0284c7" stroke="#00f2fe" stroke-width="1.5"/>
-            <rect x="16" y="9" width="14" height="4" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
-            <rect x="7" y="13" width="32" height="56" rx="6" fill="rgba(6,182,212,0.06)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
-            <path d="M 10 17 L 10 65" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M 8 52 Q 23 49 38 52 L 38 65 Q 23 68 8 65 Z" fill="rgba(255,255,255,0.85)"/>
-            <rect x="10" y="24" width="26" height="25" rx="2" fill="#09121d" stroke="#0284c7" stroke-width="1"/>
-            <text x="23" y="33" fill="#00f2fe" font-size="4" font-family="'Outfit', sans-serif" font-weight="bold" text-anchor="middle">FELIX</text>
-            <text x="23" y="41" fill="#ffffff" font-size="5" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" text-anchor="middle">99%</text>
-            <text x="23" y="46" fill="#10b981" font-size="3" font-family="'JetBrains Mono', monospace" text-anchor="middle">USA LAB</text>
-          </svg>
+          <h3 class="product-name">${p.name}</h3>
+          <span class="product-quantity">${p.quantity}</span>
+          <p class="product-desc">${p.description}</p>
         </div>
-        <div class="product-vial-info">
-          <span class="product-vial-batch">${p.batch || 'FLX-2026-US'}</span>
-          <span class="product-vial-form">Lyophilized Solid Cake</span>
-          <span class="product-vial-storage">-20°C Desiccated Cold-Chain</span>
+
+        <div>
+          <div class="product-meta-row">
+            <span>Batch Reference:</span>
+            <span class="batch-code">${p.batch}</span>
+          </div>
+
+          <div class="card-actions">
+            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-card-order" title="Order ${p.name} via WhatsApp">
+              <span>WhatsApp Order</span>
+            </a>
+            <button type="button" class="btn-card-inquire" onclick="selectProductForOrder('${p.id}')">
+              Select for Form
+            </button>
+          </div>
         </div>
-      </div>
-
-      <h3 class="product-card-title">${p.name}</h3>
-      <span class="product-dosage-badge">${p.quantity}</span>
-      <p class="product-neutral-desc">${p.description}</p>
-      
-      <div class="card-pricing-row">
-        <span class="pricing-label">Domestic Dispatch</span>
-        <span class="pricing-val">In Stock • 10 Vials/Kit</span>
-      </div>
-
-      <div class="card-actions">
-        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-card" title="Chat directly with +1 209 271 8485 on WhatsApp">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-          </svg>
-          Order WhatsApp
-        </a>
-        <button class="btn btn-secondary btn-sm" onclick="openProductModal('${p.id}')">
-          COA &amp; Specs
-        </button>
-      </div>
-      <button class="btn btn-cyan-outline btn-sm" onclick="addToInquiryCart('${p.id}')" style="margin-top:8px;width:100%;display:flex;align-items:center;justify-content:center;gap:6px;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <path d="M16 10a4 4 0 0 1-8 0"></path>
-        </svg>
-        Add to Order List
-      </button>
-    </div>
-  `}).join("");
+      </article>
+    `;
+  }).join("");
 }
 
-function renderFeatured() {
-  const container = document.getElementById("featuredScroll");
-  if (!container) return;
-
-  const featured = products.filter(p => p.featured);
-  container.innerHTML = featured.map(p => {
-    const waMsg = `Hello Felix Chemical Supply, I would like to order ${p.name} (${p.quantity}, Batch: ${p.batch || 'FLX-2026'}) from your USA warehouse.`;
-    const waUrl = `https://wa.me/12092718485?text=${encodeURIComponent(waMsg)}`;
-    
-    return `
-    <div class="featured-card">
-      <span class="featured-badge">${p.category}</span>
-      <div class="featured-card-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="m4.93 4.93 4.24 4.24"></path>
-          <path d="m14.83 9.17 4.24-4.24"></path>
-          <path d="m14.83 14.83 4.24 4.24"></path>
-          <path d="m9.17 14.83-4.24 4.24"></path>
-        </svg>
-      </div>
-      <h4 style="font-size:1.15rem;font-weight:800;margin-bottom:4px;color:var(--text-primary);">${p.name}</h4>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--cyan-primary);font-weight:700;margin-bottom:12px;display:inline-block;">${p.quantity} • ≥99% HPLC</span>
-      <p style="font-size:0.84rem;color:var(--text-secondary);margin-bottom:18px;line-height:1.5;">${p.description}</p>
-      
-      <div style="margin-top:auto;display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;gap:8px;">
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-card" style="flex:1;" title="Chat directly with +1 209 271 8485 on WhatsApp">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-            </svg>
-            WhatsApp
-          </a>
-          <button class="btn btn-secondary btn-sm" style="flex:1;" onclick="openProductModal('${p.id}')">COA</button>
-        </div>
-        <button class="btn btn-cyan-outline btn-sm" onclick="addToInquiryCart('${p.id}')" style="display:flex;align-items:center;justify-content:center;gap:6px;">
-          + Add to Inquiry List
-        </button>
-      </div>
-    </div>
-  `}).join("");
-}
-
-function setupCatalogControls() {
-  const searchInput = document.getElementById("catalogSearch");
-  const headerSearch = document.getElementById("headerSearch");
-  const sortSelect = document.getElementById("catalogSort");
-  const chipContainer = document.getElementById("filterChips");
-  const headerCategoryPills = document.getElementById("headerCategoryPills");
-
-  // In-page catalog search input
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      currentSearch = e.target.value.trim();
-      if (headerSearch) headerSearch.value = currentSearch;
-      renderCatalog();
-    });
-  }
-
-  // Header quick search bar (UtherBio style)
-  if (headerSearch) {
-    headerSearch.addEventListener("input", (e) => {
-      currentSearch = e.target.value.trim();
-      if (searchInput) searchInput.value = currentSearch;
-      renderCatalog();
-    });
-
-    headerSearch.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        const catalogSec = document.getElementById("catalog");
-        if (catalogSec) catalogSec.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  }
-
-  if (sortSelect) {
-    sortSelect.addEventListener("change", (e) => {
-      currentSort = e.target.value;
-      renderCatalog();
-    });
-  }
-
-  // Filter chips in catalog section
-  if (chipContainer) {
-    chipContainer.addEventListener("click", (e) => {
-      const btn = e.target.closest(".chip-btn");
-      if (!btn) return;
-      document.querySelectorAll(".chip-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      currentFilter = btn.dataset.filter || "All";
-
-      // Sync header category strip
-      if (headerCategoryPills) {
-        headerCategoryPills.querySelectorAll(".cat-pill").forEach(p => {
-          p.classList.toggle("active", (p.dataset.filter || "") === currentFilter);
-        });
-      }
-      renderCatalog();
-    });
-  }
-
-  // UtherBio Header Category Strip pills
-  if (headerCategoryPills) {
-    headerCategoryPills.addEventListener("click", (e) => {
-      const pill = e.target.closest(".cat-pill");
-      if (!pill) return;
-      headerCategoryPills.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
-      currentFilter = pill.dataset.filter || "All";
-
-      // Sync catalog filter chips
-      if (chipContainer) {
-        chipContainer.querySelectorAll(".chip-btn").forEach(b => {
-          b.classList.toggle("active", (b.dataset.filter || "") === currentFilter);
-        });
-      }
-
-      // Smooth scroll down to catalog
-      const catalogSec = document.getElementById("catalog");
-      if (catalogSec) {
-        catalogSec.scrollIntoView({ behavior: "smooth" });
-      }
-      renderCatalog();
-    });
-  }
-}
-
-function resetFilters() {
-  currentFilter = "All";
-  currentSearch = "";
-  const searchInput = document.getElementById("catalogSearch");
-  const headerSearch = document.getElementById("headerSearch");
-  if (searchInput) searchInput.value = "";
-  if (headerSearch) headerSearch.value = "";
-
-  document.querySelectorAll(".chip-btn").forEach(b => {
-    b.classList.toggle("active", b.dataset.filter === "All");
-  });
-  document.querySelectorAll(".cat-pill").forEach(p => {
-    p.classList.toggle("active", p.dataset.filter === "All");
-  });
-  renderCatalog();
-}
-
-function populateProductSelect() {
-  const select = document.getElementById("formProduct");
+// Populate Product dropdown in Order Form
+function populateOrderFormProducts() {
+  const select = document.getElementById("orderProductSelect");
   if (!select) return;
-  select.innerHTML = `<option value="">Select a product from catalog...</option>` +
+
+  select.innerHTML = `<option value="">-- Choose a research material --</option>` +
     products.map(p => `<option value="${p.name}">${p.name} (${p.category})</option>`).join("");
 }
 
-// ==========================================================================
-// INQUIRY CART & ORDER DRAWER (UtherBio Pattern)
-// ==========================================================================
-function saveCart() {
-  try {
-    localStorage.setItem("felix_inquiry_cart", JSON.stringify(inquiryCart));
-  } catch (e) {
-    // Ignore storage issues
-  }
-}
-
-function updateCartBadge() {
-  const countBadge = document.getElementById("inquiryCount");
-  const summaryCount = document.getElementById("drawerSummaryCount");
-  const totalItems = inquiryCart.reduce((sum, item) => sum + (item.qty || 1), 0);
-  
-  if (countBadge) countBadge.textContent = totalItems;
-  if (summaryCount) summaryCount.textContent = `${totalItems} vials/kits`;
-
-  // Update checkout WhatsApp link
-  updateCartWhatsappLink();
-}
-
-function updateCartWhatsappLink() {
-  const checkoutBtn = document.getElementById("drawerWhatsappCheckout");
-  if (!checkoutBtn) return;
-
-  if (inquiryCart.length === 0) {
-    checkoutBtn.href = "https://wa.me/12092718485?text=" + encodeURIComponent("Hello Felix Chemical Supply, I would like to inquire about research materials from your domestic USA warehouse.");
-    return;
-  }
-
-  let text = "Hello Felix Chemical Supply, I would like to place an order from your USA domestic warehouse:\n\n";
-  inquiryCart.forEach((item, index) => {
-    text += `${index + 1}. ${item.name} (${item.quantity}) x ${item.qty || 1} [Batch: ${item.batch || 'FLX-2026'}]\n`;
-  });
-  text += `\nPlease confirm domestic stock and payment instructions for USDT/USDC.`;
-
-  checkoutBtn.href = `https://wa.me/12092718485?text=${encodeURIComponent(text)}`;
-}
-
-function addToInquiryCart(productId) {
-  const product = products.find(p => p.id === productId);
-  if (!product) return;
-
-  const existing = inquiryCart.find(item => item.id === productId);
-  if (existing) {
-    existing.qty = (existing.qty || 1) + 1;
-  } else {
-    inquiryCart.push({
-      id: product.id,
-      name: product.name,
-      quantity: product.quantity,
-      batch: product.batch,
-      category: product.category,
-      qty: 1
+// Setup Event Listeners
+function setupEventListeners() {
+  // Search input
+  const searchInput = document.getElementById("catalogSearch");
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value.trim();
+      renderCatalog();
     });
   }
 
-  saveCart();
-  updateCartBadge();
-  renderInquiryDrawer();
-  openInquiryDrawer();
-  showToast(`Added ${product.name} to inquiry list.`, "success");
-}
-
-function removeFromInquiryCart(productId) {
-  inquiryCart = inquiryCart.filter(item => item.id !== productId);
-  saveCart();
-  updateCartBadge();
-  renderInquiryDrawer();
-}
-
-function updateCartItemQty(productId, delta) {
-  const item = inquiryCart.find(i => i.id === productId);
-  if (!item) return;
-
-  item.qty = Math.max(1, (item.qty || 1) + delta);
-  saveCart();
-  updateCartBadge();
-  renderInquiryDrawer();
-}
-
-function renderInquiryDrawer() {
-  const body = document.getElementById("drawerBody");
-  if (!body) return;
-
-  if (inquiryCart.length === 0) {
-    body.innerHTML = `
-      <div class="drawer-empty-state">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px;color:var(--text-muted);">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-        </svg>
-        <p style="font-weight:600;margin-bottom:4px;">Your inquiry list is empty</p>
-        <p style="font-size:0.84rem;color:var(--text-muted);">Select research peptides from the catalog to prepare your domestic USA shipment order.</p>
-      </div>
-    `;
-    return;
+  // Sort select
+  const sortSelect = document.getElementById("catalogSort");
+  if (sortSelect) {
+    sortSelect.addEventListener("change", (e) => {
+      sortBy = e.target.value;
+      renderCatalog();
+    });
   }
 
-  body.innerHTML = inquiryCart.map(item => `
-    <div class="drawer-item">
-      <div class="drawer-item-info">
-        <span class="drawer-item-title">${item.name}</span>
-        <span class="drawer-item-meta">${item.quantity} • Batch: ${item.batch || 'FLX-2026'}</span>
-      </div>
-      <div class="drawer-item-controls">
-        <div class="quantity-control" style="margin:0;">
-          <button class="qty-btn" style="width:28px;height:28px;font-size:0.9rem;" onclick="updateCartItemQty('${item.id}', -1)">-</button>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:0.9rem;font-weight:700;min-width:24px;text-align:center;">${item.qty || 1}</span>
-          <button class="qty-btn" style="width:28px;height:28px;font-size:0.9rem;" onclick="updateCartItemQty('${item.id}', 1)">+</button>
-        </div>
-        <button class="drawer-item-remove" onclick="removeFromInquiryCart('${item.id}')" aria-label="Remove item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="3 6 5 6 21 6"></polyline>
-            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  `).join("");
-}
-
-function openInquiryDrawer() {
-  const overlay = document.getElementById("drawerOverlay");
-  const drawer = document.getElementById("inquiryDrawer");
-  if (overlay) overlay.classList.add("active");
-  if (drawer) drawer.classList.add("active");
-  document.body.style.overflow = "hidden";
-}
-
-function closeInquiryDrawer() {
-  const overlay = document.getElementById("drawerOverlay");
-  const drawer = document.getElementById("inquiryDrawer");
-  if (overlay) overlay.classList.remove("active");
-  if (drawer) drawer.classList.remove("active");
-  document.body.style.overflow = "";
-}
-
-function transferCartToForm() {
-  closeInquiryDrawer();
-  if (inquiryCart.length === 0) return;
-
-  const productNames = inquiryCart.map(item => `${item.name} (${item.qty}x)`).join(", ");
-  const productSelect = document.getElementById("formProduct");
-  const notesField = document.getElementById("formNotes");
-
-  if (productSelect && inquiryCart[0]) {
-    productSelect.value = inquiryCart[0].name;
-  }
-  if (notesField) {
-    notesField.value = `Order List: ${productNames}\nRequesting payment and domestic shipping details.`;
-  }
-
-  const formSection = document.getElementById("inquiry");
-  if (formSection) {
-    formSection.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
-// ==========================================================================
-// PRODUCT DETAIL MODAL & QUANTITY SELECTOR
-// ==========================================================================
-function openProductModal(productId) {
-  const product = products.find(p => p.id === productId);
-  if (!product) return;
-  activeProductModal = product;
-
-  const modal = document.getElementById("productModal");
-  const title = document.getElementById("modalProductTitle");
-  const meta = document.getElementById("modalProductMeta");
-  const desc = document.getElementById("modalProductDesc");
-  const batch = document.getElementById("modalProductBatch");
-  const qtyInput = document.getElementById("modalQtyInput");
-
-  if (title) title.textContent = product.name;
-  if (meta) meta.textContent = `${product.category} • ${product.quantity}`;
-  if (desc) desc.textContent = product.description;
-  if (batch) batch.textContent = `Batch: ${product.batch} | Storage: Verified Laboratory Standard`;
-  if (qtyInput) qtyInput.value = "1";
-  updateModalWhatsappLink();
-
-  if (modal) {
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-}
-
-function updateModalWhatsappLink() {
-  const btn = document.getElementById("modalWhatsappBtn");
-  if (!btn || !activeProductModal) return;
-  const input = document.getElementById("modalQtyInput");
-  const qty = input ? (input.value || 1) : 1;
-  const msg = `Hello Felix Chemical Supply, I would like to order ${activeProductModal.name} (Qty: ${qty}) from your USA warehouse catalog.`;
-  btn.href = `https://wa.me/12092718485?text=${encodeURIComponent(msg)}`;
-}
-
-function closeProductModal() {
-  const modal = document.getElementById("productModal");
-  if (modal) {
-    modal.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-  activeProductModal = null;
-}
-
-function changeModalQty(delta) {
-  const input = document.getElementById("modalQtyInput");
-  if (!input) return;
-  let val = parseInt(input.value, 10) || 1;
-  val = Math.max(1, Math.min(999, val + delta));
-  input.value = val;
-  updateModalWhatsappLink();
-}
-
-function confirmModalInquiry() {
-  if (!activeProductModal) return;
-  const input = document.getElementById("modalQtyInput");
-  const qty = input ? input.value : 1;
-  const productName = activeProductModal.name;
-
-  closeProductModal();
-  prefillInquiry(productName, qty);
-  showToast(`Added ${productName} (Qty: ${qty}) to inquiry form.`);
-}
-
-function requestProductInquiry(productId) {
-  const product = products.find(p => p.id === productId);
-  if (!product) return;
-  prefillInquiry(product.name, 1);
-  showToast(`Selected ${product.name} for inquiry.`);
-}
-
-function prefillInquiry(productName, qty = 1) {
-  const productSelect = document.getElementById("formProduct");
-  const qtyInput = document.getElementById("formQuantity");
-  if (productSelect) productSelect.value = productName;
-  if (qtyInput) qtyInput.value = qty;
-
-  const formSection = document.getElementById("inquiry");
-  if (formSection) {
-    formSection.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
-// ==========================================================================
-// CLIPBOARD COPYING
-// ==========================================================================
-function copyPaymentAddress() {
-  const text = CONFIG.PAYMENT_ADDRESS;
-  const btn = document.getElementById("copyAddressBtn");
-
-  navigator.clipboard.writeText(text).then(() => {
-    if (btn) {
-      btn.textContent = "Copied!";
-      btn.style.backgroundColor = "var(--success)";
-      btn.style.color = "#ffffff";
-      btn.style.borderColor = "var(--success)";
-      setTimeout(() => {
-        btn.textContent = "Copy Address";
-        btn.style.backgroundColor = "";
-        btn.style.color = "";
-        btn.style.borderColor = "";
-      }, 2400);
-    }
-    showToast("Payment address copied to clipboard!");
-  }).catch(() => {
-    fallbackCopy(text);
-  });
-}
-
-function copyOrderFormat() {
-  const formatText = `Name:\nAddress:\nCity:\nState:\nZIP:\nPhone:\nProduct:\nQuantity:\nOrder Total:\nPayment Method: USDT / USDC (ERC20)\nTransaction ID / Hash:`;
-  navigator.clipboard.writeText(formatText).then(() => {
-    showToast("Order format template copied!");
-  }).catch(() => {
-    fallbackCopy(formatText);
-  });
-}
-
-function fallbackCopy(text) {
-  const temp = document.createElement("textarea");
-  temp.value = text;
-  document.body.appendChild(temp);
-  temp.select();
-  try {
-    document.execCommand("copy");
-    showToast("Copied to clipboard!");
-  } catch (err) {
-    showToast("Could not copy automatically. Please select text manually.", "warning");
-  }
-  document.body.removeChild(temp);
-}
-
-// ==========================================================================
-// ACCORDIONS
-// ==========================================================================
-function setupAccordions() {
-  document.querySelectorAll(".accordion-header").forEach(header => {
-    header.addEventListener("click", () => {
-      const item = header.parentElement;
-      const wasActive = item.classList.contains("active");
-
-      // Optional: keep single open or independent. Let's allow smooth independent toggling
-      item.classList.toggle("active", !wasActive);
+  // Category Pills
+  const pills = document.querySelectorAll(".filter-pill-btn");
+  pills.forEach(pill => {
+    pill.addEventListener("click", () => {
+      pills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      currentCategory = pill.getAttribute("data-category");
+      renderCatalog();
     });
   });
-}
 
-// ==========================================================================
-// NAVIGATION & MOBILE MENU
-// ==========================================================================
-function setupNav() {
-  const menuBtn = document.getElementById("mobileMenuBtn");
-  const navLinks = document.getElementById("navLinks");
-
-  if (menuBtn && navLinks) {
-    menuBtn.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-      });
-    });
-  }
-
-  // Connect Contact buttons
-  const textFelixBtn = document.getElementById("textFelixBtn");
-  if (textFelixBtn) textFelixBtn.href = `sms:${CONFIG.PHONE_CLEAN}`;
-
-  const telegramBtn = document.getElementById("telegramOrderBtn");
-  if (telegramBtn) telegramBtn.href = CONFIG.TELEGRAM_URL;
-
-  const whatsappBtn = document.getElementById("whatsappOrderBtn");
-  if (whatsappBtn) whatsappBtn.href = CONFIG.WHATSAPP_URL;
-
-  const heroWhatsappBtn = document.getElementById("heroWhatsappBtn");
-  if (heroWhatsappBtn) heroWhatsappBtn.href = CONFIG.WHATSAPP_URL;
-
-  const drawerTelegram = document.getElementById("drawerTelegram");
-  if (drawerTelegram) drawerTelegram.href = CONFIG.TELEGRAM_URL;
-
-  const drawerWhatsapp = document.getElementById("drawerWhatsapp");
-  if (drawerWhatsapp) drawerWhatsapp.href = CONFIG.WHATSAPP_URL;
-
-  const footerTelegram = document.getElementById("footerTelegram");
-  if (footerTelegram) footerTelegram.href = CONFIG.TELEGRAM_URL;
-
-  const footerWhatsapp = document.getElementById("footerWhatsapp");
-  if (footerWhatsapp) footerWhatsapp.href = CONFIG.WHATSAPP_URL;
-
-  const modalQtyInput = document.getElementById("modalQtyInput");
-  if (modalQtyInput) {
-    modalQtyInput.addEventListener("input", updateModalWhatsappLink);
-  }
-
-  // Modal backdrop click handlers
-  const productModal = document.getElementById("productModal");
-  if (productModal) {
-    productModal.addEventListener("click", (e) => {
-      if (e.target === productModal) closeProductModal();
-    });
-  }
-
-  const policyModal = document.getElementById("policyModal");
-  if (policyModal) {
-    policyModal.addEventListener("click", (e) => {
-      if (e.target === policyModal) closePolicyModal();
-    });
-  }
-}
-
-// ==========================================================================
-// FORM HANDLING
-// ==========================================================================
-function setupInquiryForm() {
-  const form = document.getElementById("inquiryForm");
-  const endpointNotice = document.getElementById("formEndpointNotice");
-
-  if (!form) return;
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById("formName")?.value.trim();
-    const email = document.getElementById("formEmail")?.value.trim();
-    const product = document.getElementById("formProduct")?.value.trim();
-
-    if (!name || !email || !product) {
-      showToast("Please fill in required fields: Name, Email, and Product.", "warning");
-      return;
-    }
-
-    // Check CONFIG.FORM_ENDPOINT
-    if (!CONFIG.FORM_ENDPOINT) {
-      if (endpointNotice) {
-        endpointNotice.style.display = "block";
-        endpointNotice.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
-      showToast("Inquiry prepared. Please connect form endpoint or contact Felix directly.", "info");
-      return;
-    }
-
-    // Submit via fetch if endpoint provided
-    const formData = new FormData(form);
-    const submitBtn = form.querySelector("button[type='submit']");
-    if (submitBtn) submitBtn.disabled = true;
-
-    fetch(CONFIG.FORM_ENDPOINT, {
-      method: "POST",
-      body: formData,
-      headers: { "Accept": "application/json" }
-    })
-    .then(res => {
-      if (res.ok) {
-        form.reset();
-        showToast("Inquiry successfully submitted! Felix team will respond shortly.", "success");
+  // Mobile menu toggle
+  const mobileBtn = document.getElementById("mobileMenuToggle");
+  const nav = document.getElementById("siteNav");
+  if (mobileBtn && nav) {
+    mobileBtn.addEventListener("click", () => {
+      if (nav.style.display === "flex") {
+        nav.style.display = "none";
       } else {
-        showToast("Submission encountered an issue. Please contact Felix directly via text or messaging.", "warning");
+        nav.style.display = "flex";
+        nav.style.flexDirection = "column";
+        nav.style.position = "absolute";
+        nav.style.top = "100%";
+        nav.style.left = "0";
+        nav.style.right = "0";
+        nav.style.background = "#ffffff";
+        nav.style.padding = "20px";
+        nav.style.boxShadow = "0 8px 20px rgba(17,46,81,0.12)";
       }
-    })
-    .catch(() => {
-      showToast("Network error. Please text or message Felix directly.", "warning");
-    })
-    .finally(() => {
-      if (submitBtn) submitBtn.disabled = false;
     });
+  }
+
+  // Order form submission
+  const orderForm = document.getElementById("orderForm");
+  if (orderForm) {
+    orderForm.addEventListener("submit", handleOrderSubmit);
+  }
+}
+
+// Handle Order Form Submit
+function handleOrderSubmit(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("orderName")?.value.trim() || "";
+  const phone = document.getElementById("orderPhone")?.value.trim() || "";
+  const product = document.getElementById("orderProductSelect")?.value || "";
+  const quantity = document.getElementById("orderQuantity")?.value.trim() || "";
+  const address = document.getElementById("orderAddress")?.value.trim() || "";
+  const crypto = document.getElementById("orderCrypto")?.value || "USDT (ERC20)";
+  const txid = document.getElementById("orderTxid")?.value.trim() || "Pending";
+  const notes = document.getElementById("orderNotes")?.value.trim() || "";
+
+  if (!product) {
+    showToast("Please choose a research material from the list.", "warning");
+    return;
+  }
+
+  const messageText = `*NEW RESEARCH ORDER INQUIRY*\n` +
+    `--------------------------------\n` +
+    `Company: Felix Chemical Supply\n` +
+    `Client / Lab: ${name || "Not provided"}\n` +
+    `Phone: ${phone || "Not provided"}\n` +
+    `Product: ${product}\n` +
+    `Quantity: ${quantity || "1 Unit"}\n` +
+    `Shipping Address: ${address || "Will provide in chat"}\n` +
+    `Payment Method: ${crypto}\n` +
+    `Deposit Address: ${CONFIG.PAYMENT_ADDRESS}\n` +
+    (txid && txid !== "Pending" ? `TXID: ${txid}\n` : "") +
+    (notes ? `Notes: ${notes}\n` : "") +
+    `--------------------------------`;
+
+  const waUrl = `https://wa.me/${CONFIG.PHONE_CLEAN}?text=${encodeURIComponent(messageText)}`;
+  window.open(waUrl, "_blank");
+  showToast("Order inquiry prepared! Opening WhatsApp...", "success");
+}
+
+// Select Product from Card into Order Form
+function selectProductForOrder(productId) {
+  const p = products.find(item => item.id === productId);
+  if (!p) return;
+
+  const select = document.getElementById("orderProductSelect");
+  if (select) {
+    select.value = p.name;
+  }
+
+  const orderSection = document.getElementById("order");
+  if (orderSection) {
+    orderSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  showToast(`Selected ${p.name} in order form below`, "success");
+}
+
+// Copy Payment Crypto Address
+function copyPaymentAddress() {
+  const address = CONFIG.PAYMENT_ADDRESS;
+  navigator.clipboard.writeText(address).then(() => {
+    const btn = document.getElementById("copyAddressBtn");
+    if (btn) {
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!`;
+      btn.style.backgroundColor = "var(--fx-success)";
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.backgroundColor = "";
+      }, 2500);
+    }
+    showToast("ETH (ERC20) address copied to clipboard!", "success");
+  }).catch(() => {
+    showToast("Could not copy address automatically.", "warning");
   });
 }
 
-// ==========================================================================
-// SCROLL EFFECTS & ASSISTANT
-// ==========================================================================
-function setupScrollEffects() {
-  const progressBar = document.getElementById("scrollProgress");
-  const navbar = document.querySelector(".navbar");
-  const backToTop = document.getElementById("backToTop");
+// Reset Filters
+function resetFilters() {
+  searchQuery = "";
+  currentCategory = "All";
+  sortBy = "name-asc";
 
-  window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+  const searchInput = document.getElementById("catalogSearch");
+  if (searchInput) searchInput.value = "";
 
-    if (progressBar) progressBar.style.width = `${progress}%`;
-    if (navbar) navbar.classList.toggle("scrolled", scrollY > 20);
-    if (backToTop) backToTop.classList.toggle("visible", scrollY > 400);
-  });
+  const sortSelect = document.getElementById("catalogSort");
+  if (sortSelect) sortSelect.value = "name-asc";
 
-  if (backToTop) {
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  // Floating assistant toggle
-  const assistantBtn = document.getElementById("assistantBtn");
-  const assistantPanel = document.getElementById("assistantPanel");
-  if (assistantBtn && assistantPanel) {
-    assistantBtn.addEventListener("click", () => {
-      assistantPanel.classList.toggle("active");
-    });
-  }
-
-  // Keyboard accessibility: ESC key closes modals
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeProductModal();
-      closePolicyModal();
-      if (assistantPanel) assistantPanel.classList.remove("active");
+  const pills = document.querySelectorAll(".filter-pill-btn");
+  pills.forEach(p => {
+    if (p.getAttribute("data-category") === "All") {
+      p.classList.add("active");
+    } else {
+      p.classList.remove("active");
     }
   });
+
+  renderCatalog();
 }
 
-// ==========================================================================
-// POLICY MODALS
-// ==========================================================================
-const POLICIES = {
-  terms: {
-    title: "Terms of Research Supply",
-    content: `All products supplied by Felix Chemical Supply are offered exclusively for laboratory and scientific research purposes where legally permissible. By submitting an inquiry or acquiring materials, the purchaser certifies that they are qualified personnel affiliated with a recognized laboratory, research entity, or institution possessing standard chemical safety protocols. Materials are strictly not for human or veterinary administration, diagnostic procedure, or consumer use.`
-  },
-  privacy: {
-    title: "Privacy & Data Policy",
-    content: `Felix Chemical Supply respects commercial discretion and confidentiality. Customer contact details and inquiry requests are utilized strictly for order processing, logistics coordination, and direct support. Information is never sold or distributed to third-party marketing entities. Communications may occur via secure messaging channels as elected by the researcher.`
-  },
-  shipping: {
-    title: "Domestic U.S. Shipping Policy",
-    content: `Orders dispatched from domestic U.S. inventory are processed in the order received, typically within 24–48 business hours. Tracking numbers are transmitted once carrier collection occurs. Domestic transit times typically range from 2–4 business days depending on destination jurisdiction. Customers are solely responsible for ensuring shipping address accuracy.`
-  },
-  refund: {
-    title: "Return & Replacement Policy",
-    content: `Due to the temperature-controlled and specialized nature of research biochemicals, standard returns of opened or altered reagents cannot be accepted once dispatched. In the verified event of carrier transit loss or damaged exterior containment, notify Felix customer service immediately with documentation to initiate appropriate carrier claims and resolution.`
-  },
-  disclaimer: {
-    title: "Research-Use Regulatory Disclaimer",
-    content: `IMPORTANT NOTICE: Products displayed on this website are intended for research or laboratory use only. Product status and permitted uses vary by jurisdiction. Nothing on this website constitutes medical advice, a recommendation for human use, or a claim of therapeutic efficacy. Customers are responsible for determining whether purchase, possession, importation, exportation, or use of any product is lawful in their jurisdiction.`
-  }
-};
+// Toast System
+function showToast(message, type = "info") {
+  const container = document.getElementById("toastContainer");
+  if (!container) return;
 
-function selectPolicyTab(policyKey) {
-  const tabs = document.querySelectorAll(".policy-tab-btn");
-  const panels = document.querySelectorAll(".policy-content-panel");
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.innerHTML = `
+    <span>${message}</span>
+    <button onclick="this.parentElement.remove()" style="color:#ffffff;font-size:16px;margin-left:8px;">&times;</button>
+  `;
+  container.appendChild(toast);
 
-  tabs.forEach(tab => {
-    tab.classList.toggle("active", tab.dataset.policy === policyKey);
-  });
-
-  panels.forEach(panel => {
-    panel.classList.toggle("active", panel.id === `policy-${policyKey}`);
-  });
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateY(10px)";
+    toast.style.transition = "all 0.25s ease";
+    setTimeout(() => toast.remove(), 250);
+  }, 3500);
 }
 
-function openPolicyModal(policyKey) {
-  selectPolicyTab(policyKey);
-  const policiesSec = document.getElementById("policies");
-  if (policiesSec) {
-    policiesSec.scrollIntoView({ behavior: "smooth" });
-  }
-}
-
-function closePolicyModal() {
-  const modal = document.getElementById("policyModal");
-  if (modal) {
-    modal.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-}
-
-// Attach functions to window for universal access across environments
-window.openProductModal = openProductModal;
-window.closeProductModal = closeProductModal;
-window.changeModalQty = changeModalQty;
-window.confirmModalInquiry = confirmModalInquiry;
-window.requestProductInquiry = requestProductInquiry;
+// Expose globals for inline onclicks
 window.copyPaymentAddress = copyPaymentAddress;
-window.copyOrderFormat = copyOrderFormat;
+window.selectProductForOrder = selectProductForOrder;
 window.resetFilters = resetFilters;
-window.openPolicyModal = openPolicyModal;
-window.closePolicyModal = closePolicyModal;
-window.selectPolicyTab = selectPolicyTab;
-window.openInquiryDrawer = openInquiryDrawer;
-window.closeInquiryDrawer = closeInquiryDrawer;
-window.addToInquiryCart = addToInquiryCart;
-window.removeFromInquiryCart = removeFromInquiryCart;
-window.updateCartItemQty = updateCartItemQty;
-window.transferCartToForm = transferCartToForm;
-window.CONFIG = CONFIG;
-window.products = products;
-
