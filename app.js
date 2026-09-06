@@ -7,7 +7,7 @@ const CONFIG = {
   PHONE: "+1 209 271 8485",
   PHONE_CLEAN: "+12092718485",
   TELEGRAM_URL: "https://t.me/felixchemicalsupply",
-  WHATSAPP_URL: "#",
+  WHATSAPP_URL: "https://wa.me/12092718485",
   FORM_ENDPOINT: "", // When empty, displays instruction message to connect endpoint
   PAYMENT_ADDRESS: "0xfAc5677671a5479C8b7ec06d32dE81120431C50e",
   PAYMENT_CURRENCIES: "USDT / USDC",
@@ -368,6 +368,17 @@ let currentFilter = "All";
 let currentSearch = "";
 let currentSort = "name-asc";
 let activeProductModal = null;
+let inquiryCart = [];
+
+// Load cart from localStorage if available
+try {
+  const savedCart = localStorage.getItem("felix_inquiry_cart");
+  if (savedCart) {
+    inquiryCart = JSON.parse(savedCart);
+  }
+} catch (e) {
+  inquiryCart = [];
+}
 
 // ==========================================================================
 // INITIALIZATION
@@ -381,6 +392,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setupInquiryForm();
   setupScrollEffects();
   populateProductSelect();
+  updateCartBadge();
+  renderInquiryDrawer();
 });
 
 // Toast System
@@ -413,11 +426,20 @@ function renderCatalog() {
 
   // Filter products
   let filtered = products.filter(p => {
-    const matchesFilter = currentFilter === "All" || p.category === currentFilter;
+    let matchesFilter = false;
+    if (currentFilter === "All") {
+      matchesFilter = true;
+    } else if (currentFilter === "Popular") {
+      matchesFilter = p.featured === true;
+    } else {
+      matchesFilter = p.category === currentFilter;
+    }
+
     const matchesSearch = !currentSearch || 
       p.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
       p.quantity.toLowerCase().includes(currentSearch.toLowerCase()) ||
-      p.category.toLowerCase().includes(currentSearch.toLowerCase());
+      p.category.toLowerCase().includes(currentSearch.toLowerCase()) ||
+      (p.batch && p.batch.toLowerCase().includes(currentSearch.toLowerCase()));
     return matchesFilter && matchesSearch;
   });
 
@@ -446,34 +468,75 @@ function renderCatalog() {
     return;
   }
 
-  grid.innerHTML = filtered.map(p => `
+  grid.innerHTML = filtered.map(p => {
+    const waMsg = `Hello Felix Chemical Supply, I would like to order ${p.name} (${p.quantity}, Batch: ${p.batch || 'FLX-2026'}) from your USA warehouse.`;
+    const waUrl = `https://wa.me/12092718485?text=${encodeURIComponent(waMsg)}`;
+    
+    return `
     <div class="product-card" id="card-${p.id}">
       <div class="card-top-meta">
-        <span class="product-category-tag">${p.category}</span>
+        <div class="card-meta-left">
+          <span class="product-category-tag">${p.category}</span>
+          <span class="purity-pill-sm">≥99% HPLC</span>
+        </div>
         <span class="product-status-tag">
           <span class="status-dot-sm"></span>
           ${p.status}
         </span>
       </div>
+
+      <!-- Pharmaceutical Vial Showcase Box -->
+      <div class="product-vial-box">
+        <div class="product-vial-svg">
+          <svg width="46" height="72" viewBox="0 0 46 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="13" y="2" width="20" height="7" rx="2" fill="#0284c7" stroke="#00f2fe" stroke-width="1.5"/>
+            <rect x="16" y="9" width="14" height="4" fill="#0f172a" stroke="#0284c7" stroke-width="1"/>
+            <rect x="7" y="13" width="32" height="56" rx="6" fill="rgba(6,182,212,0.06)" stroke="rgba(6,182,212,0.4)" stroke-width="1.5"/>
+            <path d="M 10 17 L 10 65" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M 8 52 Q 23 49 38 52 L 38 65 Q 23 68 8 65 Z" fill="rgba(255,255,255,0.85)"/>
+            <rect x="10" y="24" width="26" height="25" rx="2" fill="#09121d" stroke="#0284c7" stroke-width="1"/>
+            <text x="23" y="33" fill="#00f2fe" font-size="4" font-family="'Outfit', sans-serif" font-weight="bold" text-anchor="middle">FELIX</text>
+            <text x="23" y="41" fill="#ffffff" font-size="5" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" text-anchor="middle">99%</text>
+            <text x="23" y="46" fill="#10b981" font-size="3" font-family="'JetBrains Mono', monospace" text-anchor="middle">USA LAB</text>
+          </svg>
+        </div>
+        <div class="product-vial-info">
+          <span class="product-vial-batch">${p.batch || 'FLX-2026-US'}</span>
+          <span class="product-vial-form">Lyophilized Solid Cake</span>
+          <span class="product-vial-storage">-20°C Desiccated Cold-Chain</span>
+        </div>
+      </div>
+
       <h3 class="product-card-title">${p.name}</h3>
       <span class="product-dosage-badge">${p.quantity}</span>
       <p class="product-neutral-desc">${p.description}</p>
       
       <div class="card-pricing-row">
-        <span class="pricing-label">Catalog Status</span>
-        <span class="pricing-val">${p.price !== null ? p.price : "Inquire for Pricing"}</span>
+        <span class="pricing-label">Domestic Dispatch</span>
+        <span class="pricing-val">In Stock • 10 Vials/Kit</span>
       </div>
 
       <div class="card-actions">
+        <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-card" title="Chat directly with +1 209 271 8485 on WhatsApp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          Order WhatsApp
+        </a>
         <button class="btn btn-secondary btn-sm" onclick="openProductModal('${p.id}')">
-          View Details
-        </button>
-        <button class="btn btn-cyan-outline btn-sm" onclick="requestProductInquiry('${p.id}')">
-          Inquire
+          COA &amp; Specs
         </button>
       </div>
+      <button class="btn btn-cyan-outline btn-sm" onclick="addToInquiryCart('${p.id}')" style="margin-top:8px;width:100%;display:flex;align-items:center;justify-content:center;gap:6px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        Add to Order List
+      </button>
     </div>
-  `).join("");
+  `}).join("");
 }
 
 function renderFeatured() {
@@ -481,7 +544,11 @@ function renderFeatured() {
   if (!container) return;
 
   const featured = products.filter(p => p.featured);
-  container.innerHTML = featured.map(p => `
+  container.innerHTML = featured.map(p => {
+    const waMsg = `Hello Felix Chemical Supply, I would like to order ${p.name} (${p.quantity}, Batch: ${p.batch || 'FLX-2026'}) from your USA warehouse.`;
+    const waUrl = `https://wa.me/12092718485?text=${encodeURIComponent(waMsg)}`;
+    
+    return `
     <div class="featured-card">
       <span class="featured-badge">${p.category}</span>
       <div class="featured-card-icon">
@@ -493,26 +560,57 @@ function renderFeatured() {
           <path d="m9.17 14.83-4.24 4.24"></path>
         </svg>
       </div>
-      <h4 style="font-size:1.1rem;font-weight:700;margin-bottom:4px;">${p.name}</h4>
-      <span style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--text-muted);margin-bottom:12px;">${p.quantity}</span>
+      <h4 style="font-size:1.15rem;font-weight:800;margin-bottom:4px;color:var(--text-primary);">${p.name}</h4>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--cyan-primary);font-weight:700;margin-bottom:12px;display:inline-block;">${p.quantity} • ≥99% HPLC</span>
       <p style="font-size:0.84rem;color:var(--text-secondary);margin-bottom:18px;line-height:1.5;">${p.description}</p>
-      <div style="margin-top:auto;display:flex;gap:8px;">
-        <button class="btn btn-secondary btn-sm" style="flex:1;" onclick="openProductModal('${p.id}')">Details</button>
-        <button class="btn btn-primary btn-sm" style="flex:1;" onclick="requestProductInquiry('${p.id}')">Inquire</button>
+      
+      <div style="margin-top:auto;display:flex;flex-direction:column;gap:8px;">
+        <div style="display:flex;gap:8px;">
+          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-card" style="flex:1;" title="Chat directly with +1 209 271 8485 on WhatsApp">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            WhatsApp
+          </a>
+          <button class="btn btn-secondary btn-sm" style="flex:1;" onclick="openProductModal('${p.id}')">COA</button>
+        </div>
+        <button class="btn btn-cyan-outline btn-sm" onclick="addToInquiryCart('${p.id}')" style="display:flex;align-items:center;justify-content:center;gap:6px;">
+          + Add to Inquiry List
+        </button>
       </div>
     </div>
-  `).join("");
+  `}).join("");
 }
 
 function setupCatalogControls() {
   const searchInput = document.getElementById("catalogSearch");
+  const headerSearch = document.getElementById("headerSearch");
   const sortSelect = document.getElementById("catalogSort");
   const chipContainer = document.getElementById("filterChips");
+  const headerCategoryPills = document.getElementById("headerCategoryPills");
 
+  // In-page catalog search input
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       currentSearch = e.target.value.trim();
+      if (headerSearch) headerSearch.value = currentSearch;
       renderCatalog();
+    });
+  }
+
+  // Header quick search bar (UtherBio style)
+  if (headerSearch) {
+    headerSearch.addEventListener("input", (e) => {
+      currentSearch = e.target.value.trim();
+      if (searchInput) searchInput.value = currentSearch;
+      renderCatalog();
+    });
+
+    headerSearch.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const catalogSec = document.getElementById("catalog");
+        if (catalogSec) catalogSec.scrollIntoView({ behavior: "smooth" });
+      }
     });
   }
 
@@ -523,6 +621,7 @@ function setupCatalogControls() {
     });
   }
 
+  // Filter chips in catalog section
   if (chipContainer) {
     chipContainer.addEventListener("click", (e) => {
       const btn = e.target.closest(".chip-btn");
@@ -530,6 +629,38 @@ function setupCatalogControls() {
       document.querySelectorAll(".chip-btn").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       currentFilter = btn.dataset.filter || "All";
+
+      // Sync header category strip
+      if (headerCategoryPills) {
+        headerCategoryPills.querySelectorAll(".cat-pill").forEach(p => {
+          p.classList.toggle("active", (p.dataset.filter || "") === currentFilter);
+        });
+      }
+      renderCatalog();
+    });
+  }
+
+  // UtherBio Header Category Strip pills
+  if (headerCategoryPills) {
+    headerCategoryPills.addEventListener("click", (e) => {
+      const pill = e.target.closest(".cat-pill");
+      if (!pill) return;
+      headerCategoryPills.querySelectorAll(".cat-pill").forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      currentFilter = pill.dataset.filter || "All";
+
+      // Sync catalog filter chips
+      if (chipContainer) {
+        chipContainer.querySelectorAll(".chip-btn").forEach(b => {
+          b.classList.toggle("active", (b.dataset.filter || "") === currentFilter);
+        });
+      }
+
+      // Smooth scroll down to catalog
+      const catalogSec = document.getElementById("catalog");
+      if (catalogSec) {
+        catalogSec.scrollIntoView({ behavior: "smooth" });
+      }
       renderCatalog();
     });
   }
@@ -539,9 +670,15 @@ function resetFilters() {
   currentFilter = "All";
   currentSearch = "";
   const searchInput = document.getElementById("catalogSearch");
+  const headerSearch = document.getElementById("headerSearch");
   if (searchInput) searchInput.value = "";
+  if (headerSearch) headerSearch.value = "";
+
   document.querySelectorAll(".chip-btn").forEach(b => {
     b.classList.toggle("active", b.dataset.filter === "All");
+  });
+  document.querySelectorAll(".cat-pill").forEach(p => {
+    p.classList.toggle("active", p.dataset.filter === "All");
   });
   renderCatalog();
 }
@@ -551,6 +688,167 @@ function populateProductSelect() {
   if (!select) return;
   select.innerHTML = `<option value="">Select a product from catalog...</option>` +
     products.map(p => `<option value="${p.name}">${p.name} (${p.category})</option>`).join("");
+}
+
+// ==========================================================================
+// INQUIRY CART & ORDER DRAWER (UtherBio Pattern)
+// ==========================================================================
+function saveCart() {
+  try {
+    localStorage.setItem("felix_inquiry_cart", JSON.stringify(inquiryCart));
+  } catch (e) {
+    // Ignore storage issues
+  }
+}
+
+function updateCartBadge() {
+  const countBadge = document.getElementById("inquiryCount");
+  const summaryCount = document.getElementById("drawerSummaryCount");
+  const totalItems = inquiryCart.reduce((sum, item) => sum + (item.qty || 1), 0);
+  
+  if (countBadge) countBadge.textContent = totalItems;
+  if (summaryCount) summaryCount.textContent = `${totalItems} vials/kits`;
+
+  // Update checkout WhatsApp link
+  updateCartWhatsappLink();
+}
+
+function updateCartWhatsappLink() {
+  const checkoutBtn = document.getElementById("drawerWhatsappCheckout");
+  if (!checkoutBtn) return;
+
+  if (inquiryCart.length === 0) {
+    checkoutBtn.href = "https://wa.me/12092718485?text=" + encodeURIComponent("Hello Felix Chemical Supply, I would like to inquire about research materials from your domestic USA warehouse.");
+    return;
+  }
+
+  let text = "Hello Felix Chemical Supply, I would like to place an order from your USA domestic warehouse:\n\n";
+  inquiryCart.forEach((item, index) => {
+    text += `${index + 1}. ${item.name} (${item.quantity}) x ${item.qty || 1} [Batch: ${item.batch || 'FLX-2026'}]\n`;
+  });
+  text += `\nPlease confirm domestic stock and payment instructions for USDT/USDC.`;
+
+  checkoutBtn.href = `https://wa.me/12092718485?text=${encodeURIComponent(text)}`;
+}
+
+function addToInquiryCart(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+
+  const existing = inquiryCart.find(item => item.id === productId);
+  if (existing) {
+    existing.qty = (existing.qty || 1) + 1;
+  } else {
+    inquiryCart.push({
+      id: product.id,
+      name: product.name,
+      quantity: product.quantity,
+      batch: product.batch,
+      category: product.category,
+      qty: 1
+    });
+  }
+
+  saveCart();
+  updateCartBadge();
+  renderInquiryDrawer();
+  openInquiryDrawer();
+  showToast(`Added ${product.name} to inquiry list.`, "success");
+}
+
+function removeFromInquiryCart(productId) {
+  inquiryCart = inquiryCart.filter(item => item.id !== productId);
+  saveCart();
+  updateCartBadge();
+  renderInquiryDrawer();
+}
+
+function updateCartItemQty(productId, delta) {
+  const item = inquiryCart.find(i => i.id === productId);
+  if (!item) return;
+
+  item.qty = Math.max(1, (item.qty || 1) + delta);
+  saveCart();
+  updateCartBadge();
+  renderInquiryDrawer();
+}
+
+function renderInquiryDrawer() {
+  const body = document.getElementById("drawerBody");
+  if (!body) return;
+
+  if (inquiryCart.length === 0) {
+    body.innerHTML = `
+      <div class="drawer-empty-state">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px;color:var(--text-muted);">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+        </svg>
+        <p style="font-weight:600;margin-bottom:4px;">Your inquiry list is empty</p>
+        <p style="font-size:0.84rem;color:var(--text-muted);">Select research peptides from the catalog to prepare your domestic USA shipment order.</p>
+      </div>
+    `;
+    return;
+  }
+
+  body.innerHTML = inquiryCart.map(item => `
+    <div class="drawer-item">
+      <div class="drawer-item-info">
+        <span class="drawer-item-title">${item.name}</span>
+        <span class="drawer-item-meta">${item.quantity} • Batch: ${item.batch || 'FLX-2026'}</span>
+      </div>
+      <div class="drawer-item-controls">
+        <div class="quantity-control" style="margin:0;">
+          <button class="qty-btn" style="width:28px;height:28px;font-size:0.9rem;" onclick="updateCartItemQty('${item.id}', -1)">-</button>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:0.9rem;font-weight:700;min-width:24px;text-align:center;">${item.qty || 1}</span>
+          <button class="qty-btn" style="width:28px;height:28px;font-size:0.9rem;" onclick="updateCartItemQty('${item.id}', 1)">+</button>
+        </div>
+        <button class="drawer-item-remove" onclick="removeFromInquiryCart('${item.id}')" aria-label="Remove item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="3 6 5 6 21 6"></polyline>
+            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  `).join("");
+}
+
+function openInquiryDrawer() {
+  const overlay = document.getElementById("drawerOverlay");
+  const drawer = document.getElementById("inquiryDrawer");
+  if (overlay) overlay.classList.add("active");
+  if (drawer) drawer.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeInquiryDrawer() {
+  const overlay = document.getElementById("drawerOverlay");
+  const drawer = document.getElementById("inquiryDrawer");
+  if (overlay) overlay.classList.remove("active");
+  if (drawer) drawer.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+function transferCartToForm() {
+  closeInquiryDrawer();
+  if (inquiryCart.length === 0) return;
+
+  const productNames = inquiryCart.map(item => `${item.name} (${item.qty}x)`).join(", ");
+  const productSelect = document.getElementById("formProduct");
+  const notesField = document.getElementById("formNotes");
+
+  if (productSelect && inquiryCart[0]) {
+    productSelect.value = inquiryCart[0].name;
+  }
+  if (notesField) {
+    notesField.value = `Order List: ${productNames}\nRequesting payment and domestic shipping details.`;
+  }
+
+  const formSection = document.getElementById("inquiry");
+  if (formSection) {
+    formSection.scrollIntoView({ behavior: "smooth" });
+  }
 }
 
 // ==========================================================================
@@ -573,11 +871,21 @@ function openProductModal(productId) {
   if (desc) desc.textContent = product.description;
   if (batch) batch.textContent = `Batch: ${product.batch} | Storage: Verified Laboratory Standard`;
   if (qtyInput) qtyInput.value = "1";
+  updateModalWhatsappLink();
 
   if (modal) {
     modal.classList.add("active");
     document.body.style.overflow = "hidden";
   }
+}
+
+function updateModalWhatsappLink() {
+  const btn = document.getElementById("modalWhatsappBtn");
+  if (!btn || !activeProductModal) return;
+  const input = document.getElementById("modalQtyInput");
+  const qty = input ? (input.value || 1) : 1;
+  const msg = `Hello Felix Chemical Supply, I would like to order ${activeProductModal.name} (Qty: ${qty}) from your USA warehouse catalog.`;
+  btn.href = `https://wa.me/12092718485?text=${encodeURIComponent(msg)}`;
 }
 
 function closeProductModal() {
@@ -595,6 +903,7 @@ function changeModalQty(delta) {
   let val = parseInt(input.value, 10) || 1;
   val = Math.max(1, Math.min(999, val + delta));
   input.value = val;
+  updateModalWhatsappLink();
 }
 
 function confirmModalInquiry() {
@@ -720,6 +1029,9 @@ function setupNav() {
   const whatsappBtn = document.getElementById("whatsappOrderBtn");
   if (whatsappBtn) whatsappBtn.href = CONFIG.WHATSAPP_URL;
 
+  const heroWhatsappBtn = document.getElementById("heroWhatsappBtn");
+  if (heroWhatsappBtn) heroWhatsappBtn.href = CONFIG.WHATSAPP_URL;
+
   const drawerTelegram = document.getElementById("drawerTelegram");
   if (drawerTelegram) drawerTelegram.href = CONFIG.TELEGRAM_URL;
 
@@ -731,6 +1043,11 @@ function setupNav() {
 
   const footerWhatsapp = document.getElementById("footerWhatsapp");
   if (footerWhatsapp) footerWhatsapp.href = CONFIG.WHATSAPP_URL;
+
+  const modalQtyInput = document.getElementById("modalQtyInput");
+  if (modalQtyInput) {
+    modalQtyInput.addEventListener("input", updateModalWhatsappLink);
+  }
 
   // Modal backdrop click handlers
   const productModal = document.getElementById("productModal");
@@ -875,20 +1192,24 @@ const POLICIES = {
   }
 };
 
+function selectPolicyTab(policyKey) {
+  const tabs = document.querySelectorAll(".policy-tab-btn");
+  const panels = document.querySelectorAll(".policy-content-panel");
+
+  tabs.forEach(tab => {
+    tab.classList.toggle("active", tab.dataset.policy === policyKey);
+  });
+
+  panels.forEach(panel => {
+    panel.classList.toggle("active", panel.id === `policy-${policyKey}`);
+  });
+}
+
 function openPolicyModal(policyKey) {
-  const policy = POLICIES[policyKey];
-  if (!policy) return;
-
-  const modal = document.getElementById("policyModal");
-  const title = document.getElementById("policyModalTitle");
-  const body = document.getElementById("policyModalBody");
-
-  if (title) title.textContent = policy.title;
-  if (body) body.textContent = policy.content;
-
-  if (modal) {
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
+  selectPolicyTab(policyKey);
+  const policiesSec = document.getElementById("policies");
+  if (policiesSec) {
+    policiesSec.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -911,6 +1232,13 @@ window.copyOrderFormat = copyOrderFormat;
 window.resetFilters = resetFilters;
 window.openPolicyModal = openPolicyModal;
 window.closePolicyModal = closePolicyModal;
+window.selectPolicyTab = selectPolicyTab;
+window.openInquiryDrawer = openInquiryDrawer;
+window.closeInquiryDrawer = closeInquiryDrawer;
+window.addToInquiryCart = addToInquiryCart;
+window.removeFromInquiryCart = removeFromInquiryCart;
+window.updateCartItemQty = updateCartItemQty;
+window.transferCartToForm = transferCartToForm;
 window.CONFIG = CONFIG;
 window.products = products;
 

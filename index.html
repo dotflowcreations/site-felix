@@ -26,9 +26,22 @@
 
     <!-- Promo Bar -->
     <div class="promo-bar">
-      <div class="promo-badge">
-        <span class="status-dot"></span>
-        <span>CNY PROMO — ALL ORDERS FREE SHIPPING</span>
+      <div class="container promo-bar-inner">
+        <div class="promo-badge">
+          <span class="status-dot"></span>
+          <span>CNY PROMO // ALL RESEARCH ORDERS SHIP FREE VIA DOMESTIC U.S. PRIORITY</span>
+        </div>
+        <div class="promo-contacts">
+          <a href="https://wa.me/12092718485" target="_blank" rel="noopener noreferrer" class="promo-link" title="Chat directly on WhatsApp">
+            <span>WhatsApp:</span> +1 209 271 8485
+          </a>
+          <span class="promo-sep">•</span>
+          <a href="https://t.me/felixchemicalsupply" target="_blank" rel="noopener noreferrer" class="promo-link">
+            <span>Telegram:</span> @felixchemicalsupply
+          </a>
+          <span class="promo-sep">•</span>
+          <span class="promo-pill-subtle">USA Domestic Warehouse</span>
+        </div>
       </div>
     </div>
 
@@ -56,64 +69,239 @@
           </div>
         </a>
 
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#hero" class="nav-link">Home</a></li>
-          <li><a href="#catalog" class="nav-link">Catalog</a></li>
-          <li><a href="#ordering" class="nav-link">Ordering</a></li>
-          <li><a href="#shipping" class="nav-link">Shipping</a></li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
+        <!-- UtherBio Header Search -->
+        <div class="header-search-wrap">
+          <svg class="header-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="headerSearch" 
+            class="header-search-input" 
+            placeholder="Search 23+ research peptides, CAS, batches..." 
+            aria-label="Search research peptides"
+          />
+        </div>
 
         <div class="nav-actions">
-          <a href="#catalog" class="btn btn-primary btn-sm">View Catalog</a>
-          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
+          <a href="https://wa.me/12092718485" class="btn btn-whatsapp-header btn-sm" target="_blank" rel="noopener noreferrer" style="gap:6px;" title="Chat directly with +1 209 271 8485 on WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
             </svg>
+            <span>WhatsApp (+1 209 271 8485)</span>
+          </a>
+          <a href="https://t.me/felixchemicalsupply" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer" style="gap:6px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            <span>Telegram</span>
+          </a>
+          <button class="btn btn-primary btn-sm inquiry-badge-btn" onclick="openInquiryDrawer()">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span>Inquiry Cart</span>
+            <span class="inquiry-count-badge" id="inquiryCount">0</span>
           </button>
         </div>
       </div>
     </nav>
 
+    <!-- UtherBio Horizontal Category Navigation Strip -->
+    <div class="category-strip" id="categoryStrip">
+      <div class="container category-strip-inner">
+        <span class="category-strip-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="4" y1="21" x2="4" y2="14"></line>
+            <line x1="4" y1="10" x2="4" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12" y2="3"></line>
+            <line x1="20" y1="21" x2="20" y2="16"></line>
+            <line x1="20" y1="12" x2="20" y2="3"></line>
+            <line x1="1" y1="14" x2="7" y2="14"></line>
+            <line x1="9" y1="8" x2="15" y2="8"></line>
+            <line x1="17" y1="16" x2="23" y2="16"></line>
+          </svg>
+          Categories:
+        </span>
+        <div class="category-pills" id="headerCategoryPills">
+          <button class="cat-pill active" data-filter="All">All Peptides (23)</button>
+          <button class="cat-pill" data-filter="Popular">Popular Peptides (6)</button>
+          <button class="cat-pill" data-filter="Peptides">Research Peptides (12)</button>
+          <button class="cat-pill" data-filter="Biological Regulators">Biological Regulators (4)</button>
+          <button class="cat-pill" data-filter="Blends">Peptide Blends (4)</button>
+          <button class="cat-pill" data-filter="Research Materials">Solutions &amp; Materials (2)</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Main Content -->
     <main>
-      <!-- Hero Section -->
+      <!-- Hero Section (UtherBio Two-Column Banner Layout) -->
       <section class="hero-section" id="hero">
         <div class="container hero-grid">
           <div class="hero-content">
             <div class="hero-tag">
               <span class="status-dot"></span>
-              CNY PROMO — FREE SHIPPING
+              // AMERICAN-OPERATED DOMESTIC RESEARCH SUPPLY • HPLC ≥99%
             </div>
             <h1 class="hero-title">
-              Felix Chemical <span>Supply</span>
+              High-Purity Research Peptides &amp; <span>Analytical Compounds</span>
             </h1>
             <p class="hero-subheadline">
-              Research-grade peptides and specialty compounds, presented with clarity, transparency, and a better ordering experience.
+              Solid-Phase Peptide Synthesis (SPPS) engineered for verified purity. Backed by 3-tier analytical testing: Quantitative HPLC, Endotoxin Screening, and Reconstitution Sterility. Packed in cold-chain containment and fulfilled immediately from our domestic New York warehouse.
             </p>
             <div class="hero-actions">
-              <a href="#catalog" class="btn btn-primary btn-lg">Explore Catalog</a>
-              <a href="#contact" class="btn btn-secondary btn-lg">Contact Felix</a>
+              <a href="#catalog" class="btn btn-primary btn-lg">Browse All Peptides</a>
+              <a href="https://wa.me/12092718485" class="btn btn-secondary btn-lg" id="heroWhatsappBtn" target="_blank" rel="noopener noreferrer" style="background: rgba(34, 197, 94, 0.12); border-color: rgba(34, 197, 94, 0.4); color: #15803d; font-weight: 700;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                WhatsApp Order (+1 209 271 8485)
+              </a>
+              <a href="https://t.me/felixchemicalsupply" class="btn btn-secondary btn-lg" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Official Telegram
+              </a>
+              <a href="#contact" class="btn btn-secondary btn-lg">Direct Order / SMS</a>
             </div>
             <div class="trust-line">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              <span>USA Warehouse • Research Materials • Clear Product Information</span>
+              <span>HPLC ≥99% Verified • Low Bioburden Endotoxin • 100% Domestic US Fulfillment • 24–48h Dispatch</span>
             </div>
           </div>
 
-          <div class="hero-visual-card">
-            <img src="assets/felix-hero.svg" alt="Felix Chemical Supply high-tech research peptides specimen display" loading="lazy" />
-            <div class="hero-visual-overlay">
-              <div>
-                <div class="hero-spec-tag">// SPECIMEN ARCHITECTURE</div>
-                <div class="hero-spec-sub">Lyophilized Formulations &amp; Analytical Materials</div>
+          <!-- UtherBio Featured Specimen Showcase Card -->
+          <div class="hero-visual-card uther-specimen-card">
+            <div class="specimen-header">
+              <div class="specimen-badge">
+                <span class="status-dot"></span>
+                <span>BATCH FLX-2026-01</span>
               </div>
-              <span class="product-category-tag">Verified Stock</span>
+              <span class="purity-badge-highlight">≥99.4% HPLC</span>
+            </div>
+            
+            <div class="specimen-vial-stage">
+              <div class="specimen-vial-graphic">
+                <svg width="120" height="190" viewBox="0 0 130 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Vial Cap & Crimp -->
+                  <rect x="35" y="10" width="60" height="16" rx="4" fill="#0284c7" stroke="#00f2fe" stroke-width="2"/>
+                  <rect x="42" y="26" width="46" height="12" rx="2" fill="#0f172a" stroke="#0284c7" stroke-width="1.5"/>
+                  <rect x="48" y="38" width="34" height="10" fill="#1e293b"/>
+                  <!-- Glass Bottle Body -->
+                  <rect x="20" y="48" width="90" height="145" rx="14" fill="rgba(6, 182, 212, 0.04)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="2"/>
+                  <!-- Glass reflection -->
+                  <path d="M 28 58 L 28 178" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-linecap="round"/>
+                  <!-- Lyophilized Cake -->
+                  <path d="M 22 155 Q 65 150 108 155 L 108 180 Q 65 190 22 180 Z" fill="rgba(255, 255, 255, 0.85)" stroke="rgba(6, 182, 212, 0.3)" stroke-width="1"/>
+                  <!-- Bottle Label -->
+                  <rect x="25" y="75" width="80" height="70" rx="4" fill="#09121d" stroke="#0284c7" stroke-width="1.5"/>
+                  <text x="65" y="93" fill="#00f2fe" font-size="9" font-family="'Outfit', sans-serif" font-weight="bold" text-anchor="middle">FELIX CHEMICAL</text>
+                  <text x="65" y="106" fill="#ffffff" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" text-anchor="middle">RETA 30MG</text>
+                  <text x="65" y="118" fill="#10b981" font-size="8" font-family="'JetBrains Mono', monospace" font-weight="600" text-anchor="middle">≥99.4% HPLC</text>
+                  <text x="65" y="130" fill="#94a3b8" font-size="7" font-family="'JetBrains Mono', monospace" text-anchor="middle">LOT FLX-2026-01</text>
+                  <text x="65" y="140" fill="#64748b" font-size="6" font-family="'JetBrains Mono', monospace" text-anchor="middle">IN-VITRO RESEARCH</text>
+                </svg>
+              </div>
+              <div class="specimen-specs">
+                <div class="spec-row">
+                  <span class="spec-name">Compound:</span>
+                  <span class="spec-val">Retatrutide (30mg)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Purity (HPLC):</span>
+                  <span class="spec-val" style="color:#10b981;">99.42% (Single Peak)</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Endotoxin:</span>
+                  <span class="spec-val">&lt; 0.05 EU/mg</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Packaging:</span>
+                  <span class="spec-val">10 Vials / Kit</span>
+                </div>
+                <div class="spec-row">
+                  <span class="spec-name">Dispatch:</span>
+                  <span class="spec-val">Domestic NY • In Stock</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="specimen-footer">
+              <button class="btn btn-secondary btn-sm" onclick="openProductModal('reta-30')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+                Inspect Batch COA
+              </button>
+              <a href="https://wa.me/12092718485?text=Hello%20Felix%20Chemical%20Supply%2C%20I%20would%20like%20to%20order%20Reta%2030mg%20(10%20vials%2Fkit)%20from%20your%20domestic%20USA%20warehouse." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.4);color:#16a34a;font-weight:700;">
+                Order via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- UtherBio 4-Column Feature Highlights Bar -->
+      <section class="feature-strip">
+        <div class="container feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">≥99% Purity Guaranteed</h3>
+              <p class="feature-desc">Solid-Phase Peptide Synthesis with quantitative HPLC and Mass Spectrometry validation.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Domestic US Warehouse</h3>
+              <p class="feature-desc">Immediate dispatch from New York facility within 24–48 hours with domestic carrier tracking.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">3-Tier Quality Panels</h3>
+              <p class="feature-desc">Quantitative HPLC assay, quantitative endotoxin screening, and reconstitution sterility.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon" style="background:rgba(34,197,94,0.1);border-color:rgba(34,197,94,0.3);color:#16a34a;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="feature-title">Direct WhatsApp Support</h3>
+              <p class="feature-desc">Direct lab communication at +1 209 271 8485 for rapid batch allocation and instant order fulfillment.</p>
             </div>
           </div>
         </div>
@@ -170,6 +358,46 @@
             <div>
               <div class="stat-num">Direct</div>
               <div class="stat-label">Researcher Inquiries</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testing & Quality Standards Section (FelixChem.is Architecture) -->
+      <section class="testing-section" id="testing">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">Quality Assurance</span>
+            <h2 class="section-title">Comprehensive 3-Tier Laboratory Testing</h2>
+            <p class="section-desc">Operating as Chem-LLC, Felix Chemical Supply synthesizes and supplies research-grade peptides with verifiable analytical protocols and cold-chain protection.</p>
+          </div>
+
+          <div class="testing-grid">
+            <!-- Tier 1: HPLC Purity -->
+            <div class="testing-card">
+              <div class="testing-badge">TIER 01 // HPLC</div>
+              <h3 class="testing-title">Quantitative &amp; Qualitative HPLC</h3>
+              <p class="testing-desc">
+                High-Performance Liquid Chromatography analytical profiling confirms compound identity and guarantees &gt;99% purity across every research batch. Solid-Phase Peptide Synthesis (SPPS) ensures maximum peptide sequence fidelity.
+              </p>
+            </div>
+
+            <!-- Tier 2: Endotoxin Testing -->
+            <div class="testing-card">
+              <div class="testing-badge">TIER 02 // ENDOTOXIN</div>
+              <h3 class="testing-title">Endotoxin Testing Panels</h3>
+              <p class="testing-desc">
+                Implemented in November 2025 as part of our rigorous quality overhaul, quantitative endotoxin screening verifies analytical standards and low bioburden, differentiating Felix Chemical Supply in laboratory research supply.
+              </p>
+            </div>
+
+            <!-- Tier 3: Sterility & Reconstitution -->
+            <div class="testing-card">
+              <div class="testing-badge">TIER 03 // STERILITY</div>
+              <h3 class="testing-title">Sterility &amp; Reconstitution Stability</h3>
+              <p class="testing-desc">
+                Lyophilized cakes undergo stringent sterility assessments and reconstitution solubility checks with bacteriostatic solutions to ensure compound stability and long-term research viability under domestic cold-chain storage.
+              </p>
             </div>
           </div>
         </div>
@@ -236,6 +464,72 @@
           <!-- Product Grid -->
           <div class="product-grid" id="productGrid">
             <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Wholesale & Institutional Procurement Section (FelixChem.is Architecture) -->
+      <section class="wholesale-section" id="wholesale">
+        <div class="container">
+          <div class="wholesale-box">
+            <div class="wholesale-grid">
+              <div>
+                <div class="hero-tag" style="background:rgba(6,182,212,0.15);border-color:rgba(6,182,212,0.3);color:var(--cyan-glow);">
+                  <span class="status-dot"></span>
+                  INSTITUTIONAL ALLOCATION
+                </div>
+                <h2 style="font-size:2rem;font-weight:800;letter-spacing:-0.02em;margin:12px 0 14px 0;color:#ffffff;">
+                  Wholesale &amp; High-Volume Research Supply
+                </h2>
+                <p style="color:#cbd5e1;font-size:0.95rem;line-height:1.65;margin-bottom:16px;">
+                  Felix Chemical Supply provides dedicated wholesale allocation for university laboratories, contract research organizations (CROs), independent institutions, and qualified analytical facilities requiring predictable domestic supply chains.
+                </p>
+                <ul class="wholesale-perks">
+                  <li class="wholesale-perk">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Tiered volume pricing with batch consistency reservation</span>
+                  </li>
+                  <li class="wholesale-perk">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Priority queue fulfillment from domestic New York / USA facility</span>
+                  </li>
+                  <li class="wholesale-perk">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Expedited cold-chain transit and dedicated account coordination</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="text-align:center;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:var(--radius-md);padding:32px 24px;">
+                <div style="font-family:'JetBrains Mono',monospace;color:var(--cyan-glow);font-size:0.85rem;font-weight:700;margin-bottom:8px;">
+                  // BULK INQUIRY CHANNEL
+                </div>
+                <div style="font-size:1.4rem;font-weight:800;color:#ffffff;margin-bottom:12px;">
+                  Custom Batch Allocation
+                </div>
+                <p style="color:#94a3b8;font-size:0.88rem;line-height:1.6;margin-bottom:24px;">
+                  Connect directly with our logistics team via Telegram or our online inquiry system to receive a volume quotation within business hours.
+                </p>
+                <div style="display:flex;flex-direction:column;gap:10px;">
+                  <a href="https://t.me/felixchemicalsupply" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    Telegram Wholesale Desk
+                  </a>
+                  <a href="#contact" class="btn btn-secondary" onclick="document.getElementById('formMessage').value='Inquiry regarding institutional wholesale / bulk allocation for research materials.';">
+                    Submit Bulk Inquiry
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -531,11 +825,11 @@ Transaction ID / Hash:
                 </svg>
                 Telegram Order
               </a>
-              <a href="#" class="btn btn-secondary" id="whatsappOrderBtn" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/12092718485" class="btn btn-secondary" id="whatsappOrderBtn" target="_blank" rel="noopener noreferrer" style="background: rgba(34, 197, 94, 0.08); border-color: rgba(34, 197, 94, 0.3); color: #16a34a;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
                 </svg>
-                WhatsApp Order
+                WhatsApp Order (+1 209 271 8485)
               </a>
             </div>
           </div>
@@ -702,20 +996,74 @@ Transaction ID / Hash:
         </div>
       </section>
 
-      <!-- Legal & Compliance Section -->
-      <section class="compliance-section">
+      <!-- Comprehensive Policies & Compliance Section (All on single page) -->
+      <section class="policies-section" id="policies">
         <div class="container">
-          <div class="compliance-box">
-            <div class="compliance-title">Important Compliance Notice</div>
-            <p class="compliance-text">
-              Products displayed on this website may be intended for research or laboratory use only. Product status and permitted uses vary by jurisdiction. Nothing on this website constitutes medical advice, a recommendation for human use, or a claim of therapeutic efficacy. Customers are responsible for determining whether purchase, possession, importation, exportation, or use of any product is lawful in their jurisdiction.
-            </p>
-            <div class="policy-links-row">
-              <button class="policy-link-btn" onclick="openPolicyModal('terms')">Terms of Service</button>
-              <button class="policy-link-btn" onclick="openPolicyModal('privacy')">Privacy Policy</button>
-              <button class="policy-link-btn" onclick="openPolicyModal('shipping')">Shipping Policy</button>
-              <button class="policy-link-btn" onclick="openPolicyModal('refund')">Refund Policy</button>
-              <button class="policy-link-btn" onclick="openPolicyModal('disclaimer')">Research-Use Disclaimer</button>
+          <div class="section-header text-center">
+            <span class="section-tag">Regulatory &amp; Policies</span>
+            <h2 class="section-title">Compliance &amp; Operational Policies</h2>
+            <p class="section-desc">All regulatory guidelines, supply terms, and shipping procedures presented directly on this page.</p>
+          </div>
+
+          <!-- Policy Tab Navigation -->
+          <div class="policy-tabs-nav" role="tablist">
+            <button class="policy-tab-btn active" data-policy="terms" onclick="selectPolicyTab('terms')">Terms of Research Supply</button>
+            <button class="policy-tab-btn" data-policy="privacy" onclick="selectPolicyTab('privacy')">Privacy &amp; Data Security</button>
+            <button class="policy-tab-btn" data-policy="shipping" onclick="selectPolicyTab('shipping')">Domestic Shipping Policy</button>
+            <button class="policy-tab-btn" data-policy="refund" onclick="selectPolicyTab('refund')">Return &amp; Replacement</button>
+            <button class="policy-tab-btn" data-policy="disclaimer" onclick="selectPolicyTab('disclaimer')">Research Regulatory Disclaimer</button>
+          </div>
+
+          <!-- Policy Panels Container -->
+          <div class="policy-panels-container">
+            <!-- 01 Terms -->
+            <div class="policy-content-panel active" id="policy-terms" role="tabpanel">
+              <h3 class="policy-panel-title">Terms of Research Supply</h3>
+              <div class="policy-panel-body">
+                <p style="margin-bottom:12px;">All products supplied by Felix Chemical Supply (operating under Chem-LLC) are manufactured and distributed exclusively for laboratory, scientific, and in-vitro research purposes where legally permissible under local, state, and federal law.</p>
+                <p style="margin-bottom:12px;">By placing an inquiry or acquiring materials, the purchaser expressly certifies that they are an authorized researcher, scientific investigator, or institutional representative operating standard laboratory safety containment. Products are strictly not intended for human consumption, medical diagnosis, therapeutic application, veterinary administration, or household consumer use.</p>
+                <p>The purchaser assumes all legal and regulatory responsibility for the handling, storage, possession, and hazardous disposal of all chemical reagents and lyophilized compounds in full adherence to applicable scientific protocols.</p>
+              </div>
+            </div>
+
+            <!-- 02 Privacy -->
+            <div class="policy-content-panel" id="policy-privacy" role="tabpanel">
+              <h3 class="policy-panel-title">Privacy &amp; Data Security Policy</h3>
+              <div class="policy-panel-body">
+                <p style="margin-bottom:12px;">Felix Chemical Supply adheres to strict institutional confidentiality standards. Customer contact details, inquiries, and logistics transmissions are used solely for order processing, carrier dispatch, and technical customer service.</p>
+                <p style="margin-bottom:12px;">We do not sell, rent, monetize, or distribute customer information to third-party advertisers or marketing aggregators. Communication via our direct SMS channel or designated Telegram (@felixchemicalsupply) is handled with commercial discretion.</p>
+                <p>Payment settlement records utilizing cryptocurrency (USDT / USDC ERC20) remain decentralized and pseudonymized on the Ethereum blockchain, providing transaction finality without requiring invasive personal banking disclosures.</p>
+              </div>
+            </div>
+
+            <!-- 03 Shipping Policy -->
+            <div class="policy-content-panel" id="policy-shipping" role="tabpanel">
+              <h3 class="policy-panel-title">Domestic U.S. Shipping Policy</h3>
+              <div class="policy-panel-body">
+                <p style="margin-bottom:12px;">Orders dispatched from our domestic USA warehouse are processed in the order received, typically within 24–48 business hours. Carrier collection occurs Monday through Friday.</p>
+                <p style="margin-bottom:12px;">Domestic transit times typically range from 2 to 4 business days depending on delivery destination and carrier routing. All materials are packed in temperature-controlled, shock-absorbent packaging to maintain lyophilized stability during transit.</p>
+                <p>Tracking numbers are transmitted via SMS or Telegram immediately upon carrier handoff. Customers are responsible for verifying the accuracy of their physical delivery addresses prior to shipment dispatch.</p>
+              </div>
+            </div>
+
+            <!-- 04 Refund Policy -->
+            <div class="policy-content-panel" id="policy-refund" role="tabpanel">
+              <h3 class="policy-panel-title">Return &amp; Replacement Policy</h3>
+              <div class="policy-panel-body">
+                <p style="margin-bottom:12px;">Due to the sensitive biochemical integrity of lyophilized peptides and laboratory reagents, returned products cannot be accepted back into our sterile storage facility once dispatched from our warehouse.</p>
+                <p style="margin-bottom:12px;">In the verified event of carrier transit damage, containment breach, or verifiable loss, contact Felix customer service within 48 hours of carrier notification. Please provide clear photographic documentation of the package condition and shipping label to initiate a replacement claim.</p>
+                <p>All claims are reviewed promptly by our fulfillment team to ensure resolution for legitimate research disruptions.</p>
+              </div>
+            </div>
+
+            <!-- 05 Disclaimer -->
+            <div class="policy-content-panel" id="policy-disclaimer" role="tabpanel">
+              <h3 class="policy-panel-title">Research-Use Regulatory Disclaimer</h3>
+              <div class="policy-panel-body">
+                <p style="margin-bottom:12px;"><strong>IMPORTANT STATUTORY NOTICE:</strong> All items listed in this catalog are sold strictly as chemical reagents for laboratory and analytical research purposes only. None of the products on this website have been evaluated or approved by the U.S. Food and Drug Administration (FDA) for the diagnosis, treatment, cure, or prevention of any disease.</p>
+                <p style="margin-bottom:12px;">Under federal and state law, the bodily introduction of any of these materials into humans or animals is strictly prohibited. You must be at least 21 years of age to access this catalog or submit an inquiry.</p>
+                <p>Nothing on this website should be construed as medical instruction or advice. Purchasers warrant that they possess appropriate analytical testing facilities, safety apparatus, and knowledge to handle high-purity chemical substances.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -730,45 +1078,100 @@ Transaction ID / Hash:
             <div class="footer-brand-title">FELIX CHEMICAL SUPPLY</div>
             <p class="footer-brand-tagline">"Research materials. Clear information. Better service."</p>
             <p style="color:#64748b;font-size:0.82rem;line-height:1.6;">
-              Providing laboratory researchers with transparent specifications and domestic fulfillment workflows.
+              American-operated domestic research supplier (Chem-LLC). Providing laboratory researchers with verified HPLC &gt;99% purity, endotoxin screening, and domestic U.S. fulfillment.
             </p>
           </div>
 
           <div>
-            <h4 class="footer-col-title">Explore</h4>
+            <h4 class="footer-col-title">Navigation</h4>
             <ul class="footer-links">
-              <li><a href="#catalog" class="footer-link">Catalog</a></li>
-              <li><a href="#ordering" class="footer-link">Ordering</a></li>
-              <li><a href="#shipping" class="footer-link">Shipping</a></li>
+              <li><a href="#hero" class="footer-link">Home</a></li>
+              <li><a href="#testing" class="footer-link">Testing &amp; Quality</a></li>
+              <li><a href="#catalog" class="footer-link">Research Catalog</a></li>
+              <li><a href="#wholesale" class="footer-link">Wholesale Supply</a></li>
+              <li><a href="#ordering" class="footer-link">Ordering Guide</a></li>
+              <li><a href="#shipping" class="footer-link">Shipping Logistics</a></li>
               <li><a href="#faq" class="footer-link">FAQ</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="footer-col-title">Support</h4>
+            <h4 class="footer-col-title">Support &amp; Inquiries</h4>
             <ul class="footer-links">
-              <li><a href="#contact" class="footer-link">Contact (+1 209 271 8485)</a></li>
-              <li><a href="https://t.me/felixchemicalsupply" id="footerTelegram" class="footer-link" target="_blank" rel="noopener noreferrer">Telegram</a></li>
-              <li><a href="#" id="footerWhatsapp" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+              <li><a href="#contact" class="footer-link">Contact Desk (+1 209 271 8485)</a></li>
+              <li><a href="https://t.me/felixchemicalsupply" id="footerTelegram" class="footer-link" target="_blank" rel="noopener noreferrer">Official Telegram Channel</a></li>
+              <li><a href="https://wa.me/12092718485" id="footerWhatsapp" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp Support (+1 209 271 8485)</a></li>
+              <li><a href="#ordering" class="footer-link">Payment Protocol (ERC20)</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 class="footer-col-title">Legal</h4>
+            <h4 class="footer-col-title">Policies (On Page)</h4>
             <ul class="footer-links">
-              <li><button class="footer-link" style="background:none;border:none;padding:0;cursor:pointer;" onclick="openPolicyModal('terms')">Terms</button></li>
-              <li><button class="footer-link" style="background:none;border:none;padding:0;cursor:pointer;" onclick="openPolicyModal('privacy')">Privacy</button></li>
-              <li><button class="footer-link" style="background:none;border:none;padding:0;cursor:pointer;" onclick="openPolicyModal('disclaimer')">Disclaimer</button></li>
+              <li><a href="#policies" class="footer-link" onclick="selectPolicyTab('terms')">Terms of Supply</a></li>
+              <li><a href="#policies" class="footer-link" onclick="selectPolicyTab('privacy')">Privacy Policy</a></li>
+              <li><a href="#policies" class="footer-link" onclick="selectPolicyTab('shipping')">Shipping Policy</a></li>
+              <li><a href="#policies" class="footer-link" onclick="selectPolicyTab('refund')">Return Policy</a></li>
+              <li><a href="#policies" class="footer-link" onclick="selectPolicyTab('disclaimer')">Regulatory Disclaimer</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <div>&copy; 2026 Felix Chemical Supply. All rights reserved.</div>
-          <div>Research-use disclaimer applies where applicable.</div>
+          <div>&copy; 2026 Felix Chemical Supply (Chem-LLC). All rights reserved. Single-page laboratory resource.</div>
+          <div>All compounds intended strictly for laboratory and analytical research purposes. 21+ only.</div>
         </div>
       </div>
     </footer>
+
+    <!-- Slide-Over Inquiry Cart Drawer (UtherBio Inspired) -->
+    <div class="drawer-overlay" id="drawerOverlay" onclick="closeInquiryDrawer()"></div>
+    <div class="inquiry-drawer" id="inquiryDrawer" aria-label="Inquiry Cart Drawer">
+      <div class="drawer-header">
+        <div class="drawer-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          Inquiry &amp; Order Cart
+        </div>
+        <button class="drawer-close-btn" onclick="closeInquiryDrawer()" aria-label="Close drawer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer-body" id="drawerBody">
+        <!-- Rendered dynamically by app.js -->
+        <div class="drawer-empty-state">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom:12px;color:var(--text-muted);">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+          </svg>
+          <p style="font-weight:600;margin-bottom:4px;">Your inquiry list is empty</p>
+          <p style="font-size:0.84rem;color:var(--text-muted);">Add research peptides to initiate a direct order via WhatsApp or SMS.</p>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <div class="drawer-summary-row">
+          <span>Selected Compounds:</span>
+          <span class="drawer-summary-count" id="drawerSummaryCount">0 items</span>
+        </div>
+        <a href="https://wa.me/12092718485" class="btn btn-whatsapp-drawer" id="drawerWhatsappCheckout" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          Order via WhatsApp (+1 209 271 8485)
+        </a>
+        <button class="btn btn-secondary btn-sm" onclick="transferCartToForm()">
+          Fill Direct Inquiry Form
+        </button>
+      </div>
+    </div>
 
     <!-- Product Detail Modal -->
     <div class="modal-overlay" id="productModal">
@@ -809,6 +1212,12 @@ Transaction ID / Hash:
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" onclick="closeProductModal()">Close</button>
+          <a id="modalWhatsappBtn" href="https://wa.me/12092718485" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.3);color:#16a34a;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            Order via WhatsApp
+          </a>
           <button class="btn btn-primary" onclick="confirmModalInquiry()">Request Information</button>
         </div>
       </div>
@@ -855,8 +1264,8 @@ Transaction ID / Hash:
         <a href="https://t.me/felixchemicalsupply" id="drawerTelegram" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
           Telegram Channel
         </a>
-        <a href="#" id="drawerWhatsapp" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
-          WhatsApp Direct
+        <a href="https://wa.me/12092718485" id="drawerWhatsapp" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+          WhatsApp Direct (+1 209 271 8485)
         </a>
         <a href="#shipping" class="btn btn-cyan-outline btn-sm" onclick="document.getElementById('assistantPanel').classList.remove('active')">
           Shipping Procedures

@@ -7,7 +7,7 @@ const CONFIG = {
   PHONE: "+1 209 271 8485",
   PHONE_CLEAN: "+12092718485",
   TELEGRAM_URL: "https://t.me/felixchemicalsupply",
-  WHATSAPP_URL: "#",
+  WHATSAPP_URL: "https://wa.me/12092718485",
   FORM_ENDPOINT: "", // When empty, displays instruction message to connect endpoint
   PAYMENT_ADDRESS: "0xfAc5677671a5479C8b7ec06d32dE81120431C50e",
   PAYMENT_CURRENCIES: "USDT / USDC",
@@ -573,11 +573,21 @@ function openProductModal(productId) {
   if (desc) desc.textContent = product.description;
   if (batch) batch.textContent = `Batch: ${product.batch} | Storage: Verified Laboratory Standard`;
   if (qtyInput) qtyInput.value = "1";
+  updateModalWhatsappLink();
 
   if (modal) {
     modal.classList.add("active");
     document.body.style.overflow = "hidden";
   }
+}
+
+function updateModalWhatsappLink() {
+  const btn = document.getElementById("modalWhatsappBtn");
+  if (!btn || !activeProductModal) return;
+  const input = document.getElementById("modalQtyInput");
+  const qty = input ? (input.value || 1) : 1;
+  const msg = `Hello Felix Chemical Supply, I would like to order ${activeProductModal.name} (Qty: ${qty}) from your USA warehouse catalog.`;
+  btn.href = `https://wa.me/12092718485?text=${encodeURIComponent(msg)}`;
 }
 
 function closeProductModal() {
@@ -595,6 +605,7 @@ function changeModalQty(delta) {
   let val = parseInt(input.value, 10) || 1;
   val = Math.max(1, Math.min(999, val + delta));
   input.value = val;
+  updateModalWhatsappLink();
 }
 
 function confirmModalInquiry() {
@@ -720,6 +731,9 @@ function setupNav() {
   const whatsappBtn = document.getElementById("whatsappOrderBtn");
   if (whatsappBtn) whatsappBtn.href = CONFIG.WHATSAPP_URL;
 
+  const heroWhatsappBtn = document.getElementById("heroWhatsappBtn");
+  if (heroWhatsappBtn) heroWhatsappBtn.href = CONFIG.WHATSAPP_URL;
+
   const drawerTelegram = document.getElementById("drawerTelegram");
   if (drawerTelegram) drawerTelegram.href = CONFIG.TELEGRAM_URL;
 
@@ -731,6 +745,11 @@ function setupNav() {
 
   const footerWhatsapp = document.getElementById("footerWhatsapp");
   if (footerWhatsapp) footerWhatsapp.href = CONFIG.WHATSAPP_URL;
+
+  const modalQtyInput = document.getElementById("modalQtyInput");
+  if (modalQtyInput) {
+    modalQtyInput.addEventListener("input", updateModalWhatsappLink);
+  }
 
   // Modal backdrop click handlers
   const productModal = document.getElementById("productModal");
@@ -875,20 +894,24 @@ const POLICIES = {
   }
 };
 
+function selectPolicyTab(policyKey) {
+  const tabs = document.querySelectorAll(".policy-tab-btn");
+  const panels = document.querySelectorAll(".policy-content-panel");
+
+  tabs.forEach(tab => {
+    tab.classList.toggle("active", tab.dataset.policy === policyKey);
+  });
+
+  panels.forEach(panel => {
+    panel.classList.toggle("active", panel.id === `policy-${policyKey}`);
+  });
+}
+
 function openPolicyModal(policyKey) {
-  const policy = POLICIES[policyKey];
-  if (!policy) return;
-
-  const modal = document.getElementById("policyModal");
-  const title = document.getElementById("policyModalTitle");
-  const body = document.getElementById("policyModalBody");
-
-  if (title) title.textContent = policy.title;
-  if (body) body.textContent = policy.content;
-
-  if (modal) {
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
+  selectPolicyTab(policyKey);
+  const policiesSec = document.getElementById("policies");
+  if (policiesSec) {
+    policiesSec.scrollIntoView({ behavior: "smooth" });
   }
 }
 
@@ -911,6 +934,7 @@ window.copyOrderFormat = copyOrderFormat;
 window.resetFilters = resetFilters;
 window.openPolicyModal = openPolicyModal;
 window.closePolicyModal = closePolicyModal;
+window.selectPolicyTab = selectPolicyTab;
 window.CONFIG = CONFIG;
 window.products = products;
 
