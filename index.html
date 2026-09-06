@@ -3,16 +3,881 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Felix Chemical Supply</title>
-    <meta name="description" content="An application built with Google AI Studio." />
-    <meta property="og:title" content="My Google AI Studio App" />
-    <meta property="og:description" content="An application built with Google AI Studio." />
+    <title>Felix Chemical Supply | Research Peptides &amp; Specialty Compounds</title>
+    <meta name="description" content="Felix Chemical Supply provides a structured catalog of research peptides, specialty compounds, and laboratory materials with clear product and ordering information." />
+    
+    <!-- Open Graph SEO Metadata -->
+    <meta property="og:title" content="Felix Chemical Supply | Research Peptides &amp; Specialty Compounds" />
+    <meta property="og:description" content="Structured catalog of research peptides, specialty compounds, and laboratory materials with clear product and ordering information." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Outfit (Display), Plus Jakarta Sans (Body), JetBrains Mono (Codes) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="lab-grid-bg">
+    <!-- Scroll Progress Indicator -->
+    <div id="scrollProgress"></div>
+
+    <!-- Promo Bar -->
+    <div class="promo-bar">
+      <div class="promo-badge">
+        <span class="status-dot"></span>
+        <span>CNY PROMO — ALL ORDERS FREE SHIPPING</span>
+      </div>
+    </div>
+
+    <!-- Top Sticky Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="container nav-container">
+        <a href="#hero" class="brand-logo" aria-label="Felix Chemical Supply Home">
+          <div class="brand-icon-wrapper">
+            <!-- Vector Double Helix Emblem -->
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="100" r="90" stroke="#0284c7" stroke-width="8" />
+              <path d="M 68 55 C 68 35, 100 28, 100 28 C 100 28, 132 35, 132 55 C 132 75, 100 95, 100 100" stroke="#06b6d4" stroke-width="8" stroke-linecap="round" />
+              <path d="M 100 100 C 100 105, 68 125, 68 145 C 68 165, 100 172, 100 172 C 100 172, 132 165, 132 145 C 132 125, 100 105, 100 100" stroke="#0284c7" stroke-width="8" stroke-linecap="round" />
+              <line x1="78" y1="42" x2="122" y2="42" stroke="#0284c7" stroke-width="6" stroke-linecap="round" />
+              <line x1="73" y1="55" x2="127" y2="55" stroke="#06b6d4" stroke-width="6" stroke-linecap="round" />
+              <line x1="77" y1="68" x2="123" y2="68" stroke="#0284c7" stroke-width="6" stroke-linecap="round" />
+              <line x1="77" y1="132" x2="123" y2="132" stroke="#0284c7" stroke-width="6" stroke-linecap="round" />
+              <line x1="73" y1="145" x2="127" y2="145" stroke="#06b6d4" stroke-width="6" stroke-linecap="round" />
+              <line x1="78" y1="158" x2="122" y2="158" stroke="#0284c7" stroke-width="6" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div>
+            <div class="brand-title">FELIX</div>
+            <span class="brand-subtitle">Chemical Supply</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#catalog" class="nav-link">Catalog</a></li>
+          <li><a href="#ordering" class="nav-link">Ordering</a></li>
+          <li><a href="#shipping" class="nav-link">Shipping</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#catalog" class="btn btn-primary btn-sm">View Catalog</a>
+          <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <span class="status-dot"></span>
+              CNY PROMO — FREE SHIPPING
+            </div>
+            <h1 class="hero-title">
+              Felix Chemical <span>Supply</span>
+            </h1>
+            <p class="hero-subheadline">
+              Research-grade peptides and specialty compounds, presented with clarity, transparency, and a better ordering experience.
+            </p>
+            <div class="hero-actions">
+              <a href="#catalog" class="btn btn-primary btn-lg">Explore Catalog</a>
+              <a href="#contact" class="btn btn-secondary btn-lg">Contact Felix</a>
+            </div>
+            <div class="trust-line">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <span>USA Warehouse • Research Materials • Clear Product Information</span>
+            </div>
+          </div>
+
+          <div class="hero-visual-card">
+            <img src="assets/felix-hero.svg" alt="Felix Chemical Supply high-tech research peptides specimen display" loading="lazy" />
+            <div class="hero-visual-overlay">
+              <div>
+                <div class="hero-spec-tag">// SPECIMEN ARCHITECTURE</div>
+                <div class="hero-spec-sub">Lyophilized Formulations &amp; Analytical Materials</div>
+              </div>
+              <span class="product-category-tag">Verified Stock</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Factual Stats Strip -->
+      <section class="stats-strip">
+        <div class="container stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-num">31+</div>
+              <div class="stat-label">Catalog Offerings</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-num">USA</div>
+              <div class="stat-label">Domestic Warehouse</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-num">24–48h</div>
+              <div class="stat-label">Fulfillment Processing</div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div>
+              <div class="stat-num">Direct</div>
+              <div class="stat-label">Researcher Inquiries</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Section -->
+      <section class="featured-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">Key Inventory</span>
+            <h2 class="section-title">Featured Research Materials</h2>
+            <p class="section-desc">Selected peptides and biological regulators frequently requested for laboratory investigation.</p>
+          </div>
+          <div class="featured-scroll-container" id="featuredScroll">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Catalog Section -->
+      <section class="catalog-section" id="catalog">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">Structured Inventory</span>
+            <h2 class="section-title">Research Catalog</h2>
+            <p class="section-desc">Browse our current selection of peptides, compounds, blends, and research materials.</p>
+          </div>
+
+          <!-- Catalog Controls: Search, Sort & Dynamic Chips -->
+          <div class="catalog-controls">
+            <div class="search-sort-bar">
+              <div class="search-input-wrap">
+                <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input 
+                  type="text" 
+                  id="catalogSearch" 
+                  class="search-input" 
+                  placeholder="Search materials (e.g., 'reta', 'tirz', 'blend', 'ghk')..." 
+                  aria-label="Search catalog materials"
+                />
+              </div>
+
+              <select id="catalogSort" class="sort-select" aria-label="Sort product catalog">
+                <option value="name-asc">Sort: Name (A–Z)</option>
+                <option value="name-desc">Sort: Name (Z–A)</option>
+                <option value="category">Sort: Category</option>
+              </select>
+            </div>
+
+            <!-- Dynamic Category Chips -->
+            <div class="filter-chips" id="filterChips">
+              <button class="chip-btn active" data-filter="All">All</button>
+              <button class="chip-btn" data-filter="Peptides">Peptides</button>
+              <button class="chip-btn" data-filter="Blends">Blends</button>
+              <button class="chip-btn" data-filter="Biological Regulators">Biological Regulators</button>
+              <button class="chip-btn" data-filter="Research Materials">Research Materials</button>
+              <button class="chip-btn" data-filter="Raw Materials">Raw Materials</button>
+            </div>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="product-grid" id="productGrid">
+            <!-- Populated dynamically by app.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Felix Section -->
+      <section class="why-section">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">Our Principles</span>
+            <h2 class="section-title">Why Felix Chemical Supply</h2>
+            <p class="section-desc">Designed from the ground up for clarity, precision, and dependable communication.</p>
+          </div>
+
+          <div class="why-grid">
+            <div class="why-card">
+              <div class="why-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <h3 class="why-card-title">Clear Information</h3>
+              <p class="why-card-text">Straightforward product and ordering information presented without inflated marketing rhetoric or ambiguity.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="why-card-title">Responsive Support</h3>
+              <p class="why-card-text">Contact Felix when you need direct assistance with an inventory inquiry or logistics confirmation.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+              </div>
+              <h3 class="why-card-title">Shipping Information</h3>
+              <p class="why-card-text">Clear explanation of shipping timelines, warehouse handling, and carrier tracking procedures.</p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-card-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="12 6 12 12 16 14"></polygon>
+                </svg>
+              </div>
+              <h3 class="why-card-title">Research-Focused Catalog</h3>
+              <p class="why-card-text">A structured catalog designed intentionally for efficient research-material discovery and documentation.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USA Warehouse Ordering Information Section -->
+      <section class="ordering-section" id="ordering">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">Warehouse Logistics</span>
+            <h2 class="section-title">USA Warehouse — Ordering Information</h2>
+            <p class="section-desc">Review our standardized preparation and processing workflow prior to dispatch.</p>
+          </div>
+
+          <div class="accordion-wrap">
+            <!-- 01 Payment Preparation -->
+            <div class="accordion-item active">
+              <button class="accordion-header">
+                <span><span class="accordion-num">01</span> Payment Preparation</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  Please make sure your selected payment method is ready before submitting an order inquiry. Confirming your allocation beforehand ensures prompt processing upon invoice creation.
+                </div>
+              </div>
+            </div>
+
+            <!-- 02 Order Processing -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span><span class="accordion-num">02</span> Order Processing</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  Orders are processed in the order in which they are received. Domestic warehouse inventory is queued systematically to guarantee accuracy and consistent turnaround.
+                </div>
+              </div>
+            </div>
+
+            <!-- 03 Tracking Information -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span><span class="accordion-num">03</span> Tracking Information</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  Tracking information is normally provided after the order has been processed. Please allow sufficient time for warehouse processing and carrier pickup.
+                </div>
+              </div>
+            </div>
+
+            <!-- 04 Shipping Information -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span><span class="accordion-num">04</span> Shipping Information Verification</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  Customers must carefully verify all recipient details before confirming dispatch:
+                  <ul style="margin: 8px 0 8px 20px;">
+                    <li>Full Legal Name / Department Contact</li>
+                    <li>Complete Physical Shipping Address (No unverified drop boxes)</li>
+                    <li>City, State, and ZIP Code</li>
+                    <li>Active Phone Number for carrier delivery updates</li>
+                  </ul>
+                  Customers are responsible for ensuring shipping information is accurate.
+                </div>
+              </div>
+            </div>
+
+            <!-- 05 Order Information Format -->
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span><span class="accordion-num">05</span> Order Information Format (Example)</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">
+                  <p>When communicating an inquiry or confirmed settlement, you may provide the details in the following format. Note that this is an example format and not a request for unnecessary sensitive information:</p>
+                  <div class="format-box">
+Name:
+Address:
+City:
+State:
+ZIP:
+Phone:
+Product:
+Quantity:
+Order Total:
+Payment Method: USDT / USDC (ERC20)
+Transaction ID / Hash:
+                    <button class="btn btn-secondary btn-sm copy-format-btn" onclick="copyOrderFormat()">Copy Template</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment Information Section -->
+      <section class="payment-section" id="payment">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">Settlement Protocol</span>
+            <h2 class="section-title">Payment Information</h2>
+            <p class="section-desc">Transparent transaction guidelines and network parameters.</p>
+          </div>
+
+          <div class="payment-grid">
+            <div class="payment-card">
+              <div>
+                <div class="crypto-pill-row">
+                  <span class="crypto-pill">USDT / USDC</span>
+                  <span class="crypto-pill">Network: ETH (ERC20)</span>
+                </div>
+                <h3 style="font-size:1.15rem;margin-bottom:8px;">Designated Settlement Address</h3>
+                <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:12px;">
+                  Send only supported tokens via the Ethereum (ERC20) mainnet. Sending unsupported tokens or networks will result in permanent loss.
+                </p>
+                <div class="address-box">
+                  <span class="address-text" id="paymentAddressText">0xfAc5677671a5479C8b7ec06d32dE81120431C50e</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:10px;margin-top:16px;">
+                <button class="btn btn-primary" id="copyAddressBtn" onclick="copyPaymentAddress()">
+                  Copy Address
+                </button>
+                <a href="#contact" class="btn btn-secondary">Contact Felix</a>
+              </div>
+            </div>
+
+            <!-- Payment Safety Notice -->
+            <div class="payment-warning-card">
+              <div>
+                <div class="warning-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                  Important Payment Notice
+                </div>
+                <p class="warning-text">
+                  Always verify the current payment instructions directly with Felix Chemical Supply before sending funds. Cryptocurrency transactions are generally irreversible. Never rely solely on payment information received from an unverified third party.
+                </p>
+              </div>
+              <div>
+                <a href="#contact" class="btn btn-primary" style="background:#b45309;border-color:#b45309;">
+                  Verify Before Paying
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Domestic U.S. Shipping Section -->
+      <section class="shipping-section" id="shipping">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">Transit &amp; Delivery</span>
+            <h2 class="section-title">Domestic U.S. Shipping</h2>
+            <p class="section-desc">USA Warehouse orders, where available and legally permitted, are intended for domestic U.S. delivery.</p>
+          </div>
+
+          <div class="shipping-steps-grid">
+            <div class="shipping-step-card">
+              <div class="step-num">01</div>
+              <h3 class="step-title">Order / Inquiry</h3>
+              <p class="step-desc">Researcher specifies requested item, quantity, and verified shipping destination via formal inquiry.</p>
+            </div>
+
+            <div class="shipping-step-card">
+              <div class="step-num">02</div>
+              <h3 class="step-title">Processing</h3>
+              <p class="step-desc">Warehouse staff verifies packaging integrity, temperature precautions, and prepares domestic dispatch.</p>
+            </div>
+
+            <div class="shipping-step-card">
+              <div class="step-num">03</div>
+              <h3 class="step-title">Tracking</h3>
+              <p class="step-desc">Standard carrier tracking details are generated and provided directly to the inquiry contact.</p>
+            </div>
+          </div>
+
+          <div class="carrier-notice-card">
+            <strong>Carrier Support Notice:</strong> If a delivery problem occurs, contact the carrier first with your tracking number. If sender action is required, contact Felix customer service with the relevant order and tracking information.
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Service & Inquiry Section -->
+      <section class="service-section" id="contact">
+        <div class="container service-grid">
+          <!-- Direct Support Details -->
+          <div class="direct-contact-card">
+            <span class="section-tag">Direct Assistance</span>
+            <h2 style="font-size:1.85rem;margin-bottom:8px;">Need Assistance?</h2>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.6;margin-bottom:18px;">
+              Our team is available to help with product information, order inquiries, and shipping questions.
+            </p>
+
+            <div style="font-size:0.82rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;">
+              FCS Customer Service
+            </div>
+            <div class="phone-display">+1 209 271 8485</div>
+
+            <div class="contact-channels">
+              <a href="sms:+12092718485" class="btn btn-primary" id="textFelixBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Text Felix
+              </a>
+              <a href="#" class="btn btn-secondary" id="telegramOrderBtn" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Telegram Order
+              </a>
+              <a href="#" class="btn btn-secondary" id="whatsappOrderBtn" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                WhatsApp Order
+              </a>
+            </div>
+          </div>
+
+          <!-- Modern Inquiry Form -->
+          <div class="inquiry-form-card" id="inquiry">
+            <h3 style="font-size:1.4rem;margin-bottom:6px;">Submit Research Inquiry</h3>
+            <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:24px;">Complete the form below to request catalog specifications or batch availability.</p>
+
+            <form id="inquiryForm">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label class="form-label" for="formName">Full Name *</label>
+                  <input type="text" id="formName" name="name" class="form-input" placeholder="Dr. Jane Doe" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formEmail">Email Address *</label>
+                  <input type="email" id="formEmail" name="email" class="form-input" placeholder="name@laboratory.org" required />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formPhone">Phone Number</label>
+                  <input type="tel" id="formPhone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formCountry">Country</label>
+                  <input type="text" id="formCountry" name="country" class="form-input" value="United States" />
+                </div>
+
+                <div class="form-group col-span-2">
+                  <label class="form-label" for="formProduct">Requested Product *</label>
+                  <select id="formProduct" name="product" class="form-select" required>
+                    <!-- Populated dynamically -->
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="formQuantity">Quantity</label>
+                  <input type="number" id="formQuantity" name="quantity" class="form-input" value="1" min="1" />
+                </div>
+
+                <div class="form-group col-span-2">
+                  <label class="form-label" for="formMessage">Inquiry Details / Laboratory Affiliation</label>
+                  <textarea id="formMessage" name="message" class="form-textarea" placeholder="Specify research context or delivery questions..."></textarea>
+                </div>
+
+                <div class="form-group col-span-2">
+                  <div id="formEndpointNotice" style="display:none;background:#f1f5f9;border:1px solid #cbd5e1;border-radius:var(--radius-sm);padding:12px;font-size:0.85rem;color:#475569;margin-bottom:12px;">
+                    Your inquiry form is ready, but the website owner must connect a form endpoint before submissions can be sent. Please use text or direct messaging channels in the meantime.
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Submit Inquiry</button>
+                  <span class="form-hint" style="text-align:center;margin-top:8px;display:block;">
+                    Submitting an inquiry does not constitute a completed transaction.
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <div class="section-header text-center">
+            <span class="section-tag">Common Inquiries</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-desc">Factual answers regarding research materials, logistics, and settlement.</p>
+          </div>
+
+          <div class="accordion-wrap">
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>1. How do I place an inquiry?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">You may browse the catalog, select your items, and submit an inquiry through the online inquiry form, or contact Felix directly via SMS, Telegram, or WhatsApp with your required product names and quantities.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>2. What payment methods are supported?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">Supported settlement methods currently include USDT and USDC. All cryptocurrency transactions must be confirmed directly with Felix prior to transmission.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>3. Which network is supported for USDT/USDC?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">The Ethereum mainnet (ERC20) is supported. Always verify the current recipient address directly with customer service before transmitting funds.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>4. How long does processing take?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">Orders are processed in the order received, typically within 24 to 48 business hours, contingent upon inventory allocation and verified recipient details.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>5. How is tracking provided?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">Carrier tracking numbers are transmitted directly via SMS or your registered contact channel once the shipment has been packed and collected by the carrier.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>6. What information should I provide for shipping?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">Please provide full recipient name, complete physical shipping address, city, state, ZIP code, and an active contact telephone number for delivery notifications.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>7. What should I do if my package has a delivery issue?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">If a delivery problem occurs, contact the carrier first with your tracking number. If sender action is required, contact Felix customer service with your relevant order and tracking information.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>8. Are these products intended for human consumption?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">No. All materials are strictly intended for laboratory and in-vitro scientific research where permitted by law. They are not for human consumption, medical diagnosis, or therapeutic use.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>9. How can I contact Felix?</span>
+                <svg class="accordion-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </button>
+              <div class="accordion-body">
+                <div class="accordion-content">You can reach Felix customer service via telephone or SMS at +1 209 271 8485, or connect via our designated Telegram and WhatsApp inquiry channels.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Legal & Compliance Section -->
+      <section class="compliance-section">
+        <div class="container">
+          <div class="compliance-box">
+            <div class="compliance-title">Important Compliance Notice</div>
+            <p class="compliance-text">
+              Products displayed on this website may be intended for research or laboratory use only. Product status and permitted uses vary by jurisdiction. Nothing on this website constitutes medical advice, a recommendation for human use, or a claim of therapeutic efficacy. Customers are responsible for determining whether purchase, possession, importation, exportation, or use of any product is lawful in their jurisdiction.
+            </p>
+            <div class="policy-links-row">
+              <button class="policy-link-btn" onclick="openPolicyModal('terms')">Terms of Service</button>
+              <button class="policy-link-btn" onclick="openPolicyModal('privacy')">Privacy Policy</button>
+              <button class="policy-link-btn" onclick="openPolicyModal('shipping')">Shipping Policy</button>
+              <button class="policy-link-btn" onclick="openPolicyModal('refund')">Refund Policy</button>
+              <button class="policy-link-btn" onclick="openPolicyModal('disclaimer')">Research-Use Disclaimer</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-title">FELIX CHEMICAL SUPPLY</div>
+            <p class="footer-brand-tagline">"Research materials. Clear information. Better service."</p>
+            <p style="color:#64748b;font-size:0.82rem;line-height:1.6;">
+              Providing laboratory researchers with transparent specifications and domestic fulfillment workflows.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Explore</h4>
+            <ul class="footer-links">
+              <li><a href="#catalog" class="footer-link">Catalog</a></li>
+              <li><a href="#ordering" class="footer-link">Ordering</a></li>
+              <li><a href="#shipping" class="footer-link">Shipping</a></li>
+              <li><a href="#faq" class="footer-link">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Support</h4>
+            <ul class="footer-links">
+              <li><a href="#contact" class="footer-link">Contact (+1 209 271 8485)</a></li>
+              <li><a href="#" id="footerTelegram" class="footer-link" target="_blank" rel="noopener noreferrer">Telegram</a></li>
+              <li><a href="#" id="footerWhatsapp" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-col-title">Legal</h4>
+            <ul class="footer-links">
+              <li><button class="footer-link" style="background:none;border:none;padding:0;cursor:pointer;" onclick="openPolicyModal('terms')">Terms</button></li>
+              <li><button class="footer-link" style="background:none;border:none;padding:0;cursor:pointer;" onclick="openPolicyModal('privacy')">Privacy</button></li>
+              <li><button class="footer-link" style="background:none;border:none;padding:0;cursor:pointer;" onclick="openPolicyModal('disclaimer')">Disclaimer</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 Felix Chemical Supply. All rights reserved.</div>
+          <div>Research-use disclaimer applies where applicable.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="productModal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h3 class="modal-title" id="modalProductTitle">Product Detail</h3>
+          <button class="modal-close-btn" onclick="closeProductModal()" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div style="font-size:0.85rem;font-weight:700;color:var(--cyan-primary);margin-bottom:8px;" id="modalProductMeta">
+            Category • Quantity
+          </div>
+          <p style="font-size:0.95rem;color:var(--text-secondary);margin-bottom:14px;" id="modalProductDesc">
+            Product neutral description
+          </p>
+
+          <div style="font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--text-muted);background:var(--bg-muted);padding:8px 12px;border-radius:var(--radius-sm);margin-bottom:14px;" id="modalProductBatch">
+            Batch: FLX-2026-US
+          </div>
+
+          <div class="modal-disclaimer-box">
+            <strong>Notice:</strong> For research/laboratory use only where applicable. Not for human consumption. Buyers are responsible for complying with all applicable laws and regulations.
+          </div>
+
+          <div style="margin-top:16px;">
+            <label style="font-size:0.85rem;font-weight:600;display:block;margin-bottom:6px;">Select Inquiry Quantity</label>
+            <div class="quantity-control">
+              <button class="qty-btn" onclick="changeModalQty(-1)">-</button>
+              <input type="number" id="modalQtyInput" class="qty-input" value="1" min="1" max="999" />
+              <button class="qty-btn" onclick="changeModalQty(1)">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="closeProductModal()">Close</button>
+          <button class="btn btn-primary" onclick="confirmModalInquiry()">Request Information</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Modal -->
+    <div class="modal-overlay" id="policyModal">
+      <div class="modal-window">
+        <div class="modal-header">
+          <h3 class="modal-title" id="policyModalTitle">Policy</h3>
+          <button class="modal-close-btn" onclick="closePolicyModal()" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.7;" id="policyModalBody"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" onclick="closePolicyModal()">I Understand</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Order Assistant -->
+    <button class="floating-assistant-btn" id="assistantBtn" aria-label="Open assistance panel">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      Need Help?
+    </button>
+
+    <div class="assistant-panel" id="assistantPanel">
+      <div class="assistant-panel-header">
+        <span style="font-weight:700;font-size:0.95rem;">Order Assistant</span>
+        <button onclick="document.getElementById('assistantPanel').classList.remove('active')" style="color:#94a3b8;font-size:18px;">&times;</button>
+      </div>
+      <div class="assistant-panel-body">
+        <a href="#contact" class="btn btn-secondary btn-sm" onclick="document.getElementById('assistantPanel').classList.remove('active')">
+          Contact Felix (+1 209 271 8485)
+        </a>
+        <a href="#" id="drawerTelegram" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+          Telegram Channel
+        </a>
+        <a href="#" id="drawerWhatsapp" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">
+          WhatsApp Direct
+        </a>
+        <a href="#shipping" class="btn btn-cyan-outline btn-sm" onclick="document.getElementById('assistantPanel').classList.remove('active')">
+          Shipping Procedures
+        </a>
+        <a href="#faq" class="btn btn-cyan-outline btn-sm" onclick="document.getElementById('assistantPanel').classList.remove('active')">
+          View FAQ
+        </a>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer"></div>
+
+    <!-- JavaScript Application Code -->
+    <script src="./app.js"></script>
   </body>
 </html>
-
