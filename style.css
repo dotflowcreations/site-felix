@@ -150,6 +150,64 @@ input, select, textarea {
 }
 
 /* ==========================================================================
+   TOP DISCLAIMER BANNER (Exact text from felixchem.is)
+   ========================================================================== */
+.top-disclaimer-banner {
+  background: var(--fx-navy);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(94, 178, 230, 0.3);
+  position: relative;
+  z-index: 105;
+}
+
+.disclaimer-banner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: left;
+}
+
+.disclaimer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(94, 178, 230, 0.18);
+  border: 1px solid var(--fx-primary);
+  color: var(--fx-primary);
+  padding: 3px 9px;
+  border-radius: var(--radius-xs);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.disclaimer-text-lead {
+  color: #d8e5f2;
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.disclaimer-text-lead strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .disclaimer-banner-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+/* ==========================================================================
    HEADER & NAVIGATION BAR (felixchem.is theme)
    ========================================================================== */
 .site-header {
@@ -778,6 +836,109 @@ input, select, textarea {
   font-size: 0.95rem;
 }
 
+.payment-badge {
+  display: inline-block;
+  background: rgba(94, 178, 230, 0.15);
+  color: var(--fx-navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 10px;
+  border: 1px solid var(--fx-border);
+}
+
+.crypto-tabs-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.crypto-tab-btn {
+  background: var(--fx-bg-subtle);
+  border: 2px solid var(--fx-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: left;
+}
+
+.crypto-tab-btn:hover {
+  border-color: var(--fx-primary);
+  background: #ffffff;
+}
+
+.crypto-tab-btn.active {
+  background: #ffffff;
+  border-color: var(--fx-primary);
+  box-shadow: 0 4px 12px rgba(94, 178, 230, 0.18);
+}
+
+.tab-crypto-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.eth-badge {
+  background: rgba(94, 178, 230, 0.18);
+  color: var(--fx-navy);
+}
+
+.btc-badge {
+  background: rgba(247, 147, 26, 0.18);
+  color: #b36300;
+}
+
+.sol-badge {
+  background: rgba(20, 241, 149, 0.18);
+  color: #0b8058;
+}
+
+.tab-crypto-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--fx-navy);
+}
+
+.network-badge {
+  background: var(--fx-primary);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.address-sub-notice {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--fx-text-sub);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 768px) {
+  .crypto-tabs-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
 .payment-details-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1199,3 +1360,513 @@ input, select, textarea {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   TOP DISCLAIMER DRAWER & TOGGLE (Exact felixchem.is styling)
+   ========================================================================== */
+.btn-toggle-disclaimer {
+  background: rgba(94, 178, 230, 0.15);
+  border: 1px solid var(--fx-primary);
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.btn-toggle-disclaimer:hover {
+  background: var(--fx-primary);
+  color: #ffffff;
+}
+
+.top-disclaimer-drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+  border-top: 1px dashed rgba(94, 178, 230, 0.2);
+  margin-top: 8px;
+  padding-top: 0;
+}
+
+.top-disclaimer-drawer.open {
+  max-height: 600px;
+  opacity: 1;
+  padding-top: 12px;
+}
+
+.top-disclaimer-drawer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #cbdbee;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.top-disclaimer-drawer-inner p {
+  margin: 0;
+}
+
+.top-disclaimer-drawer-inner p.lead-bold {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   DEDICATED COMPLIANCE & DISCLAIMER SECTION (Exact felixchem.is Format)
+   ========================================================================== */
+.compliance-section {
+  margin-bottom: 36px;
+}
+
+.compliance-card {
+  background: #ffffff;
+  border: 1px solid var(--fx-border);
+  border-left: 5px solid var(--fx-primary);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.compliance-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--fx-border);
+  flex-wrap: wrap;
+}
+
+.compliance-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.compliance-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(94, 178, 230, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fx-navy);
+  flex-shrink: 0;
+}
+
+.compliance-main-heading {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--fx-navy);
+  margin: 0;
+}
+
+.compliance-sub-heading {
+  font-size: 0.82rem;
+  color: var(--fx-text-sub);
+  margin: 0;
+}
+
+.cfr-badge {
+  background: var(--fx-bg-subtle);
+  border: 1px solid var(--fx-border);
+  color: var(--fx-navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.03em;
+}
+
+.compliance-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--fx-text-title);
+}
+
+.compliance-paragraph {
+  margin: 0;
+}
+
+.compliance-bold {
+  font-weight: 700;
+  color: var(--fx-navy);
+}
+
+.compliance-citation {
+  font-style: italic;
+  color: var(--fx-text-sub);
+  background: var(--fx-bg-subtle);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--fx-primary);
+  margin-top: 4px;
+}
+
+/* ==========================================================================
+   PRODUCT CARD RICH DETAILS & PRICE (felixchem.is Exact Details)
+   ========================================================================== */
+.card-title-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.card-title-price-row .product-name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--fx-navy);
+}
+
+.product-price-tag {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--fx-primary);
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.card-sub-specs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.sku-badge {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--fx-text-muted);
+  background: var(--fx-bg-subtle);
+  padding: 2px 7px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--fx-border);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.spec-pills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+  padding: 10px;
+  background: var(--fx-bg-subtle);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--fx-border);
+}
+
+.spec-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.78rem;
+  color: var(--fx-navy);
+  font-weight: 500;
+}
+
+.spec-pill svg {
+  color: var(--fx-primary);
+  flex-shrink: 0;
+}
+
+.card-footer-block {
+  margin-top: 14px;
+}
+
+.card-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.btn-card-specs {
+  background: #ffffff;
+  color: var(--fx-navy);
+  border: 1px solid var(--fx-border);
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-card-specs:hover {
+  background: var(--fx-bg-subtle);
+  border-color: var(--fx-primary);
+  color: var(--fx-primary);
+}
+
+.btn-card-inquire-full {
+  width: 100%;
+  background: var(--fx-bg-subtle);
+  color: var(--fx-text-sub);
+  border: 1px dashed var(--fx-border);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.btn-card-inquire-full:hover {
+  background: #ffffff;
+  color: var(--fx-navy);
+  border-color: var(--fx-border-dark);
+}
+
+/* ==========================================================================
+   PRODUCT DETAIL MODAL (Exact Reconstitution, Storage & 21CFR Guidance)
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 46, 81, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-container {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  max-width: 650px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(17, 46, 81, 0.25);
+  border: 1px solid var(--fx-border);
+  position: relative;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--fx-border);
+  background: #ffffff;
+  color: var(--fx-navy);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background: var(--fx-bg-subtle);
+  color: var(--fx-primary);
+}
+
+.modal-product-header {
+  padding: 24px 28px 16px;
+  border-bottom: 1px solid var(--fx-border);
+}
+
+.modal-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.modal-product-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--fx-navy);
+  margin: 0 0 8px;
+  padding-right: 32px;
+}
+
+.modal-product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.modal-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--fx-primary);
+}
+
+.modal-quantity-tag {
+  font-size: 0.9rem;
+  color: var(--fx-text-sub);
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 20px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-section-box {
+  background: var(--fx-bg-subtle);
+  border: 1px solid var(--fx-border);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+}
+
+.modal-section-heading {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--fx-navy);
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.modal-desc-text {
+  font-size: 0.92rem;
+  color: var(--fx-text-title);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.modal-specs-table {
+  border: 1px solid var(--fx-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.modal-spec-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  padding: 10px 16px;
+  font-size: 0.86rem;
+  border-bottom: 1px solid var(--fx-border);
+}
+
+.modal-spec-row:last-child {
+  border-bottom: none;
+}
+
+.modal-spec-row:nth-child(even) {
+  background: #fafcff;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: var(--fx-text-sub);
+}
+
+.spec-value {
+  color: var(--fx-navy);
+  font-weight: 500;
+}
+
+.modal-compliance-box {
+  background: #fdfaf3;
+  border: 1px solid #f1ddb0;
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #7a5100;
+}
+
+.modal-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.btn-modal-whatsapp {
+  background: var(--fx-primary);
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-modal-whatsapp:hover {
+  background: var(--fx-primary-hover);
+  color: #ffffff;
+}
+
+.btn-modal-inquire {
+  background: #ffffff;
+  color: var(--fx-navy);
+  border: 1px solid var(--fx-border);
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-modal-inquire:hover {
+  background: var(--fx-bg-subtle);
+  border-color: var(--fx-border-dark);
+}
+
+@media (max-width: 600px) {
+  .modal-spec-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .modal-actions-row {
+    grid-template-columns: 1fr;
+  }
+}
+
