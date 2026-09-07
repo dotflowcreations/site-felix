@@ -150,13 +150,13 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   TOP DISCLAIMER BANNER (Exact text from felixchem.is)
+   TOP DISCLAIMER BANNER (Exact styling & text from felixchem.is)
    ========================================================================== */
 .top-disclaimer-banner {
-  background: var(--fx-navy);
-  color: #ffffff;
-  padding: 10px 16px;
-  border-bottom: 1px solid rgba(94, 178, 230, 0.3);
+  background: #ffffff;
+  color: #000000;
+  padding: 5px 16px;
+  border-bottom: 1px solid #e5e7eb;
   position: relative;
   z-index: 105;
 }
@@ -167,35 +167,39 @@ input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
+  gap: 10px;
   text-align: left;
 }
 
 .disclaimer-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(94, 178, 230, 0.18);
-  border: 1px solid var(--fx-primary);
-  color: var(--fx-primary);
-  padding: 3px 9px;
+  gap: 5px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #111827;
+  padding: 2px 7px;
   border-radius: var(--radius-xs);
-  font-size: 0.72rem;
+  font-size: 0.67rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   flex-shrink: 0;
 }
 
+.disclaimer-badge svg {
+  color: #111827;
+}
+
 .disclaimer-text-lead {
-  color: #d8e5f2;
+  color: #111827;
   margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.45;
+  font-size: 0.72rem;
+  line-height: 1.38;
 }
 
 .disclaimer-text-lead strong {
-  color: #ffffff;
+  color: #000000;
   font-weight: 700;
 }
 
@@ -1366,25 +1370,30 @@ input, select, textarea {
    TOP DISCLAIMER DRAWER & TOGGLE (Exact felixchem.is styling)
    ========================================================================== */
 .btn-toggle-disclaimer {
-  background: rgba(94, 178, 230, 0.15);
-  border: 1px solid var(--fx-primary);
-  color: #ffffff;
-  font-size: 0.76rem;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #111827;
+  font-size: 0.69rem;
   font-weight: 600;
-  padding: 4px 10px;
+  padding: 2px 8px;
   border-radius: var(--radius-xs);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   transition: var(--transition);
   white-space: nowrap;
   margin-left: auto;
 }
 
 .btn-toggle-disclaimer:hover {
-  background: var(--fx-primary);
-  color: #ffffff;
+  background: #f3f4f6;
+  border-color: #9ca3af;
+  color: #000000;
+}
+
+.btn-toggle-disclaimer svg {
+  stroke: #111827;
 }
 
 .top-disclaimer-drawer {
@@ -1392,26 +1401,28 @@ input, select, textarea {
   overflow: hidden;
   transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
   opacity: 0;
-  border-top: 1px dashed rgba(94, 178, 230, 0.2);
-  margin-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+  margin-top: 6px;
   padding-top: 0;
+  border-radius: var(--radius-xs);
 }
 
 .top-disclaimer-drawer.open {
   max-height: 600px;
   opacity: 1;
-  padding-top: 12px;
+  padding: 10px 14px;
 }
 
 .top-disclaimer-drawer-inner {
   max-width: 1200px;
   margin: 0 auto;
-  font-size: 0.78rem;
-  line-height: 1.6;
-  color: #cbdbee;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #374151;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .top-disclaimer-drawer-inner p {
@@ -1419,7 +1430,7 @@ input, select, textarea {
 }
 
 .top-disclaimer-drawer-inner p.lead-bold {
-  color: #ffffff;
+  color: #000000;
   font-weight: 700;
 }
 
