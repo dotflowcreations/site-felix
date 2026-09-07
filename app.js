@@ -9231,3 +9231,80 @@ function showToast(message, type = "info") {
     }, 300);
   }, 3500);
 }
+
+// ==========================================
+// COMPLIANCE DISCLAIMER POP-OUT MENU & MODAL
+// ==========================================
+window.toggleComplianceDrawer = function(area) {
+  const drawerId = area === "order" ? "complianceDrawerOrder" : "complianceDrawerCatalog";
+  const btnId = area === "order" ? "btnToggleOrderCompliance" : "btnToggleCatalogCompliance";
+  
+  const drawer = document.getElementById(drawerId);
+  const btn = document.getElementById(btnId);
+  if (!drawer || !btn) return;
+
+  const isHidden = drawer.style.display === "none" || !drawer.classList.contains("open");
+  if (isHidden) {
+    drawer.style.display = "block";
+    requestAnimationFrame(() => {
+      drawer.classList.add("open");
+    });
+    btn.setAttribute("aria-expanded", "true");
+    btn.classList.add("active");
+    const statusText = btn.querySelector(".toggle-text-status");
+    if (statusText) statusText.textContent = "Close Disclaimer Menu";
+  } else {
+    drawer.classList.remove("open");
+    drawer.style.display = "none";
+    btn.setAttribute("aria-expanded", "false");
+    btn.classList.remove("active");
+    const statusText = btn.querySelector(".toggle-text-status");
+    if (statusText) statusText.textContent = "View Terms & Disclaimer";
+  }
+};
+
+window.openComplianceModal = function() {
+  const modal = document.getElementById("complianceModal");
+  if (modal) {
+    modal.classList.add("active");
+    document.body.classList.add("modal-open");
+  }
+};
+
+window.closeComplianceModal = function() {
+  const modal = document.getElementById("complianceModal");
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-open");
+  }
+};
+
+// Modal backdrop and escape key listeners for compliance modal
+const complianceModalEl = document.getElementById("complianceModal");
+if (complianceModalEl) {
+  complianceModalEl.addEventListener("click", (e) => {
+    if (e.target === complianceModalEl) {
+      closeComplianceModal();
+    }
+  });
+}
+
+// Top disclaimer toggle button listener
+const topToggleBtn = document.getElementById("toggleDisclaimerBtn");
+const topDrawer = document.getElementById("topDisclaimerFull");
+if (topToggleBtn && topDrawer) {
+  topToggleBtn.addEventListener("click", () => {
+    const isExpanded = topToggleBtn.getAttribute("aria-expanded") === "true";
+    if (isExpanded) {
+      topDrawer.classList.remove("open");
+      topToggleBtn.setAttribute("aria-expanded", "false");
+      const span = topToggleBtn.querySelector("span");
+      if (span) span.textContent = "View Full Regulatory & 21CFR Notice";
+    } else {
+      topDrawer.classList.add("open");
+      topToggleBtn.setAttribute("aria-expanded", "true");
+      const span = topToggleBtn.querySelector("span");
+      if (span) span.textContent = "Collapse Regulatory Notice";
+    }
+  });
+}
