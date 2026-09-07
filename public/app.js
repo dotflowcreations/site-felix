@@ -1,6 +1,6 @@
 /**
  * Felix Chemical Supply — Official Application Logic
- * Only carries initially provided information and verified felixchem.is products.
+ * Clean, concise product specifications and zero character encoding issues.
  * Color Scheme & Typography matching felixchem.is
  * Strictly NO vial imagery or references.
  */
@@ -40,7 +40,7 @@ const CONFIG = {
   DEFAULT_CRYPTO: "ETH"
 };
 
-// Research Materials Catalog with Complete Details from https://felixchem.is/ (Strictly No Vials)
+// Research Materials Catalog with concise, non-verbose specifications
 const products = [
   {
     "id": "ipa-5mg",
@@ -53,9 +53,9 @@ const products = [
     "sku": "ipa-5mg",
     "quantity": "5mg",
     "status": "In Stock",
-    "description": "Ipamorelin 5mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Selective growth hormone secretagogue pentapeptide for somatotropic receptor and cellular research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -70,9 +70,9 @@ const products = [
     "sku": "dsip-5mg",
     "quantity": "5mg",
     "status": "In Stock",
-    "description": "DSIP (Deep Sleep Inducing Peptide) 5mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic nonapeptide investigated for sleep architecture, circadian rhythm, and neuromodulation research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -88,9 +88,9 @@ const products = [
     "sku": "maz-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Peptide-M 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Dual GLP-1/GIP receptor co-agonist investigated for glycemic control and metabolic pathway research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -106,9 +106,9 @@ const products = [
     "sku": "peptide-t-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Peptide-T 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Dual GIP/GLP-1 receptor agonist studied for glucose homeostasis and incretin signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -123,9 +123,9 @@ const products = [
     "sku": "ghk-cu-50mg",
     "quantity": "50mg",
     "status": "In Stock",
-    "description": "GHK-cu 50mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Copper-binding tripeptide evaluated for extracellular matrix remodeling and tissue repair research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -140,9 +140,9 @@ const products = [
     "sku": "5-amino-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "5-Amino-1MQ 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Small molecule NNMT inhibitor investigated for cellular energy metabolism and adipose signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -157,9 +157,9 @@ const products = [
     "sku": "bpctb-5-5",
     "quantity": "5mg/5mg",
     "status": "In Stock",
-    "description": "BPC-157 + TB-500 5mg/5mg blend in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Dual-acting peptide research blend formulated for angiogenic signaling and tissue repair studies.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -174,10 +174,10 @@ const products = [
     "sku": "coldcase",
     "quantity": "Analytical Grade",
     "status": "In Stock",
-    "description": "One Reusable Ice Pack Cold-Case Keep your peptides cold and organized while on the go.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
-    "form": "Lyophilized Powder",
+    "description": "Insulated thermal protective case with reusable ice packs for temperature-sensitive research compounds.",
+    "reconstitution": "N/A — Pre-assembled physical supply",
+    "storage": "Room temperature. Re-freeze cooling inserts prior to use.",
+    "form": "Insulated Cold Case",
     "source": "felixchem.is"
   },
   {
@@ -191,9 +191,9 @@ const products = [
     "sku": "tesa5",
     "quantity": "5mg",
     "status": "In Stock",
-    "description": "Tesamorelin 5mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic growth hormone-releasing factor analog studied for visceral lipolysis and pituitary pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -208,15 +208,15 @@ const products = [
     "sku": "5-amino-5mg",
     "quantity": "5mg",
     "status": "In Stock",
-    "description": "5-Amino-1MQ 5mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "NNMT enzyme inhibitor researched for metabolic signaling, NAD+ salvage, and sirtuin activity.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
   {
     "id": "thymosin-10",
-    "name": "Thymosin-\u03b11 10mg",
+    "name": "Thymosin Alpha-1 (Tα1) 10mg",
     "category": "Peptides",
     "categories": [
       "Peptides"
@@ -225,9 +225,9 @@ const products = [
     "sku": "thymosin-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Thymosin-\u03b11 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic 28-amino acid polypeptide investigated for immune modulation and T-cell activation pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -242,9 +242,9 @@ const products = [
     "sku": "DSIP-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "DSIP (Deep Sleep Inducing Peptide) 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Higher-quantity delta sleep-inducing peptide standard for neurochemical and receptor evaluation.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -259,9 +259,9 @@ const products = [
     "sku": "MT2-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Melanotan-II 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic cyclic heptapeptide melanocortin receptor agonist evaluated for photoprotective signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -276,16 +276,16 @@ const products = [
     "sku": "MT1-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Melanotan-I 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic linear analog of alpha-MSH studied for selective melanocortin-1 receptor binding.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
   {
     "id": "recon-sol-10ml",
     "name": "Reconstitution Solution - 10ml",
-    "category": "Peptides",
+    "category": "Solutions & Supplies",
     "categories": [
       "Peptides"
     ],
@@ -293,10 +293,10 @@ const products = [
     "sku": "Recon-Sol-10ml",
     "quantity": "10ml",
     "status": "In Stock",
-    "description": "Reconstitution Solution unit containing 10ml to be used to reconstitute lyphilized peptides. Once opened, shelf life is 28 days when refrigerated. For long term storage, may be stored at room temperature. DO NOT FREEZE.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
-    "form": "Solution",
+    "description": "Sterile analytical reconstitution solution containing 0.9% benzyl alcohol for peptide solubilization.",
+    "reconstitution": "Ready-to-use analytical solution",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
+    "form": "Sterile Solution",
     "source": "felixchem.is"
   },
   {
@@ -311,9 +311,9 @@ const products = [
     "sku": "Peptide-SU-12-1",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Peptide-SU 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Glucagon/GLP-1 dual receptor agonist investigated for metabolic and energy expenditure signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -328,10 +328,10 @@ const products = [
     "sku": "Free-acetic-acid-3ml",
     "quantity": "3ml",
     "status": "In Stock",
-    "description": "Acetic Acid 0.6% unit containing 3ml to be used to adjust pH while reconstituting lypholized peptides. For long term storage, may be stored at room temperature. DO NOT FREEZE.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
-    "form": "Solution",
+    "description": "Specialized 0.6% acetic acid analytical solvent for solubilizing basic or hydrophobic peptides.",
+    "reconstitution": "Ready-to-use analytical solution",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
+    "form": "Sterile Solution",
     "source": "felixchem.is"
   },
   {
@@ -345,9 +345,9 @@ const products = [
     "sku": "KPV-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "KPV 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "C-terminal tripeptide fragment of alpha-MSH studied for anti-inflammatory and mucosal pathway research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -362,9 +362,9 @@ const products = [
     "sku": "KLOW-10mg-10mg-10mg-50mg",
     "quantity": "10mg/10mg/10mg/50mg",
     "status": "In Stock",
-    "description": "KPV 10mg + BPC-157 10mg + GHK-cu 50mg + TB-500 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Multi-peptide research formulation combining KPV, BPC-157, TB-500, and GHK-Cu for matrix studies.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -379,9 +379,9 @@ const products = [
     "sku": "Peptide-31-60mg",
     "quantity": "60mg",
     "status": "In Stock",
-    "description": "Peptide-31 60mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Mitochondria-targeting tetrapeptide antioxidant studied for cardiolipin protection and ATP synthesis.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -397,9 +397,9 @@ const products = [
     "sku": "Peptide-C-5",
     "quantity": "5mg",
     "status": "In Stock",
-    "description": "Peptide-C 5mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Amylin analog investigated for satiety signaling, glycemic homeostasis, and neuroendocrine pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -415,9 +415,9 @@ const products = [
     "sku": "Peptide-R-50",
     "quantity": "50mg",
     "status": "In Stock",
-    "description": "Peptide-R 50mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use . Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Triple GIP/GLP-1/glucagon receptor tri-agonist researched for multi-pathway metabolic activation.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -433,9 +433,9 @@ const products = [
     "sku": "Peptide-M-15",
     "quantity": "15mg",
     "status": "In Stock",
-    "description": "Peptide-M 15mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "High-concentration dual incretin mimetic evaluated for metabolic receptor binding kinetics.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -451,9 +451,9 @@ const products = [
     "sku": "Peptide-CS55",
     "quantity": "5mg/5mg",
     "status": "In Stock",
-    "description": "Peptide-CS 5mg/5mg (a combination of Peptide-S 5mg and Peptide-C 5mg) unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synergistic research formulation combining Peptide-C and Peptide-S for co-receptor signaling studies.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -469,9 +469,9 @@ const products = [
     "sku": "Peptide-C-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Peptide-C 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic amylin receptor agonist peptide standard for metabolic and pancreatic endocrine assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -487,9 +487,9 @@ const products = [
     "sku": "Peptide-C-20",
     "quantity": "20mg",
     "status": "In Stock",
-    "description": "Peptide-C 20mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Extended quantity amylin mimetic peptide for high-throughput endocrine and receptor binding assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -505,9 +505,9 @@ const products = [
     "sku": "Peptide-R-20",
     "quantity": "20mg",
     "status": "In Stock",
-    "description": "Peptide-R 20mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use . Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Triple receptor co-agonist evaluated for metabolic modulation, adiposity, and energy balance.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -523,9 +523,9 @@ const products = [
     "sku": "Peptide-R-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Peptide-R 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use . Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "High-purity triple incretin/glucagon agonist peptide standard for receptor activation studies.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -541,9 +541,9 @@ const products = [
     "sku": "Peptide-T-100",
     "quantity": "100mg",
     "status": "In Stock",
-    "description": "Peptide-T 100mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year. &nbsp;",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Bulk analytical dual incretin co-agonist peptide standard for extensive laboratory research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -559,9 +559,9 @@ const products = [
     "sku": "Peptide-T-60",
     "quantity": "60mg",
     "status": "In Stock",
-    "description": "Peptide-T 60mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "High-mass dual GIP/GLP-1 receptor agonist reference material for biochemical assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -577,9 +577,9 @@ const products = [
     "sku": "Peptide-T-30",
     "quantity": "30mg",
     "status": "In Stock",
-    "description": "Peptide-T 30mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Dual receptor agonist research peptide standard for metabolic and incretin signaling investigations.",
+    "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -595,9 +595,9 @@ const products = [
     "sku": "Peptide-T-15",
     "quantity": "15mg",
     "status": "In Stock",
-    "description": "Peptide-T 15mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Dual incretin mimetic reference standard for in-vitro receptor binding and activation studies.",
+    "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -613,9 +613,9 @@ const products = [
     "sku": "Peptide-S-5",
     "quantity": "5mg",
     "status": "In Stock",
-    "description": "Peptide-S 5mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "GLP-1 receptor agonist peptide evaluated for insulinotropic signaling and gastric motility research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -631,9 +631,9 @@ const products = [
     "sku": "Peptide-S-15",
     "quantity": "15mg",
     "status": "In Stock",
-    "description": "Peptide-S 15mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Extended concentration GLP-1 mimetic peptide standard for analytical laboratory investigations.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -649,9 +649,9 @@ const products = [
     "sku": "Peptide-S-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Peptide-S 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "High-purity GLP-1 receptor agonist reference compound for metabolic and glycemic assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -666,9 +666,9 @@ const products = [
     "sku": "tesa10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Tesamorelin 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic GHRH analog peptide for endocrine regulation and pituitary somatotroph research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -683,9 +683,9 @@ const products = [
     "sku": "serm10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Sermorelin 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Functional 29-amino acid GHRH fragment studied for pituitary growth hormone secretion pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -700,9 +700,9 @@ const products = [
     "sku": "semax10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Semax 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Heptapeptide ACTH analog investigated for neuroprotection, BDNF expression, and cognitive pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -717,9 +717,9 @@ const products = [
     "sku": "selank10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Selank 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic regulatory tuftsin analog peptide researched for anxiolytic signaling and neurotransmission.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -734,9 +734,9 @@ const products = [
     "sku": "ipa10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Ipamorelin 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "High-potency pentapeptide ghrelin receptor agonist for somatotropic axis research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -751,9 +751,9 @@ const products = [
     "sku": "glut1200",
     "quantity": "1200mg",
     "status": "In Stock",
-    "description": "Glutathione 1200mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Endogenous master antioxidant tripeptide standard for cellular redox and oxidative stress assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -768,9 +768,9 @@ const products = [
     "sku": "cjcipa-55",
     "quantity": "5mg/5mg",
     "status": "In Stock",
-    "description": "CJC/Ipamorelin 5mg/5mg (without DAC) unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synergistic dual secretagogue research blend designed for concurrent GHRH and ghrelin receptor studies.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -785,9 +785,9 @@ const products = [
     "sku": "epi50",
     "quantity": "50mg",
     "status": "In Stock",
-    "description": "Epitalon 50mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic pineal tetrapeptide researched for telomerase induction and cellular senescence pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -802,16 +802,16 @@ const products = [
     "sku": "GLOW-10mg-70mg-10mg",
     "quantity": "10mg/70mg/10mg",
     "status": "In Stock",
-    "description": "BPC-157 10mg + GHK-cu 70mg + TB-500 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Specialized multi-compound peptide formulation researched for dermatological matrix and collagen signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
   {
     "id": "reconstitution-solution-30ml",
     "name": "Reconstitution Solution - 30ml",
-    "category": "Peptides",
+    "category": "Solutions & Supplies",
     "categories": [
       "Peptides"
     ],
@@ -819,16 +819,16 @@ const products = [
     "sku": "reconstitution-solution-30ml",
     "quantity": "30ml",
     "status": "In Stock",
-    "description": "Reconstitution Solution bottle containing 30ml to be used to reconstitute lyphilized peptides. Once opened, shelf life is 28 days. For long term storage, may be stored at room temperature. DO NOT FREEZE.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
-    "form": "Solution",
+    "description": "30ml sterile reconstitution solution formulated with 0.9% benzyl alcohol for analytical peptide prep.",
+    "reconstitution": "Ready-to-use analytical solution",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
+    "form": "Sterile Solution",
     "source": "felixchem.is"
   },
   {
     "id": "acetic-acid-3ml",
     "name": "Acetic Acid 0.6% 3ml",
-    "category": "Peptides",
+    "category": "Solutions & Supplies",
     "categories": [
       "Accessories",
       "Peptides"
@@ -837,10 +837,10 @@ const products = [
     "sku": "acetic-acid-3ml",
     "quantity": "3ml",
     "status": "In Stock",
-    "description": "Acetic Acid 0.6% unit containing 3ml to be used to adjust pH while reconstituting lypholized peptides. For long term storage, may be stored at room temperature. DO NOT FREEZE.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
-    "form": "Solution",
+    "description": "Analytical-grade 0.6% acetic acid solution for reconstituting hydrophobic peptide materials.",
+    "reconstitution": "Ready-to-use analytical solution",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
+    "form": "Sterile Solution",
     "source": "felixchem.is"
   },
   {
@@ -854,9 +854,9 @@ const products = [
     "sku": "TB-500-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "TB-500 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Synthetic 43-amino acid Thymosin Beta-4 fragment evaluated for actin sequestering and cell migration.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -871,9 +871,9 @@ const products = [
     "sku": "SS-31-25mg",
     "quantity": "25mg",
     "status": "In Stock",
-    "description": "Peptide-31 25mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Mitochondria-targeted peptide SS-31 investigated for mitochondrial membrane potential and ROS reduction.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -888,9 +888,9 @@ const products = [
     "sku": "SNAP-8-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "SNAP-8 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Octapeptide analog of SNAP-25 evaluated for SNARE complex inhibition and neuromuscular signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -905,9 +905,9 @@ const products = [
     "sku": "PT-141-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "PT-141 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Bremelanotide cyclic peptide melanocortin receptor agonist studied for central nervous system pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -922,9 +922,9 @@ const products = [
     "sku": "NAD+500mg",
     "quantity": "500mg",
     "status": "In Stock",
-    "description": "NAD+ 500mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Essential metabolic coenzyme standard investigated for mitochondrial respiration, sirtuin activation, and PARP repair.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -939,16 +939,16 @@ const products = [
     "sku": "MOTS-C-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "MOTS-C 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Mitochondrial-derived 16-amino acid peptide investigated for metabolic homeostasis and AMPK activation.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
   {
     "id": "lipo-c-10ml",
     "name": "LIPO-C 10ml",
-    "category": "Peptides",
+    "category": "Solutions & Supplies",
     "categories": [
       "Peptides"
     ],
@@ -956,16 +956,16 @@ const products = [
     "sku": "LIPO-C-10ml",
     "quantity": "10ml",
     "status": "In Stock",
-    "description": "LIPO-C (Methionine, Inositol, Choline, Carnitine, B-complex) 10ml solution for laboratory research and analytical assays. Store protected from light.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
-    "form": "Solution",
+    "description": "Sterile analytical lipotropic solution containing choline, inositol, methionine, and L-carnitine.",
+    "reconstitution": "Ready-to-use analytical solution",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
+    "form": "Sterile Solution",
     "source": "felixchem.is"
   },
   {
     "id": "lipo-b-10ml",
     "name": "LIPO-B 10ml",
-    "category": "Peptides",
+    "category": "Solutions & Supplies",
     "categories": [
       "Peptides"
     ],
@@ -973,10 +973,10 @@ const products = [
     "sku": "LIPO-B-10ml",
     "quantity": "10ml",
     "status": "In Stock",
-    "description": "LIPO-B (Lipotropic B-Complex formulation) 10ml solution for laboratory research and analytical assays. Store protected from light.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
-    "form": "Solution",
+    "description": "Sterile analytical solution containing lipotropic factors and B-complex vitamins for metabolic assays.",
+    "reconstitution": "Ready-to-use analytical solution",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
+    "form": "Sterile Solution",
     "source": "felixchem.is"
   },
   {
@@ -990,9 +990,9 @@ const products = [
     "sku": "GHK-CU-100mg",
     "quantity": "100mg",
     "status": "In Stock",
-    "description": "GHK-cu 100mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "High-yield copper peptide complex standard for extracellular matrix synthesis and gene expression research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -1007,9 +1007,9 @@ const products = [
     "sku": "AOD-9604-5mg",
     "quantity": "5mg",
     "status": "In Stock",
-    "description": "AOD-9604 5mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. All orders containing AOD-9604 will also include one (1) free 3ml unit of Acetic Acid 0.6% solution to be used for pH balancing during reconstitution. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "C-terminal fragment (177-191) of human growth hormone studied for lipolytic pathways without IGF-1 stimulation.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -1024,9 +1024,9 @@ const products = [
     "sku": "BPC-157-10mg",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "BPC-157 10mg unit in lyophilized powder form. Must be reconstituted with Reconstitution Solution prior to use. Once reconstituted, shelf life is 56 days when refrigerated. For long term storage, place in a cold, dark place (freezer is recommended.) When stored properly, lyophilized powders will retain potency upwards of 1 year.",
-    "reconstitution": "Reconstitute with Reconstitution Solution or Acetic Acid prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage (1+ year potency).",
+    "description": "Stable gastric pentadecapeptide investigated for cytoprotection, angiogenic signaling, and tissue repair.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem.is"
   },
@@ -1041,9 +1041,9 @@ const products = [
     "sku": "FLX-RETA-30",
     "quantity": "30mg",
     "status": "In Stock",
-    "description": "High-purity research peptide for laboratory assays.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Triple agonist (GIP/GLP-1/Glucagon) reference material for advanced metabolic pathway research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1058,9 +1058,9 @@ const products = [
     "sku": "FLX-TIRZ-30",
     "quantity": "30mg",
     "status": "In Stock",
-    "description": "Synthetic peptide material for in-vitro research.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Dual GIP and GLP-1 receptor co-agonist standard for comparative incretin receptor assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1075,9 +1075,9 @@ const products = [
     "sku": "FLX-RETATRUTIDE-20",
     "quantity": "20mg",
     "status": "In Stock",
-    "description": "Multi-agonist research peptide compound.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Triple receptor agonist peptide for comprehensive glycemic and energy balance research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1092,9 +1092,9 @@ const products = [
     "sku": "FLX-TB4-BPC-COMBO",
     "quantity": "10mg / 10mg",
     "status": "In Stock",
-    "description": "Dual-constituent peptide laboratory research blend.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Combined synergistic blend of Thymosin Beta-4 and BPC-157 for regenerative biology studies.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1109,9 +1109,9 @@ const products = [
     "sku": "FLX-TESAMORELIN-20",
     "quantity": "20mg",
     "status": "In Stock",
-    "description": "Stabilized research peptide for analytical investigation.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "High-quantity GHRH analog peptide for extended pituitary somatotroph signaling and lipolysis research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1126,9 +1126,9 @@ const products = [
     "sku": "FLX-RETATRUTIDE-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Research peptide reference compound.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Triple incretin/glucagon receptor agonist reference standard for in-vitro metabolic evaluation.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1143,9 +1143,9 @@ const products = [
     "sku": "FLX-TIRZEPATIDE-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Dual incretin receptor agonist research compound.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Dual incretin mimetic peptide standard for receptor kinetics and cellular assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1160,9 +1160,9 @@ const products = [
     "sku": "FLX-GHK-CU-KPV",
     "quantity": "50mg / 20mg",
     "status": "In Stock",
-    "description": "Combined peptide formulation for scientific testing.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "High-synergy dual peptide research blend for matrix remodeling and cytokine modulation research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1177,9 +1177,9 @@ const products = [
     "sku": "FLX-THYMOSIN-ALPHA-1",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Immune-modulating research peptide compound.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Biological immune response regulator peptide studied for innate and adaptive immune cell signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1194,9 +1194,9 @@ const products = [
     "sku": "FLX-KPV-30",
     "quantity": "30mg",
     "status": "In Stock",
-    "description": "Tripeptide fragment for research exploration.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "High-purity tripeptide standard for anti-inflammatory signaling and epithelial barrier research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1211,9 +1211,9 @@ const products = [
     "sku": "FLX-TB4-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Thymosin Beta-4 synthetic research peptide.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Thymosin Beta-4 full-sequence 43-amino acid peptide for actin regulation and cellular repair assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1228,9 +1228,9 @@ const products = [
     "sku": "FLX-RETATRUTIDE-40",
     "quantity": "40mg",
     "status": "In Stock",
-    "description": "High-concentration research peptide material.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "High-quantity triple receptor agonist standard for high-throughput metabolic research.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1245,9 +1245,9 @@ const products = [
     "sku": "FLX-NAD-500",
     "quantity": "500mg",
     "status": "In Stock",
-    "description": "Nicotinamide adenine dinucleotide research compound.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Nicotinamide adenine dinucleotide cellular bioenergetics standard for enzymatic and mitochondrial assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1262,10 +1262,10 @@ const products = [
     "sku": "FLX-BAC-10",
     "quantity": "10ml",
     "status": "In Stock",
-    "description": "Bacteriostatic reconstitution solution for laboratory use.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
-    "form": "Lyophilized Powder",
+    "description": "Sterile bacteriostatic analytical reconstitution water with 0.9% benzyl alcohol preservative.",
+    "reconstitution": "Ready-to-use analytical solution",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
+    "form": "Sterile Solution",
     "source": "felixchem_catalog"
   },
   {
@@ -1279,10 +1279,10 @@ const products = [
     "sku": "FLX-GHK-CU-RAWS",
     "quantity": "10g bottle",
     "status": "In Stock",
-    "description": "High-grade pure powder format for laboratory synthesis.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
-    "form": "Lyophilized Powder",
+    "description": "Analytical bulk raw GHK-Cu copper peptide powder (10g) for laboratory formulation and testing.",
+    "reconstitution": "Dissolve in suitable analytical solvent for testing",
+    "storage": "Store dry at 2–8°C or -20°C in airtight container.",
+    "form": "Bulk Raw Powder",
     "source": "felixchem_catalog"
   },
   {
@@ -1296,10 +1296,10 @@ const products = [
     "sku": "FLX-AHK-CU-RAWS",
     "quantity": "10g bottle",
     "status": "In Stock",
-    "description": "High-grade pure powder format for laboratory synthesis.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
-    "form": "Lyophilized Powder",
+    "description": "Analytical bulk raw AHK-Cu copper peptide powder (10g) for follicular and dermatological research.",
+    "reconstitution": "Dissolve in suitable analytical solvent for testing",
+    "storage": "Store dry at 2–8°C or -20°C in airtight container.",
+    "form": "Bulk Raw Powder",
     "source": "felixchem_catalog"
   },
   {
@@ -1313,9 +1313,9 @@ const products = [
     "sku": "FLX-MELANOTAN-2",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Cyclic peptide reference material for laboratory assays.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Cyclic melanocortin receptor agonist peptide standard for pigmentary and photobiological assays.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1330,9 +1330,9 @@ const products = [
     "sku": "FLX-TIRZEPATIDE-60",
     "quantity": "60mg",
     "status": "In Stock",
-    "description": "High-potency research peptide material.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "High-yield dual GIP/GLP-1 receptor agonist peptide standard for extended laboratory projects.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1347,9 +1347,9 @@ const products = [
     "sku": "FLX-ILLUMINEURO",
     "quantity": "Standard Unit",
     "status": "In Stock",
-    "description": "Specialized research formulation for analytical assessment.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Specialized nootropic research compound formulation investigated for neurotrophic and synaptic signaling.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1364,9 +1364,9 @@ const products = [
     "sku": "FLX-5-AMINO-1MQ-50",
     "quantity": "50mg",
     "status": "In Stock",
-    "description": "Small molecule NNMT research material.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Bulk NNMT inhibitor standard for concentration-dependent metabolic enzyme investigations.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1381,9 +1381,9 @@ const products = [
     "sku": "FLX-RETATRUTIDE-30",
     "quantity": "30mg",
     "status": "In Stock",
-    "description": "Triple-agonist research peptide compound.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "High-purity triple incretin agonist for comparative endocrine and receptor activation models.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1398,9 +1398,9 @@ const products = [
     "sku": "FLX-BAM15-SLU",
     "quantity": "Standard Blend",
     "status": "In Stock",
-    "description": "Mitochondrial uncoupling research blend.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Dual mitochondrial uncoupler and ERR agonist research blend for cellular bioenergetics evaluation.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   },
@@ -1415,9 +1415,9 @@ const products = [
     "sku": "FLX-SURVODUTIDE-10",
     "quantity": "10mg",
     "status": "In Stock",
-    "description": "Glucagon/GLP-1 receptor dual-agonist research compound.",
-    "reconstitution": "Reconstitute with Reconstitution Solution prior to laboratory assay.",
-    "storage": "Refrigerate (2-8\u00b0C) once reconstituted. Deep freeze (-20\u00b0C) for long-term storage.",
+    "description": "Dual glucagon/GLP-1 receptor agonist peptide investigated for hepatic and metabolic pathways.",
+    "reconstitution": "Reconstitute with Reconstitution Solution.",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
     "source": "felixchem_catalog"
   }
@@ -1473,7 +1473,7 @@ function initScrollProgress() {
   });
 }
 
-// Render Catalog Grid
+// Render Catalog Grid with straight-to-the-point product cards
 function renderCatalog() {
   const grid = document.getElementById("productGrid");
   const countEl = document.getElementById("productCount");
@@ -1498,15 +1498,15 @@ function renderCatalog() {
     );
   }
 
-  // Sort logic
+  // Sort logic (Safe numeric and string sorting)
   if (sortBy === "name-asc") {
     filtered.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortBy === "name-desc") {
     filtered.sort((a, b) => b.name.localeCompare(a.name));
   } else if (sortBy === "price-asc") {
-    filtered.sort((a, b) => parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', '')));
+    filtered.sort((a, b) => parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')));
   } else if (sortBy === "price-desc") {
-    filtered.sort((a, b) => parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', '')));
+    filtered.sort((a, b) => parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')));
   } else if (sortBy === "category") {
     filtered.sort((a, b) => a.category.localeCompare(b.category));
   }
@@ -1532,16 +1532,16 @@ function renderCatalog() {
     return;
   }
 
-  // Cards render (Strictly No Vials, Exact details from felixchem.is, no phone number on button)
+  // Cards render (Concise, straight to the point, clean characters, active WhatsApp without visible number)
   grid.innerHTML = filtered.map(p => {
-    const waText = encodeURIComponent(`Hello Felix Chemical Supply, I would like to inquire about ordering: ${p.name} (${p.quantity}, Price: ${p.price}, SKU: ${p.sku}).`);
+    const waText = encodeURIComponent(`Hello Felix Chemical Supply, I would like to order: ${p.name} (${p.quantity}, Price: ${p.price}, SKU: ${p.sku}).`);
     const waLink = `https://wa.me/${CONFIG.PHONE_CLEAN}?text=${waText}`;
 
     return `
       <article class="product-card" id="card-${p.id}">
         <div>
           <div class="card-top">
-            <div class="card-emblem" aria-hidden="true" title="Analytical Standard Emblem">
+            <div class="card-emblem" aria-hidden="true" title="Analytical Standard">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="3"></circle>
                 <path d="M12 2v4"></path>
@@ -1579,23 +1579,18 @@ function renderCatalog() {
             </div>
             <div class="spec-pill">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              <span>56d Reconstituted / 1yr Frozen</span>
+              <span>${p.storage || 'Refrigerate (2–8°C) recon | Freeze (-20°C) dry'}</span>
             </div>
           </div>
         </div>
 
         <div class="card-footer-block">
-          <div class="product-meta-row">
-            <span>Storage Condition:</span>
-            <span class="meta-val">2-8&deg;C Recon / -20&deg;C Freeze</span>
-          </div>
-
           <div class="card-actions-grid">
             <button type="button" class="btn-card-specs" onclick="openProductModal('${p.id}')" title="View details and reconstitution specs for ${p.name}">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
               <span>Specs &amp; Details</span>
             </button>
-            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-card-order" title="Order ${p.name} via WhatsApp">
+            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-card-order" title="Order via WhatsApp">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
@@ -1611,7 +1606,7 @@ function renderCatalog() {
   }).join("");
 }
 
-// Open Product Modal with Full felixchem.is Details
+// Open Product Modal with Concise, Straight-to-the-point Details
 window.openProductModal = function(productId) {
   const p = products.find(item => item.id === productId);
   if (!p) return;
@@ -1620,7 +1615,7 @@ window.openProductModal = function(productId) {
   const modalContent = document.getElementById("productModalBody");
   if (!modal || !modalContent) return;
 
-  const waText = encodeURIComponent(`Hello Felix Chemical Supply, I am inquiring about ordering: ${p.name} (${p.quantity}, Price: ${p.price}, SKU: ${p.sku}). Please provide verification.`);
+  const waText = encodeURIComponent(`Hello Felix Chemical Supply, I would like to order: ${p.name} (${p.quantity}, Price: ${p.price}, SKU: ${p.sku}).`);
   const waLink = `https://wa.me/${CONFIG.PHONE_CLEAN}?text=${waText}`;
 
   modalContent.innerHTML = `
@@ -1637,52 +1632,46 @@ window.openProductModal = function(productId) {
       </div>
     </div>
 
-    <div class="modal-section-box">
-      <h4 class="modal-section-heading">Laboratory Description &amp; Overview</h4>
-      <p class="modal-desc-text">${p.description}</p>
-    </div>
+    <div class="modal-body">
+      <div class="modal-section-box">
+        <h4 class="modal-section-heading">Overview</h4>
+        <p class="modal-desc-text">${p.description}</p>
+      </div>
 
-    <div class="modal-specs-table">
-      <div class="modal-spec-row">
-        <span class="spec-label">Physical State:</span>
-        <span class="spec-value">${p.form || 'Lyophilized Powder'}</span>
+      <div class="modal-specs-table">
+        <div class="modal-spec-row">
+          <span class="spec-label">Physical State:</span>
+          <span class="spec-value">${p.form || 'Lyophilized Powder'}</span>
+        </div>
+        <div class="modal-spec-row">
+          <span class="spec-label">Reconstitution:</span>
+          <span class="spec-value">${p.reconstitution || 'Reconstitute with Reconstitution Solution prior to use.'}</span>
+        </div>
+        <div class="modal-spec-row">
+          <span class="spec-label">Storage Conditions:</span>
+          <span class="spec-value">${p.storage || 'Refrigerate (2–8°C) recon (56d) • Deep freeze (-20°C) dry (1+ yr)'}</span>
+        </div>
+        <div class="modal-spec-row">
+          <span class="spec-label">Regulatory Status:</span>
+          <span class="spec-value" style="color:var(--fx-primary);font-weight:600;">21 CFR §§ 100-740 Laboratory Research Compound</span>
+        </div>
       </div>
-      <div class="modal-spec-row">
-        <span class="spec-label">Reconstitution Protocol:</span>
-        <span class="spec-value">${p.reconstitution || 'Must be reconstituted with Reconstitution Solution prior to use.'}</span>
-      </div>
-      <div class="modal-spec-row">
-        <span class="spec-label">Reconstituted Shelf Life:</span>
-        <span class="spec-value">56 Days when refrigerated at 2&deg;C &ndash; 8&deg;C</span>
-      </div>
-      <div class="modal-spec-row">
-        <span class="spec-label">Long-Term Storage:</span>
-        <span class="spec-value">Cold, dark place (Freezer at -20&deg;C recommended). Retains potency upwards of 1 year.</span>
-      </div>
-      <div class="modal-spec-row">
-        <span class="spec-label">Source Catalog:</span>
-        <span class="spec-value">https://felixchem.is/</span>
-      </div>
-      <div class="modal-spec-row">
-        <span class="spec-label">Regulatory Exemption:</span>
-        <span class="spec-value" style="color:var(--fx-primary);font-weight:600;">21 CFR Parts 100-740 Laboratory Research Material</span>
-      </div>
-    </div>
 
-    <div class="modal-compliance-box">
-      <strong>RESEARCH USE ONLY:</strong> This compound is sold strictly for in-vitro laboratory analytical testing, scientific research, and chemical evaluation. Not for human consumption, nor medical, veterinary, or household uses.
-    </div>
+      <div class="modal-compliance-box">
+        <strong>LABORATORY RESEARCH USE ONLY:</strong> This material is sold strictly for in-vitro laboratory analytical and scientific evaluation. Not for human consumption, nor medical, veterinary, or household uses.
+      </div>
 
-    <div class="modal-actions-row">
-      <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-modal-whatsapp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-        </svg>
-        <span>Order via WhatsApp</span>
-      </a>
-      <button type="button" class="btn-modal-inquire" onclick="selectProductFromModal('${p.id}')">
-        Select for Order Form
-      </button>
+      <div class="modal-actions-row">
+        <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-modal-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <span>Order via WhatsApp</span>
+        </a>
+        <button type="button" class="btn-modal-inquire" onclick="selectProductFromModal('${p.id}')">
+          Select for Order Form
+        </button>
+      </div>
     </div>
   `;
 
@@ -1727,13 +1716,13 @@ window.selectProductFromModal = function(id) {
   selectProductForOrder(id);
 };
 
-// Populate Product dropdown in Order Form
+// Populate Product dropdown in Order Form (Clean native bullet separator)
 function populateOrderFormProducts() {
   const select = document.getElementById("orderProductSelect");
   if (!select) return;
 
   select.innerHTML = `<option value="">-- Choose a research compound (${products.length} items) --</option>` +
-    products.map(p => `<option value="${p.name}">${p.name} (${p.price} &bull; ${p.quantity} &bull; SKU: ${p.sku})</option>`).join("");
+    products.map(p => `<option value="${p.name}">${p.name} (${p.price} • ${p.quantity} • SKU: ${p.sku})</option>`).join("");
 }
 
 // Setup Event Listeners

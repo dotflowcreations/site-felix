@@ -104,7 +104,11 @@
             <span>Telegram</span>
           </a>
           <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
-            &#9776;
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
           </button>
         </div>
       </div>
@@ -157,7 +161,7 @@
             </div>
             <div class="stat-item">
               <span class="stat-number">Multi-Chain</span>
-              <span class="stat-label">USDT &bull; USDC &bull; BTC &bull; USDC-Sol</span>
+              <span class="stat-label">USDT • USDC • BTC • USDC-Sol</span>
             </div>
             <div class="stat-item">
               <span class="stat-number">Fast</span>
@@ -183,10 +187,10 @@
               </div>
               <div>
                 <h2 class="compliance-main-heading">Laboratory Research Chemicals Compliance Disclaimer</h2>
-                <p class="compliance-sub-heading">Mandatory Notice for Institutional &amp; Analytical Laboratory Inquiries &bull; Terms of Sale Apply</p>
+                <p class="compliance-sub-heading">Mandatory Notice for Institutional &amp; Analytical Laboratory Inquiries • Terms of Sale Apply</p>
               </div>
             </div>
-            <span class="cfr-badge">21 CFR &sect;&sect; 100-740 Exempt</span>
+            <span class="cfr-badge">21 CFR §§ 100-740 Exempt</span>
           </div>
 
           <div class="compliance-body">
@@ -233,10 +237,10 @@
               </div>
 
               <select id="catalogSort" class="sort-select" aria-label="Sort catalog">
-                <option value="name-asc">Sort: Name (A &rarr; Z)</option>
-                <option value="name-desc">Sort: Name (Z &rarr; A)</option>
-                <option value="price-asc">Sort: Price (Low &rarr; High)</option>
-                <option value="price-desc">Sort: Price (High &rarr; Low)</option>
+                <option value="name-asc">Sort: Name (A → Z)</option>
+                <option value="name-desc">Sort: Name (Z → A)</option>
+                <option value="price-asc">Sort: Price (Low → High)</option>
+                <option value="price-desc">Sort: Price (High → Low)</option>
                 <option value="category">Sort: Category</option>
               </select>
             </div>
@@ -448,8 +452,8 @@
         </div>
 
         <div class="footer-bottom-row">
-          <span>&copy; 2026 Felix Chemical Supply. All rights reserved.</span>
-          <span>USDT &bull; USDC &bull; BTC &bull; USDC-Sol Settlement</span>
+          <span>© 2026 Felix Chemical Supply. All rights reserved.</span>
+          <span>USDT • USDC • BTC • USDC-Sol Settlement</span>
         </div>
       </div>
     </footer>
@@ -457,7 +461,12 @@
     <!-- Product Detail Modal (Full specifications & reconstitution guidance from felixchem.is) -->
     <div class="modal-overlay" id="productDetailModal" role="dialog" aria-modal="true" aria-label="Product Specification Details">
       <div class="modal-container">
-        <button type="button" class="modal-close-btn" onclick="closeProductModal()" aria-label="Close modal">&times;</button>
+        <button type="button" class="modal-close-btn" onclick="closeProductModal()" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
         <div id="productModalBody">
           <!-- Populated dynamically by openProductModal(id) in app.js -->
         </div>
