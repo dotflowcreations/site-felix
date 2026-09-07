@@ -90,6 +90,7 @@
         <nav class="site-nav" id="siteNav">
           <a href="#compliance" class="nav-link">Compliance</a>
           <a href="#catalog" class="nav-link">Catalog</a>
+          <a href="#coas" class="nav-link">Certificates of Analysis</a>
           <a href="#payment" class="nav-link">Payment</a>
           <a href="#order" class="nav-link">Order Form</a>
           <a href="#contact" class="nav-link">Contact</a>
@@ -154,6 +155,10 @@
             <div class="stat-item">
               <span class="stat-number">80</span>
               <span class="stat-label">Catalog Products</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">258</span>
+              <span class="stat-label">Verified Lab COAs</span>
             </div>
             <div class="stat-item">
               <span class="stat-number">100%</span>
@@ -267,6 +272,92 @@
         <div id="productGrid" class="product-grid">
           <!-- Populated dynamically by app.js -->
         </div>
+      
+      <!-- Certificates of Analysis (COA) Hub copied directly from felixchem.is -->
+      <section class="coa-section" id="coas">
+        <div class="coa-header-box">
+          <div class="coa-badge-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <polyline points="9 12 11 14 15 10"></polyline>
+            </svg>
+            <span>Quality Control &amp; Analytical Purity</span>
+          </div>
+          <h2 class="section-title">Certificates of Analysis (COAs)</h2>
+          <p class="section-subtitle">
+            Explore 258 verified analytical reports copied directly from felixchem.is. Third-party verified via HPLC purity quantification and Mass Spectrometry identity verification by Janoshik Analytical and Chromate Labs.
+          </p>
+
+          <div class="coa-trust-pills">
+            <div class="coa-trust-pill">
+              <span class="pill-dot"></span>
+              <span>Janoshik HPLC &amp; Mass Spectrometry</span>
+            </div>
+            <div class="coa-trust-pill">
+              <span class="pill-dot"></span>
+              <span>Individual Batch &amp; Lot Tracing</span>
+            </div>
+            <div class="coa-trust-pill">
+              <span class="pill-dot"></span>
+              <span>Copied Directly from felixchem.is</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COA Toolbar: Search, Filters, Stats -->
+        <div class="coa-toolbar-card">
+          <div class="coa-search-row">
+            <div class="search-input-wrapper" style="flex:1;">
+              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input 
+                type="text" 
+                id="coaSearchInput" 
+                class="catalog-search-input" 
+                placeholder="Search by compound, lot #, or batch (e.g. 090425, BPC-157, Retatrutide, MOTS-c)..." 
+                aria-label="Search Certificates of Analysis"
+              />
+              <button type="button" id="clearCoaSearch" class="btn-clear-search" style="display:none;" aria-label="Clear search">✕</button>
+            </div>
+
+            <div class="coa-dropdown-group">
+              <select id="coaCompoundFilter" class="sort-select" aria-label="Filter by Compound">
+                <option value="All">All Compounds (258 COAs)</option>
+              </select>
+
+              <select id="coaTypeFilter" class="sort-select" aria-label="Filter by Format">
+                <option value="All">All Formats</option>
+                <option value="image">HPLC Image Reports</option>
+                <option value="pdf">PDF Documents</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="catalog-results-bar">
+            <span id="coaResultsCount" class="product-count-badge">Showing 258 verified analytical reports</span>
+            <span class="coa-source-note">Sourced directly from official Felix Chemical Supply laboratory archives</span>
+          </div>
+        </div>
+
+        <!-- COA Cards Grid -->
+        <div id="coaCardsGrid" class="coa-cards-grid">
+          <!-- Populated dynamically by app.js -->
+        </div>
+
+        <!-- Pagination / Load More -->
+        <div class="coa-pagination-row" id="coaPaginationRow">
+          <button type="button" id="loadMoreCoasBtn" class="btn-load-more-coas">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+            <span>Load More Certificates</span>
+          </button>
+        </div>
+      </section>
+
+
       </section>
 
       <!-- Payment Section -->
@@ -320,8 +411,8 @@
                 <input type="text" id="orderName" placeholder="e.g. Dr. Alex Morgan / Lab" required />
               </div>
               <div class="form-group">
-                <label for="orderPhone">Contact Phone / WhatsApp</label>
-                <input type="tel" id="orderPhone" placeholder="e.g. +1 (555) 019-2834" required />
+                <label for="orderPhone">WhatsApp / Mobile Number</label>
+                <input type="tel" id="orderPhone" placeholder="e.g. +1 (555) 019-2834 (for WhatsApp confirmation)" required />
               </div>
             </div>
 
@@ -422,20 +513,6 @@
               @felixchemicalsupply
             </a>
           </div>
-
-          <!-- Telephone -->
-          <div class="contact-card">
-            <div class="contact-card-icon icon-phone">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </div>
-            <h4>Direct Telephone</h4>
-            <p>Voice and SMS customer service assistance.</p>
-            <a href="tel:+16592219964" class="contact-direct-btn">
-              +1 659 221 9964
-            </a>
-          </div>
         </div>
       </section>
 
@@ -469,6 +546,39 @@
         </button>
         <div id="productModalBody">
           <!-- Populated dynamically by openProductModal(id) in app.js -->
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- COA Full-Screen / Lightbox Modal -->
+    <div class="modal-overlay" id="coaLightboxModal" role="dialog" aria-modal="true" aria-label="Certificate of Analysis Inspection">
+      <div class="coa-lightbox-container">
+        <div class="coa-lightbox-header">
+          <div class="coa-header-info">
+            <div class="coa-lab-tag" id="coaModalLab">Janoshik Analytical</div>
+            <h3 class="coa-lightbox-title" id="coaModalTitle">Peptide-C 20mg</h3>
+            <div class="coa-lightbox-meta" id="coaModalMeta">Batch: 090425-C20-6 • Tested: Sep 04, 2025</div>
+          </div>
+          <div class="coa-lightbox-actions">
+            <a href="#" target="_blank" rel="noopener noreferrer" id="coaModalDirectLink" class="btn-coa-download" title="Open original high-res report">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>Open Source File</span>
+            </a>
+            <button type="button" class="modal-close-btn" onclick="closeCoaLightbox()" aria-label="Close Lightbox">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="coa-lightbox-body" id="coaLightboxBody">
+          <!-- Injected dynamically -->
         </div>
       </div>
     </div>
