@@ -728,10 +728,10 @@ input, select, textarea {
 
 .product-desc,
 .product-desc-concise {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: var(--fx-text-sub);
-  margin-bottom: 12px;
-  line-height: 1.45;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .product-meta-row {
@@ -2552,3 +2552,857 @@ input, select, textarea {
     margin-top: 10px;
   }
 }
+
+/* ==========================================================================
+   WORDPRESS XSTORE CHILD THEME LAYOUT & WOOCOMMERCE STYLING
+   ========================================================================== */
+
+/* XStore Page Heading & Breadcrumb Bar */
+.xstore-page-heading {
+  background: #f8fafc;
+  border-top: 1px solid var(--fx-border);
+  border-bottom: 1px solid var(--fx-border);
+  padding: 20px 0;
+  margin-bottom: 30px;
+}
+
+.xstore-page-heading-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.xstore-heading-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.xstore-heading-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--fx-navy);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.xstore-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--fx-text-sub);
+}
+
+.xstore-breadcrumbs a {
+  color: var(--fx-text-sub);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.xstore-breadcrumbs a:hover {
+  color: var(--fx-primary);
+}
+
+.xstore-crumb-sep {
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.xstore-crumb-current {
+  color: var(--fx-navy);
+  font-weight: 600;
+}
+
+.xstore-heading-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.xstore-badge-stat {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: #ffffff;
+  border: 1px solid var(--fx-border);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--fx-navy);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* XStore Shop Architecture (Sidebar + Main Shop Layout) */
+.xstore-shop-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* XStore Sidebar */
+.xstore-sidebar {
+  width: 270px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.xstore-sidebar-header-mobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--fx-border);
+  margin-bottom: 14px;
+}
+
+.xstore-sidebar-mobile-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--fx-navy);
+}
+
+.btn-close-sidebar {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--fx-text-sub);
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+/* XStore Widgets */
+.xstore-widget {
+  background: #ffffff;
+  border: 1px solid var(--fx-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.widget-title {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--fx-navy);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--fx-primary);
+  margin: 0 0 16px 0;
+}
+
+.widget-desc {
+  font-size: 0.82rem;
+  color: var(--fx-text-sub);
+  margin-bottom: 12px;
+  line-height: 1.45;
+}
+
+/* Category List Widget */
+.xstore-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.xstore-cat-link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--fx-text-body);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.xstore-cat-link:hover {
+  background: #f1f5f9;
+  color: var(--fx-primary);
+}
+
+.xstore-cat-link.active {
+  background: rgba(94, 178, 230, 0.12);
+  color: var(--fx-navy);
+  font-weight: 700;
+  border-left: 3px solid var(--fx-primary);
+}
+
+.cat-count {
+  font-size: 0.75rem;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  background: #f1f5f9;
+  color: var(--fx-text-sub);
+  font-weight: 600;
+}
+
+.xstore-cat-link.active .cat-count {
+  background: var(--fx-primary);
+  color: #ffffff;
+}
+
+/* Research Standards Widget */
+.xstore-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.84rem;
+  color: var(--fx-text-body);
+  font-weight: 500;
+}
+
+.check-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--fx-success);
+  flex-shrink: 0;
+}
+
+/* Sidebar Crypto Tags */
+.xstore-crypto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.crypto-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  background: #f8fafc;
+  color: var(--fx-navy);
+  border: 1px solid var(--fx-border);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Sidebar Helpdesk Buttons */
+.sidebar-helpdesk-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.xstore-sidebar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.xstore-sidebar-btn.wa-link {
+  background: #25d366;
+  color: #ffffff !important;
+}
+
+.xstore-sidebar-btn.wa-link:hover {
+  background: #1ebc57;
+}
+
+.xstore-sidebar-btn.tg-link {
+  background: #229ed9;
+  color: #ffffff !important;
+}
+
+.xstore-sidebar-btn.tg-link:hover {
+  background: #1e8cb8;
+}
+
+/* Main Shop Content Area */
+.xstore-main-shop {
+  flex: 1;
+  min-width: 0;
+}
+
+/* XStore WooCommerce Shop Toolbar */
+.xstore-shop-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--fx-border);
+  margin-bottom: 18px;
+}
+
+.xstore-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.xstore-filter-toggle-btn {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+  border: 1px solid var(--fx-border);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--fx-navy);
+  cursor: pointer;
+}
+
+.woocommerce-result-count {
+  font-size: 0.88rem;
+  color: var(--fx-text-sub);
+  font-weight: 500;
+}
+
+.xstore-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* XStore View Switcher */
+.xstore-view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f1f5f9;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+.btn-grid-switch {
+  background: none;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.btn-grid-switch:hover {
+  color: var(--fx-navy);
+}
+
+.btn-grid-switch.active {
+  background: #ffffff;
+  color: var(--fx-navy);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* WooCommerce Ordering Select */
+.woocommerce-ordering {
+  padding: 8px 14px;
+  border: 1px solid var(--fx-border);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  color: var(--fx-navy);
+  font-size: 0.86rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.woocommerce-ordering:focus {
+  outline: none;
+  border-color: var(--fx-primary);
+  box-shadow: var(--shadow-focus);
+}
+
+/* Horizontal Search & Filter Pills Strip inside Shop */
+.xstore-filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+/* XStore Column Layouts */
+.product-grid.cols-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-grid.cols-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* XStore Product Card */
+.xstore-product-card {
+  background: #ffffff;
+  border: 1px solid #e8ecf1;
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+}
+
+.xstore-product-card:hover {
+  border-color: #93c5fd;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(11, 21, 35, 0.08);
+}
+
+/* Card Header */
+.xstore-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.xstore-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.xstore-badge-stock {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: #eaf8ef;
+  color: #1e7e34;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.xstore-badge-purity {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #f0f7ff;
+  color: var(--fx-primary);
+  border: 1px solid rgba(94, 178, 230, 0.25);
+}
+
+.xstore-card-category {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Card Media / Molecular Emblem */
+.xstore-card-media {
+  background: #f8fafc;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  padding: 18px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 14px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.2s ease;
+}
+
+.xstore-card-media:hover {
+  background: #f1f5f9;
+}
+
+.chemical-emblem-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--fx-primary);
+}
+
+.xstore-emblem-svg {
+  width: 44px;
+  height: 44px;
+}
+
+.emblem-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--fx-navy);
+  letter-spacing: 0.05em;
+}
+
+/* Quick View Overlay Button on Hover */
+.btn-xstore-quick-overlay {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--fx-navy);
+  color: #ffffff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.xstore-card-media:hover .btn-xstore-quick-overlay {
+  bottom: 12px;
+  opacity: 1;
+}
+
+.btn-xstore-quick-overlay:hover {
+  background: var(--fx-primary);
+}
+
+/* Card Body */
+.xstore-card-body {
+  flex: 1;
+}
+
+.xstore-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--fx-navy);
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.xstore-title:hover {
+  color: var(--fx-primary);
+}
+
+.xstore-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.xstore-qty {
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #f0f7ff;
+  color: var(--fx-primary);
+  border: 1px solid rgba(94, 178, 230, 0.25);
+  padding: 1px 7px;
+  border-radius: 3px;
+}
+
+.xstore-desc {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Mini Specs */
+.xstore-specs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  border-radius: 5px;
+  margin-bottom: 14px;
+}
+
+/* Price Row */
+.xstore-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px dashed var(--fx-border);
+  margin-bottom: 14px;
+}
+
+.xstore-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--fx-navy);
+}
+
+/* Action Buttons */
+.xstore-action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-xstore-details {
+  background: #ffffff;
+  border: 1px solid var(--fx-border);
+  color: var(--fx-navy);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 9px 8px;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-xstore-details:hover {
+  background: #f8fafc;
+  border-color: var(--fx-primary);
+  color: var(--fx-primary);
+}
+
+.btn-xstore-select {
+  background: var(--fx-primary);
+  border: 1px solid var(--fx-primary);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 9px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-xstore-select:hover {
+  background: var(--fx-primary-hover);
+  border-color: var(--fx-primary-hover);
+}
+
+/* ==========================================================================
+   XSTORE 4-COLUMN FOOTER WIDGETS
+   ========================================================================== */
+.xstore-footer-widgets {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.1fr;
+  gap: 36px;
+  padding: 40px 0 32px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.footer-widget-title {
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--fx-primary);
+  margin: 0 0 16px 0;
+}
+
+.footer-widget-desc {
+  font-size: 0.84rem;
+  color: #94a3b8;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.footer-lab-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lab-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  background: rgba(94, 178, 230, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(94, 178, 230, 0.3);
+}
+
+.footer-widget-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-widget-links li a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.84rem;
+  transition: color 0.15s ease;
+}
+
+.footer-widget-links li a:hover {
+  color: var(--fx-primary);
+  text-decoration: underline;
+}
+
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-contact-item {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.84rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: color 0.15s ease;
+}
+
+.footer-contact-item:hover {
+  color: #ffffff;
+}
+
+.footer-crypto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.crypto-badge {
+  font-size: 0.74rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS FOR XSTORE LAYOUT
+   ========================================================================== */
+@media (max-width: 1100px) {
+  .product-grid.cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .xstore-footer-widgets {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .xstore-shop-layout {
+    flex-direction: column;
+  }
+
+  .xstore-filter-toggle-btn {
+    display: inline-flex;
+  }
+
+  .xstore-sidebar {
+    width: 100%;
+    display: none;
+  }
+
+  .xstore-sidebar.mobile-open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 1000;
+    padding: 24px;
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .xstore-sidebar-header-mobile {
+    display: flex;
+  }
+
+  .product-grid.cols-3,
+  .product-grid.cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid.cols-3,
+  .product-grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .xstore-footer-widgets {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .xstore-page-heading-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .xstore-toolbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .woocommerce-ordering {
+    flex: 1;
+  }
+}
+

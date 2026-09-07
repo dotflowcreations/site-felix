@@ -88,7 +88,6 @@
 
         <!-- Main Desktop Navigation -->
         <nav class="site-nav" id="siteNav">
-          <a href="#compliance" class="nav-link">Compliance</a>
           <a href="#catalog" class="nav-link">Catalog</a>
           <a href="#payment" class="nav-link">Payment</a>
           <a href="#order" class="nav-link">Order Form</a>
@@ -176,6 +175,26 @@
       </div>
     </section>
 
+    <!-- XStore Page Heading & Breadcrumb Bar -->
+    <div class="xstore-page-heading">
+      <div class="page-container xstore-page-heading-inner">
+        <div class="xstore-heading-title-wrap">
+          <h2 class="xstore-heading-title">Research Catalog &amp; Store</h2>
+          <nav class="xstore-breadcrumbs" aria-label="Breadcrumbs">
+            <a href="#">Home</a>
+            <span class="xstore-crumb-sep">/</span>
+            <a href="#catalog">Shop</a>
+            <span class="xstore-crumb-sep">/</span>
+            <span class="xstore-crumb-current">All Research Materials</span>
+          </nav>
+        </div>
+        <div class="xstore-heading-badges">
+          <span class="xstore-badge-stat">80 Available Compounds</span>
+          <span class="xstore-badge-stat">258 Janoshik COAs</span>
+        </div>
+      </div>
+    </div>
+
     <!-- Main Content Container -->
     <main class="page-container">
 
@@ -213,19 +232,162 @@
         </div>
       </section>
 
-      <!-- Catalog Section -->
+      <!-- Catalog Section with XStore Child Shop Layout -->
       <section class="catalog-section" id="catalog">
-        <div class="section-header-row">
-          <div>
-            <h2 class="section-title">Research Catalog</h2>
-            <p class="section-subtitle">Browse available peptides, custom blends, solutions, and bulk raw materials.</p>
-          </div>
-        </div>
+        <div class="xstore-shop-layout">
+          <!-- XStore WooCommerce Sidebar -->
+          <aside class="xstore-sidebar" id="xstoreSidebar">
+            <div class="xstore-sidebar-header-mobile">
+              <span class="xstore-sidebar-mobile-title">Shop Filters</span>
+              <button type="button" class="btn-close-sidebar" id="closeMobileSidebar" aria-label="Close filters">✕</button>
+            </div>
 
-        <!-- Filter & Search Card Box -->
-        <div class="catalog-card-box">
-          <div class="catalog-toolbar">
-            <div class="search-and-sort-row">
+            <!-- Widget: Product Categories -->
+            <div class="xstore-widget widget-categories">
+              <h3 class="widget-title">Product Categories</h3>
+              <ul class="xstore-category-list">
+                <li>
+                  <button type="button" class="xstore-cat-link active" data-category="All">
+                    <span>All Research Items</span>
+                    <span class="cat-count">80</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="xstore-cat-link" data-category="Peptides">
+                    <span>Peptides</span>
+                    <span class="cat-count">52</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="xstore-cat-link" data-category="Blends">
+                    <span>Blends</span>
+                    <span class="cat-count">12</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="xstore-cat-link" data-category="Solutions & Supplies">
+                    <span>Solutions &amp; Supplies</span>
+                    <span class="cat-count">4</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="xstore-cat-link" data-category="Biological Regulators">
+                    <span>Biological Regulators</span>
+                    <span class="cat-count">5</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="xstore-cat-link" data-category="Research Materials">
+                    <span>Research Materials</span>
+                    <span class="cat-count">3</span>
+                  </button>
+                </li>
+                <li>
+                  <button type="button" class="xstore-cat-link" data-category="Raw Materials">
+                    <span>Raw Materials</span>
+                    <span class="cat-count">4</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Widget: Quality & Research Standards -->
+            <div class="xstore-widget widget-standards">
+              <h3 class="widget-title">Research Standards</h3>
+              <ul class="xstore-check-list">
+                <li class="check-item active">
+                  <span class="check-dot"></span>
+                  <span>≥99.0% HPLC Purity</span>
+                </li>
+                <li class="check-item active">
+                  <span class="check-dot"></span>
+                  <span>Janoshik MS Tested</span>
+                </li>
+                <li class="check-item active">
+                  <span class="check-dot"></span>
+                  <span>Batch Specific Lot #</span>
+                </li>
+                <li class="check-item active">
+                  <span class="check-dot"></span>
+                  <span>Domestic US Dispatch</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Widget: Crypto Settlement -->
+            <div class="xstore-widget widget-crypto">
+              <h3 class="widget-title">Payment Settlement</h3>
+              <p class="widget-desc">Fast, non-custodial crypto checkout available on major networks:</p>
+              <div class="xstore-crypto-tags">
+                <span class="crypto-tag">USDT (ERC20)</span>
+                <span class="crypto-tag">USDC (ERC20)</span>
+                <span class="crypto-tag">BTC</span>
+                <span class="crypto-tag">USDC-Sol</span>
+              </div>
+            </div>
+
+            <!-- Widget: Support -->
+            <div class="xstore-widget widget-support">
+              <h3 class="widget-title">Order Helpdesk</h3>
+              <p class="widget-desc">Direct assistance for catalog inquiries and order verification:</p>
+              <div class="sidebar-helpdesk-links">
+                <a href="https://wa.me/16592219964" target="_blank" rel="noopener noreferrer" class="xstore-sidebar-btn wa-link">
+                  WhatsApp Helpdesk
+                </a>
+                <a href="https://t.me/felixchemicalsupply" target="_blank" rel="noopener noreferrer" class="xstore-sidebar-btn tg-link">
+                  Telegram Channel
+                </a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Main Shop Content -->
+          <div class="xstore-main-shop">
+            <!-- XStore WooCommerce Shop Toolbar -->
+            <div class="xstore-shop-toolbar">
+              <div class="xstore-toolbar-left">
+                <button type="button" class="xstore-filter-toggle-btn" id="toggleMobileSidebar" aria-label="Toggle filters sidebar">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                  </svg>
+                  <span>Filter Sidebar</span>
+                </button>
+                <span id="productCount" class="woocommerce-result-count">Showing 1–80 of 80 results</span>
+              </div>
+
+              <div class="xstore-toolbar-right">
+                <!-- Grid Switcher (3 cols vs 4 cols) -->
+                <div class="xstore-view-switcher" role="group" aria-label="Grid Column Switcher">
+                  <button type="button" class="btn-grid-switch active" data-cols="3" title="3 Columns View" aria-pressed="true">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                      <rect x="2" y="3" width="5.5" height="18" rx="1"></rect>
+                      <rect x="9.25" y="3" width="5.5" height="18" rx="1"></rect>
+                      <rect x="16.5" y="3" width="5.5" height="18" rx="1"></rect>
+                    </svg>
+                  </button>
+                  <button type="button" class="btn-grid-switch" data-cols="4" title="4 Columns View" aria-pressed="false">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                      <rect x="2" y="3" width="3.75" height="18" rx="1"></rect>
+                      <rect x="7.75" y="3" width="3.75" height="18" rx="1"></rect>
+                      <rect x="13.5" y="3" width="3.75" height="18" rx="1"></rect>
+                      <rect x="19.25" y="3" width="3.75" height="18" rx="1"></rect>
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- WooCommerce Ordering Dropdown -->
+                <select id="catalogSort" class="woocommerce-ordering" aria-label="Shop order">
+                  <option value="name-asc">Sort by name: A to Z</option>
+                  <option value="name-desc">Sort by name: Z to A</option>
+                  <option value="price-asc">Sort by price: low to high</option>
+                  <option value="price-desc">Sort by price: high to low</option>
+                  <option value="category">Sort by category</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Search Bar & Horizontal Category Pills -->
+            <div class="xstore-filter-bar">
               <div class="search-input-wrapper">
                 <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="11" cy="11" r="8"></circle>
@@ -235,42 +397,29 @@
                   type="text" 
                   id="catalogSearch" 
                   class="catalog-search-input" 
-                  placeholder="Search by compound name, quantity, category, or batch code (e.g. Reta, Tirz, BPC)..." 
+                  placeholder="Search compounds by name, SKU, or quantity (e.g. Retatrutide, BPC-157, Tirzepatide)..." 
                   aria-label="Search catalog"
                 />
               </div>
 
-              <select id="catalogSort" class="sort-select" aria-label="Sort catalog">
-                <option value="name-asc">Sort: Name (A → Z)</option>
-                <option value="name-desc">Sort: Name (Z → A)</option>
-                <option value="price-asc">Sort: Price (Low → High)</option>
-                <option value="price-desc">Sort: Price (High → Low)</option>
-                <option value="category">Sort: Category</option>
-              </select>
+              <div class="filter-pills-wrap">
+                <button class="filter-pill-btn active" data-category="All">All Items (80)</button>
+                <button class="filter-pill-btn" data-category="Peptides">Peptides</button>
+                <button class="filter-pill-btn" data-category="Blends">Blends</button>
+                <button class="filter-pill-btn" data-category="Solutions & Supplies">Solutions</button>
+                <button class="filter-pill-btn" data-category="Biological Regulators">Regulators</button>
+                <button class="filter-pill-btn" data-category="Research Materials">Research</button>
+                <button class="filter-pill-btn" data-category="Raw Materials">Raw Materials</button>
+              </div>
             </div>
 
-            <!-- Category Pills -->
-            <div class="filter-pills-wrap">
-              <button class="filter-pill-btn active" data-category="All">All Items (80)</button>
-              <button class="filter-pill-btn" data-category="Peptides">Peptides</button>
-              <button class="filter-pill-btn" data-category="Blends">Blends</button>
-              <button class="filter-pill-btn" data-category="Solutions & Supplies">Solutions &amp; Supplies</button>
-              <button class="filter-pill-btn" data-category="Biological Regulators">Biological Regulators</button>
-              <button class="filter-pill-btn" data-category="Research Materials">Research Materials</button>
-              <button class="filter-pill-btn" data-category="Raw Materials">Raw Materials</button>
-            </div>
-
-            <div class="catalog-results-bar">
-              <span id="productCount" class="product-count-badge">Showing 80 of 80 Research Materials</span>
-              <span>Available for direct laboratory inquiry</span>
+            <!-- Product Cards Grid (WooCommerce XStore loop) -->
+            <div id="productGrid" class="product-grid cols-3">
+              <!-- Populated dynamically by app.js -->
             </div>
           </div>
         </div>
-
-        <!-- Product Cards Grid (Strictly No Vials, Clean felixchem.is theme) -->
-        <div id="productGrid" class="product-grid">
-          <!-- Populated dynamically by app.js -->
-        </div>
+      </section>
       
       <!-- Certificates of Analysis (COA) Hub copied directly from felixchem.is -->
       <section class="coa-section" id="coas">
@@ -410,8 +559,8 @@
                 <input type="text" id="orderName" placeholder="e.g. Dr. Alex Morgan / Lab" required />
               </div>
               <div class="form-group">
-                <label for="orderPhone">WhatsApp / Mobile Number</label>
-                <input type="tel" id="orderPhone" placeholder="e.g. +1 (555) 019-2834 (for WhatsApp confirmation)" required />
+                <label for="orderPhone">WhatsApp Contact Number (Messaging Only)</label>
+                <input type="tel" id="orderPhone" placeholder="e.g. +1 (555) 019-2834 (WhatsApp chat only - no voice calls)" required />
               </div>
             </div>
 
@@ -517,9 +666,67 @@
 
     </main>
 
-    <!-- Footer -->
+    <!-- XStore Theme Footer -->
     <footer class="site-footer">
       <div class="page-container footer-content">
+        <!-- XStore Footer Widget Columns -->
+        <div class="xstore-footer-widgets">
+          <div class="xstore-footer-col">
+            <h4 class="footer-widget-title">About Felix Chemical Supply</h4>
+            <p class="footer-widget-desc">
+              American supplier of synthesized research peptides, specialized biochemical blends, and analytical reference standards. Dedicated to laboratory purity, batch transparency, and verified analytical testing.
+            </p>
+            <div class="footer-lab-badges">
+              <span class="lab-pill">HPLC Verified</span>
+              <span class="lab-pill">Janoshik Tested</span>
+              <span class="lab-pill">US Domestic</span>
+            </div>
+          </div>
+
+          <div class="xstore-footer-col">
+            <h4 class="footer-widget-title">Research Categories</h4>
+            <ul class="footer-widget-links">
+              <li><a href="#catalog" class="footer-cat-link" data-cat="Peptides">Research Peptides (52)</a></li>
+              <li><a href="#catalog" class="footer-cat-link" data-cat="Blends">Peptide Blends (12)</a></li>
+              <li><a href="#catalog" class="footer-cat-link" data-cat="Solutions & Supplies">Solutions &amp; Solvents (4)</a></li>
+              <li><a href="#catalog" class="footer-cat-link" data-cat="Biological Regulators">Biological Regulators (5)</a></li>
+              <li><a href="#catalog" class="footer-cat-link" data-cat="Raw Materials">Bulk Raw Materials (4)</a></li>
+            </ul>
+          </div>
+
+          <div class="xstore-footer-col">
+            <h4 class="footer-widget-title">Customer Service</h4>
+            <p class="footer-widget-desc">
+              Direct assistance for catalog inquiries, bulk laboratory pricing, and analytical batch validation:
+            </p>
+            <ul class="footer-contact-list">
+              <li>
+                <a href="https://wa.me/16592219964" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                  <strong>WhatsApp:</strong> +1 659 221 9964
+                </a>
+              </li>
+              <li>
+                <a href="https://t.me/felixchemicalsupply" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                  <strong>Telegram:</strong> @felixchemicalsupply
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="xstore-footer-col">
+            <h4 class="footer-widget-title">Crypto Settlement</h4>
+            <p class="footer-widget-desc">
+              Fast, encrypted, non-custodial blockchain settlement verified through our direct desk:
+            </p>
+            <div class="footer-crypto-tags">
+              <span class="crypto-badge">USDT (ERC20)</span>
+              <span class="crypto-badge">USDC (ERC20)</span>
+              <span class="crypto-badge">BTC (Native)</span>
+              <span class="crypto-badge">USDC (Solana)</span>
+            </div>
+          </div>
+        </div>
+
         <div class="footer-disclaimer-box">
           <div class="disclaimer-title">Laboratory Research &amp; Analytical Compliance Notice</div>
           <p class="disclaimer-text">
@@ -528,7 +735,7 @@
         </div>
 
         <div class="footer-bottom-row">
-          <span>© 2026 Felix Chemical Supply. All rights reserved.</span>
+          <span>© 2026 Felix Chemical Supply. Built with WordPress &amp; XStore Child Theme. All rights reserved.</span>
           <span>USDT • USDC • BTC • USDC-Sol Settlement</span>
         </div>
       </div>
