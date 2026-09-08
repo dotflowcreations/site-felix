@@ -1,8 +1,7 @@
 /**
  * Felix Chemical Supply — Official Application Logic
- * Clean, concise product specifications, zero character encoding issues.
- * Full Certificates of Analysis (COA) Archive copied directly from felixchem.is.
- * Color Scheme & Typography matching felixchem.is
+ * Certificates of Analysis (COA) Archive sourced exclusively from Google Drive.
+ * Zero external third-party links or files.
  * Strictly NO vial imagery or references.
  */
 
@@ -12,6 +11,7 @@ const CONFIG = {
   PHONE_CLEAN: "16592219964",
   WHATSAPP_URL: "https://wa.me/16592219964",
   TELEGRAM_URL: "https://t.me/felixchemicalsupply",
+  GOOGLE_DRIVE_URL: "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
   PAYMENT_ADDRESSES: {
     ETH: {
       name: "USDT / USDC",
@@ -56,18 +56,18 @@ const products = [
     "status": "In Stock",
     "description": "Selective growth hormone secretagogue pentapeptide for somatotropic receptor and cellular research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-75",
         "batch": "020526-IPA-B",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-IPA-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Ipamorelin 5mg"
+        "variant": "Ipamorelin 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -84,54 +84,58 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic nonapeptide investigated for sleep architecture, circadian rhythm, and neuromodulation research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-3",
         "batch": "022526-DSP-D",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-DSP-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-4",
         "batch": "121525-DSP-D",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-DSP-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-5",
         "batch": "102125-DSP-9",
         "date": "Oct 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102125-DSP-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-6",
         "batch": "081825-DSP-C",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/DSIP-White_27357-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-7",
         "batch": "020526-DSP-1",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-DSP-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 5mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -149,9 +153,8 @@ const products = [
     "status": "In Stock",
     "description": "Dual GLP-1/GIP receptor co-agonist investigated for glycemic control and metabolic pathway research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -168,9 +171,8 @@ const products = [
     "status": "In Stock",
     "description": "Dual GIP/GLP-1 receptor agonist studied for glucose homeostasis and incretin signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -186,117 +188,128 @@ const products = [
     "status": "In Stock",
     "description": "Copper-binding tripeptide evaluated for extracellular matrix remodeling and tissue repair research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-52",
         "batch": "041626-GHK-6",
         "date": "Apr 16, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041626-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-53",
         "batch": "121525-GHK-5",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-GHK-5.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-54",
         "batch": "100825-GHK-6",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-55",
         "batch": "100125-GHK-B",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-GHK-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-56",
         "batch": "081125-GHK-1",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/GHK_26974-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-57",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/GHK-071025-GHK-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-58",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Chromate Labs",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_26117-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-59",
         "batch": "062625-GHK-3",
         "date": "Jun 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_25938-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-60",
         "batch": "040825-GHK-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/GHK-200mg.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-61",
         "batch": "042326-GH5-C",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-GH5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-62",
         "batch": "041326-GH5-1",
         "date": "Apr 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-GH5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-63",
         "batch": "021026-G50-C",
         "date": "Feb 10, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/021025-G50-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -313,45 +326,48 @@ const products = [
     "status": "In Stock",
     "description": "Small molecule NNMT inhibitor investigated for cellular energy metabolism and adipose signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-8",
         "batch": "010226-5AM-D",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-5AM-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-9",
         "batch": "102725-5AM-D",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-5AM-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-10",
         "batch": "020526-5AM-7",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-5AM-7.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 10mg"
+        "variant": "5-Amino-1MQ 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-251",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/5AM-5MG-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -368,36 +384,38 @@ const products = [
     "status": "In Stock",
     "description": "Dual-acting peptide research blend formulated for angiogenic signaling and tissue repair studies.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-1",
         "batch": "010726-BT5-0",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-BT5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg"
+        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-2",
         "batch": "110425-BT5-C",
         "date": "Nov 4, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/110425-BT5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg"
+        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-250",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/BPCTB-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 + TB-500 5mg/5mg"
+        "variant": "BPC-157 + TB-500 5mg/5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -413,10 +431,9 @@ const products = [
     "quantity": "Analytical Grade",
     "status": "In Stock",
     "description": "Insulated thermal protective case with reusable ice packs for temperature-sensitive research compounds.",
-    "reconstitution": "N/A \u2014 Pre-assembled physical supply",
+    "reconstitution": "N/A — Pre-assembled physical supply",
     "storage": "Room temperature. Re-freeze cooling inserts prior to use.",
     "form": "Insulated Cold Case",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -432,144 +449,158 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic growth hormone-releasing factor analog studied for visceral lipolysis and pituitary pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-185",
         "batch": "042326-TS1-1",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-TS1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-186",
         "batch": "033126-TS1-6",
         "date": "Mar 31, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/033126-TS1-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-187",
         "batch": "122925-TES-1",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-TES-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-188",
         "batch": "121525-TSM-0",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-TSM-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-189",
         "batch": "120125-TES-C",
         "date": "Dec 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/120125-TES-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-190",
         "batch": "112425-TES-0",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-TES-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-191",
         "batch": "100825-TS1-1",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-TS1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-192",
         "batch": "081825-TSM-0",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-TSM-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-193",
         "batch": "071025-TES-6",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_26113-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-194",
         "batch": "070225-TES-0",
         "date": "Jul 2, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_25803-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-195",
         "batch": "060525-TES-6",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-TES-6-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-196",
         "batch": "041326-TS5-0",
         "date": "Apr 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-TS5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-197",
         "batch": "030226-TS5-1",
         "date": "Mar 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-TS5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-198",
         "batch": "102725-TE5-C",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-TE5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-199",
         "batch": "081125-TE5-C",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-TE5-C-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -586,51 +617,54 @@ const products = [
     "status": "In Stock",
     "description": "NNMT enzyme inhibitor researched for metabolic signaling, NAD+ salvage, and sirtuin activity.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-8",
         "batch": "010226-5AM-D",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-5AM-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-9",
         "batch": "102725-5AM-D",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-5AM-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-10",
         "batch": "020526-5AM-7",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-5AM-7.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 10mg"
+        "variant": "5-Amino-1MQ 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-251",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/5AM-5MG-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       }
     ]
   },
   {
     "id": "thymosin-10",
-    "name": "Thymosin Alpha-1 (T\u03b11) 10mg",
+    "name": "Thymosin Alpha-1 (Tα1) 10mg",
     "category": "Peptides",
     "categories": [
       "Peptides"
@@ -641,45 +675,48 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic 28-amino acid polypeptide investigated for immune modulation and T-cell activation pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-153",
         "batch": "022526-TA1-1",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-TA1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Thymosin Alpha-1 10mg"
+        "variant": "Thymosin Alpha-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-154",
         "batch": "112425-TA1-0",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-TA1-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Thymosin Alpha-1 10mg"
+        "variant": "Thymosin Alpha-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-155",
         "batch": "081925-TA1-0",
         "date": "Aug 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081925-TA1-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Thymosin Alpha-1 10mg"
+        "variant": "Thymosin Alpha-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-156",
         "batch": "020526-TA1-9",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-TA1-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Thymosin Alpha-1 5mg"
+        "variant": "Thymosin Alpha-1 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -696,54 +733,58 @@ const products = [
     "status": "In Stock",
     "description": "Higher-quantity delta sleep-inducing peptide standard for neurochemical and receptor evaluation.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-3",
         "batch": "022526-DSP-D",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-DSP-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-4",
         "batch": "121525-DSP-D",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-DSP-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-5",
         "batch": "102125-DSP-9",
         "date": "Oct 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102125-DSP-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-6",
         "batch": "081825-DSP-C",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/DSIP-White_27357-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-7",
         "batch": "020526-DSP-1",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-DSP-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "DSIP (Deep Sleep Inducing Peptide) 5mg"
+        "variant": "DSIP (Deep Sleep Inducing Peptide) 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -760,99 +801,108 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic cyclic heptapeptide melanocortin receptor agonist evaluated for photoprotective signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-84",
         "batch": "122925-MT2-D",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-MT2-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-85",
         "batch": "112425-MT2-D",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-MT2-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-86",
         "batch": "092525-MT2-D",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-MT2-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-87",
         "batch": "081125-MT2-0",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT2-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-88",
         "batch": "102825-MT1-C",
         "date": "Oct 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-MT1-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-89",
         "batch": "101525-MT1-9",
         "date": "Oct 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-MT1-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-90",
         "batch": "100625-MT1-A",
         "date": "Oct 6, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-MT1-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-91",
         "batch": "081125-MT1-C",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT1-C-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-252",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/MT2-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-II 10mg"
+        "variant": "Melanotan-II 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-253",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/MT1-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-I 10mg"
+        "variant": "Melanotan-I 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -869,63 +919,68 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic linear analog of alpha-MSH studied for selective melanocortin-1 receptor binding.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-88",
         "batch": "102825-MT1-C",
         "date": "Oct 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-MT1-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-89",
         "batch": "101525-MT1-9",
         "date": "Oct 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-MT1-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-90",
         "batch": "100625-MT1-A",
         "date": "Oct 6, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-MT1-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-91",
         "batch": "081125-MT1-C",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT1-C-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-252",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/MT2-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-II 10mg"
+        "variant": "Melanotan-II 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-253",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/MT1-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-I 10mg"
+        "variant": "Melanotan-I 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -942,18 +997,18 @@ const products = [
     "status": "In Stock",
     "description": "Sterile analytical reconstitution solution containing 0.9% benzyl alcohol for peptide solubilization.",
     "reconstitution": "Ready-to-use analytical solution",
-    "storage": "Store at 15\u201325\u00b0C protected from light. Do not freeze.",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
     "form": "Sterile Solution",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-258",
         "batch": "Hospira Sterile Analytical Standard",
         "date": "Verified Lot",
         "lab": "Hospira Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/HospiraBacWaterCOA.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Reconstitution Solution - 10ml / 30ml"
+        "variant": "Reconstitution Solution - 10ml / 30ml",
+        "source": "Google Drive"
       }
     ]
   },
@@ -971,9 +1026,8 @@ const products = [
     "status": "In Stock",
     "description": "Glucagon/GLP-1 dual receptor agonist investigated for metabolic and energy expenditure signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -989,9 +1043,8 @@ const products = [
     "status": "In Stock",
     "description": "Specialized 0.6% acetic acid analytical solvent for solubilizing basic or hydrophobic peptides.",
     "reconstitution": "Ready-to-use analytical solution",
-    "storage": "Store at 15\u201325\u00b0C protected from light. Do not freeze.",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
     "form": "Sterile Solution",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -1007,45 +1060,48 @@ const products = [
     "status": "In Stock",
     "description": "C-terminal tripeptide fragment of alpha-MSH studied for anti-inflammatory and mucosal pathway research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-76",
         "batch": "112125-KPV-C",
         "date": "Nov 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112125-KPV-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-77",
         "batch": "100825-KPV-B",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-KPV-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-78",
         "batch": "071025-KPV-1",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/KPV-Blue_26260-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-79",
         "batch": "020526-KPV-C",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-KPV-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 5mg"
+        "variant": "KPV 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1062,54 +1118,58 @@ const products = [
     "status": "In Stock",
     "description": "Multi-peptide research formulation combining KPV, BPC-157, TB-500, and GHK-Cu for matrix studies.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-64",
         "batch": "010226-KLO-9",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-KLO-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg"
+        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-65",
         "batch": "122925-KLO-9",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-KLO-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg"
+        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-66",
         "batch": "112425-KLO-C",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-KLO-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg"
+        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-67",
         "batch": "100425-KLO-D",
         "date": "Oct 4, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100425-KLO-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg"
+        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-68",
         "batch": "071025-KLO-7",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/KLOW_26262-718x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg"
+        "variant": "KPV 10mgBPC-157 10mgTB-500 10mgGHK-cu 50mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1126,72 +1186,78 @@ const products = [
     "status": "In Stock",
     "description": "Mitochondria-targeting tetrapeptide antioxidant studied for cardiolipin protection and ATP synthesis.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-111",
         "batch": "121925-SS-C",
         "date": "Dec 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121925-SS-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 25mg"
+        "variant": "Peptide-31 25mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-112",
         "batch": "090825-SS2-D",
         "date": "Sep 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/090825-SS2-D-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-31 25mg"
+        "variant": "Peptide-31 25mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-113",
         "batch": "010726-SS6-0",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SS6-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-114",
         "batch": "111325-SS6-6",
         "date": "Nov 13, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111325-SS6-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-115",
         "batch": "102525-SS6-3",
         "date": "Oct 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102525-SS6-3.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-116",
         "batch": "071025-SS6-5",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/071025-SS6-5-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-254",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/P31-60-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1209,36 +1275,38 @@ const products = [
     "status": "In Stock",
     "description": "Amylin analog investigated for satiety signaling, glycemic homeostasis, and neuroendocrine pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-200",
         "batch": "102725-C5-6",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-C5-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-C 5mg"
+        "variant": "Peptide-C 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-201",
         "batch": "090825-C05-D",
         "date": "Sep 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/090825-C05-D-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 5mg"
+        "variant": "Peptide-C 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-202",
         "batch": "061725-C5-B",
         "date": "Jun 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/C5_25752-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 5mg"
+        "variant": "Peptide-C 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1256,63 +1324,68 @@ const products = [
     "status": "In Stock",
     "description": "Triple GIP/GLP-1/glucagon receptor tri-agonist researched for multi-pathway metabolic activation.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-203",
         "batch": "030426-R50-0",
         "date": "Mar 4, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030426-R50-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 50mg"
+        "variant": "Peptide-R 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-204",
         "batch": "022526-R50-6",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-R50-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 50mg"
+        "variant": "Peptide-R 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-205",
         "batch": "090925-R50-4",
         "date": "Sep 9, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/R50-TransGold_27786-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 50mg"
+        "variant": "Peptide-R 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-206",
         "batch": "082125-R50-D",
         "date": "Aug 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/R50_27060-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 50mg"
+        "variant": "Peptide-R 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-207",
         "batch": "071525-R50-4",
         "date": "Jul 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/R50_26035-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 50mg"
+        "variant": "Peptide-R 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-208",
         "batch": "060525-R50-8",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-R50-8-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 50mg"
+        "variant": "Peptide-R 50mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1330,9 +1403,8 @@ const products = [
     "status": "In Stock",
     "description": "High-concentration dual incretin mimetic evaluated for metabolic receptor binding kinetics.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -1349,9 +1421,8 @@ const products = [
     "status": "In Stock",
     "description": "Synergistic research formulation combining Peptide-C and Peptide-S for co-receptor signaling studies.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -1368,72 +1439,78 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic amylin receptor agonist peptide standard for metabolic and pancreatic endocrine assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-178",
         "batch": "030226-C10-B",
         "date": "Mar 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-C10-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-C 10mg"
+        "variant": "Peptide-C 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-179",
         "batch": "010226-C10-1",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-C10-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-C 10mg"
+        "variant": "Peptide-C 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-180",
         "batch": "121925-C10-1",
         "date": "Dec 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121925-C10-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-C 10mg"
+        "variant": "Peptide-C 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-181",
         "batch": "81825-C10-B",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-C10-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 10mg"
+        "variant": "Peptide-C 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-182",
         "batch": "061725-C10-9",
         "date": "Jun 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/C10_25753-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 10mg"
+        "variant": "Peptide-C 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-183",
         "batch": "060525-C10-9",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-C10-9-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 10mg"
+        "variant": "Peptide-C 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-184",
         "batch": "022825-C10",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/C10-23285-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 10mg"
+        "variant": "Peptide-C 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1451,54 +1528,58 @@ const products = [
     "status": "In Stock",
     "description": "Extended quantity amylin mimetic peptide for high-throughput endocrine and receptor binding assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-164",
         "batch": "121925-C20-6",
         "date": "Dec 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121925-C20-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-C 20mg"
+        "variant": "Peptide-C 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-165",
         "batch": "090425-C20-6",
         "date": "Sep 4, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/090425-C20-6-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 20mg"
+        "variant": "Peptide-C 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-166",
         "batch": "081125-C20-D",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-C20-D-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 20mg"
+        "variant": "Peptide-C 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-167",
         "batch": "060525-C20-7",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/060525-C20-7-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 20mg"
+        "variant": "Peptide-C 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-168",
         "batch": "040825-C20-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/C20-23829.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-C 20mg"
+        "variant": "Peptide-C 20mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1516,81 +1597,88 @@ const products = [
     "status": "In Stock",
     "description": "Triple receptor co-agonist evaluated for metabolic modulation, adiposity, and energy balance.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-209",
         "batch": "042326-R20-6",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-R20-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-210",
         "batch": "030426-R20-A",
         "date": "Mar 4, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030426-R20-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-211",
         "batch": "022526-R20-C",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-R20-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-212",
         "batch": "091125-R20-C",
         "date": "Sep 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/R20-White_27893-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-213",
         "batch": "082825-R20-8",
         "date": "Aug 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/R20-Pink_27319-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-214",
         "batch": "062625-R20-6",
         "date": "Jun 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/R20_25751-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-215",
         "batch": "060525-R20-4",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-R20-4-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-216",
         "batch": "022825-R20",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/R20-23289-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 20mg"
+        "variant": "Peptide-R 20mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1608,90 +1696,98 @@ const products = [
     "status": "In Stock",
     "description": "High-purity triple incretin/glucagon agonist peptide standard for receptor activation studies.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-217",
         "batch": "012026-R10-3",
         "date": "Jan 20, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/012026-R10-3.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-218",
         "batch": "011426-R10-9",
         "date": "Jan 14, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/011426-R10-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-219",
         "batch": "121525-R10-1",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/121525-R10-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-220",
         "batch": "082825-R10-A",
         "date": "Aug 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/R10-Red_27320-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-221",
         "batch": "081125-R10-9",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/R10Purple_27785-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-222",
         "batch": "081125-R10-9",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/R10-Purple_27125-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-223",
         "batch": "070225-R10-1",
         "date": "Jul 2, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/R10_25750-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-224",
         "batch": "060525-R10-D",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-R10-D-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-225",
         "batch": "022825-R10",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/R10-23288-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-R 10mg"
+        "variant": "Peptide-R 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1709,9 +1805,8 @@ const products = [
     "status": "In Stock",
     "description": "Bulk analytical dual incretin co-agonist peptide standard for extensive laboratory research.",
     "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -1728,9 +1823,8 @@ const products = [
     "status": "In Stock",
     "description": "High-mass dual GIP/GLP-1 receptor agonist reference material for biochemical assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -1747,9 +1841,8 @@ const products = [
     "status": "In Stock",
     "description": "Dual receptor agonist research peptide standard for metabolic and incretin signaling investigations.",
     "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -1766,9 +1859,8 @@ const products = [
     "status": "In Stock",
     "description": "Dual incretin mimetic reference standard for in-vitro receptor binding and activation studies.",
     "reconstitution": "Reconstitute with Reconstitution Solution or 0.6% Acetic Acid.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -1785,90 +1877,98 @@ const products = [
     "status": "In Stock",
     "description": "GLP-1 receptor agonist peptide evaluated for insulinotropic signaling and gastric motility research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-241",
         "batch": "030226-S5-A",
         "date": "Mar 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-S5-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-242",
         "batch": "121525-S5-C",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-S5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-243",
         "batch": "111525-S5-F",
         "date": "Nov 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111525-S5-F.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-244",
         "batch": "111425-S5-1",
         "date": "Nov 14, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111425-S5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-245",
         "batch": "092525-S5-1",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-S5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-246",
         "batch": "061725-S5-1",
         "date": "Jun 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/S5-25727-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-247",
         "batch": "060525-S5-5",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S5-5-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-248",
         "batch": "040825-S05-W",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/S5-23831.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-249",
         "batch": "022825-S5",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/S5-23281-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 5mg"
+        "variant": "Peptide-S 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1886,81 +1986,88 @@ const products = [
     "status": "In Stock",
     "description": "Extended concentration GLP-1 mimetic peptide standard for analytical laboratory investigations.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-226",
         "batch": "030226-S15-9",
         "date": "Mar 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-S15-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-227",
         "batch": "121525-S15-6",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-S15-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-228",
         "batch": "111825-S15-D",
         "date": "Nov 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/11825-S15-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-229",
         "batch": "060525-S15-B",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-230",
         "batch": "060525-S15-4",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-4-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-231",
         "batch": "060525-S15-3",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-3-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-232",
         "batch": "040825-S15-W",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/S15-23832-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-233",
         "batch": "022825-S15",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/S15-23283-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 15mg"
+        "variant": "Peptide-S 15mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -1978,72 +2085,78 @@ const products = [
     "status": "In Stock",
     "description": "High-purity GLP-1 receptor agonist reference compound for metabolic and glycemic assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-234",
         "batch": "010726-S10-B",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-S10-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 10mg"
+        "variant": "Peptide-S 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-235",
         "batch": "121525-S10-A",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-S10-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 10mg"
+        "variant": "Peptide-S 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-236",
         "batch": "111825-S10-C",
         "date": "Nov 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111825-S10-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 10mg"
+        "variant": "Peptide-S 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-237",
         "batch": "092525-S10-0",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-S10-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-S 10mg"
+        "variant": "Peptide-S 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-238",
         "batch": "061725-S10-C",
         "date": "Jun 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/S10_25749-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 10mg"
+        "variant": "Peptide-S 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-239",
         "batch": "060525-S10-C",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S10-C-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 10mg"
+        "variant": "Peptide-S 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-240",
         "batch": "022825-S10",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/S10-23282-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-S 10mg"
+        "variant": "Peptide-S 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2060,144 +2173,158 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic GHRH analog peptide for endocrine regulation and pituitary somatotroph research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-185",
         "batch": "042326-TS1-1",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-TS1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-186",
         "batch": "033126-TS1-6",
         "date": "Mar 31, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/033126-TS1-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-187",
         "batch": "122925-TES-1",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-TES-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-188",
         "batch": "121525-TSM-0",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-TSM-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-189",
         "batch": "120125-TES-C",
         "date": "Dec 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/120125-TES-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-190",
         "batch": "112425-TES-0",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-TES-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-191",
         "batch": "100825-TS1-1",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-TS1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-192",
         "batch": "081825-TSM-0",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-TSM-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-193",
         "batch": "071025-TES-6",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_26113-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-194",
         "batch": "070225-TES-0",
         "date": "Jul 2, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_25803-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-195",
         "batch": "060525-TES-6",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-TES-6-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-196",
         "batch": "041326-TS5-0",
         "date": "Apr 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-TS5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-197",
         "batch": "030226-TS5-1",
         "date": "Mar 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-TS5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-198",
         "batch": "102725-TE5-C",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-TE5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-199",
         "batch": "081125-TE5-C",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-TE5-C-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2214,72 +2341,78 @@ const products = [
     "status": "In Stock",
     "description": "Functional 29-amino acid GHRH fragment studied for pituitary growth hormone secretion pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-157",
         "batch": "021326-SER-C",
         "date": "Feb 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/021326-SER-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Sermorelin 10mg"
+        "variant": "Sermorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-158",
         "batch": "122925-SEM-0",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-SEM-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Sermorelin 10mg"
+        "variant": "Sermorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-159",
         "batch": "121525-SER-C",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SER-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Sermorelin 10mg"
+        "variant": "Sermorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-160",
         "batch": "121525-SER-0",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SER-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Sermorelin 10mg"
+        "variant": "Sermorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-161",
         "batch": "81825-SER-8",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-SER-8-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Sermorelin 10mg"
+        "variant": "Sermorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-162",
         "batch": "060525-SER-1",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-SER-1-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Sermorelin 10mg"
+        "variant": "Sermorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-163",
         "batch": "020526-SER-B",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-SER-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Sermorelin 5mg\u200b"
+        "variant": "Sermorelin 5mg​",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2296,72 +2429,78 @@ const products = [
     "status": "In Stock",
     "description": "Heptapeptide ACTH analog investigated for neuroprotection, BDNF expression, and cognitive pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-140",
         "batch": "010726-SMX-7",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SMX-7.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Semax 10mg"
+        "variant": "Semax 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-141",
         "batch": "121525-SEM-7",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SEM-7.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Semax 10mg"
+        "variant": "Semax 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-142",
         "batch": "102125-SMX-9",
         "date": "Oct 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102125-SMX-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Semax 10mg"
+        "variant": "Semax 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-143",
         "batch": "100225-SMX-9",
         "date": "Oct 2, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100225-SMX-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Semax 10mg"
+        "variant": "Semax 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-144",
         "batch": "81825-SMX-9",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-SMX-9-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Semax 10mg"
+        "variant": "Semax 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-145",
         "batch": "072625-SMX-9",
         "date": "Jul 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/SEMAX_26479-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Semax 10mg"
+        "variant": "Semax 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-146",
         "batch": "060525-SEM-1",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-SEM-1-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Semax 10mg"
+        "variant": "Semax 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2378,72 +2517,78 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic regulatory tuftsin analog peptide researched for anxiolytic signaling and neurotransmission.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-133",
         "batch": "010726-SLK-0",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SLK-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Selank 10mg"
+        "variant": "Selank 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-134",
         "batch": "121525-SEL-0",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SEL-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Selank 10mg"
+        "variant": "Selank 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-135",
         "batch": "101525-SLK-9",
         "date": "Oct 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-SLK-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Selank 10mg"
+        "variant": "Selank 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-136",
         "batch": "100625-SLK-0",
         "date": "Oct 6, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-SLK-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Selank 10mg"
+        "variant": "Selank 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-137",
         "batch": "081825-SLK-1",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825SLK-1-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Selank 10mg"
+        "variant": "Selank 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-138",
         "batch": "072125-SEL-9",
         "date": "Jul 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/Selank_26651-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Selank 10mg"
+        "variant": "Selank 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-139",
         "batch": "060525-SEL-5",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-SEL-5-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Selank 10mg"
+        "variant": "Selank 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2460,63 +2605,68 @@ const products = [
     "status": "In Stock",
     "description": "High-potency pentapeptide ghrelin receptor agonist for somatotropic axis research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-69",
         "batch": "020226-IPA-6",
         "date": "Feb 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020226-IPA-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Ipamorelin 10mg"
+        "variant": "Ipamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-70",
         "batch": "011426-IPA-D",
         "date": "Jan 14, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/011426-IPA-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Ipamorelin 10mg"
+        "variant": "Ipamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-71",
         "batch": "121525-IPA-0",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-IPA-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Ipamorelin 10mg"
+        "variant": "Ipamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-72",
         "batch": "081825-IPA-0",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-IPA-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Ipamorelin 10mg"
+        "variant": "Ipamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-73",
         "batch": "071725-IPA-0",
         "date": "Jul 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/IPA_26448-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Ipamorelin 10mg"
+        "variant": "Ipamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-74",
         "batch": "060525-IPA-1",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-IPA-1-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Ipamorelin 10mg"
+        "variant": "Ipamorelin 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2533,45 +2683,48 @@ const products = [
     "status": "In Stock",
     "description": "Endogenous master antioxidant tripeptide standard for cellular redox and oxidative stress assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-14",
         "batch": "022526-GLU-C",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-GLU-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Glutathione 1200mg"
+        "variant": "Glutathione 1200mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-15",
         "batch": "101525-GLU-C",
         "date": "Oct 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-GLU-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Glutathione 1200mg"
+        "variant": "Glutathione 1200mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-16",
         "batch": "060525-GLU-1",
         "date": "Jun 5, 2025",
         "lab": "Chromate Labs",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/Chromate_Job_25140-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Glutathione 1200mg"
+        "variant": "Glutathione 1200mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-17",
         "batch": "020526-5AM-7",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-GLU-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Glutathione 600mg"
+        "variant": "Glutathione 600mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2588,72 +2741,78 @@ const products = [
     "status": "In Stock",
     "description": "Synergistic dual secretagogue research blend designed for concurrent GHRH and ghrelin receptor studies.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-29",
         "batch": "021326-CJC-1",
         "date": "Feb 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/021326-CJC-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg"
+        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-30",
         "batch": "100825-CJC-1",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-CJC-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg"
+        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-31",
         "batch": "100625-CJC-A",
         "date": "Oct 6, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-CJC-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg"
+        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-32",
         "batch": "092525-CJC-8",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-CJC-8.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg"
+        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-33",
         "batch": "072625-CJC-A",
         "date": "Jul 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/CJC-RED_26449-763x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg"
+        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-34",
         "batch": "071725-CJC-1",
         "date": "Jul 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/CJC-Blue_26450-763x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg"
+        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-35",
         "batch": "060525-CJI-1",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-CJI-1-763x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg"
+        "variant": "CJC-1295 (No DAC) + Ipamorelin Blend 5mg/5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2670,54 +2829,58 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic pineal tetrapeptide researched for telomerase induction and cellular senescence pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-18",
         "batch": "121525-EPI-C",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-EPI-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Epitalon 50mg"
+        "variant": "Epitalon 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-19",
         "batch": "112425-EPI-0",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-EPI-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Epitalon 50mg"
+        "variant": "Epitalon 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-20",
         "batch": "060525-EPI-X",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-EPI-X-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Epitalon 50mg"
+        "variant": "Epitalon 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-21",
         "batch": "020526-EPI-9",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-EPI-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Epitalon 10mg"
+        "variant": "Epitalon 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-22",
         "batch": "020526-EPI-B",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-EPI-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Epitalon 10mg"
+        "variant": "Epitalon 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2734,36 +2897,38 @@ const products = [
     "status": "In Stock",
     "description": "Specialized multi-compound peptide formulation researched for dermatological matrix and collagen signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-11",
         "batch": "022526-GLO-0",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-GLO-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mgTB-500 10mgGHK-cu 70mg"
+        "variant": "BPC-157 10mgTB-500 10mgGHK-cu 70mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-12",
         "batch": "102825-GLO-9",
         "date": "Oct 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-GLO-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mgTB-500 10mgGHK-cu 70mg"
+        "variant": "BPC-157 10mgTB-500 10mgGHK-cu 70mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-13",
         "batch": "071025-GLO-9",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GLOW_26116-740x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 10mgTB-500 10mgGHK-cu 70mg"
+        "variant": "BPC-157 10mgTB-500 10mgGHK-cu 70mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2780,18 +2945,18 @@ const products = [
     "status": "In Stock",
     "description": "30ml sterile reconstitution solution formulated with 0.9% benzyl alcohol for analytical peptide prep.",
     "reconstitution": "Ready-to-use analytical solution",
-    "storage": "Store at 15\u201325\u00b0C protected from light. Do not freeze.",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
     "form": "Sterile Solution",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-258",
         "batch": "Hospira Sterile Analytical Standard",
         "date": "Verified Lot",
         "lab": "Hospira Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/HospiraBacWaterCOA.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Reconstitution Solution - 10ml / 30ml"
+        "variant": "Reconstitution Solution - 10ml / 30ml",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2809,9 +2974,8 @@ const products = [
     "status": "In Stock",
     "description": "Analytical-grade 0.6% acetic acid solution for reconstituting hydrophobic peptide materials.",
     "reconstitution": "Ready-to-use analytical solution",
-    "storage": "Store at 15\u201325\u00b0C protected from light. Do not freeze.",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
     "form": "Sterile Solution",
-    "source": "felixchem.is",
     "coas": []
   },
   {
@@ -2827,90 +2991,98 @@ const products = [
     "status": "In Stock",
     "description": "Synthetic 43-amino acid Thymosin Beta-4 fragment evaluated for actin sequestering and cell migration.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-169",
         "batch": "010226-TB5-0",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010026-TB5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-170",
         "batch": "122925-TB5-0",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-TB5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-171",
         "batch": "121525-TB5-A",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-TB5-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-172",
         "batch": "100125-TB5-A",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-TB5-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-173",
         "batch": "092525-TB5-A",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-TB5-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-174",
         "batch": "081825-TB5-A",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-TB5-A-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-175",
         "batch": "071725-TB5-A",
         "date": "Jul 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/TB-500_26478-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-176",
         "batch": "061725-TB5-C",
         "date": "Jun 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TB500_25882-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-177",
         "batch": "040825-TB10-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/TB500_23869.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -2927,72 +3099,78 @@ const products = [
     "status": "In Stock",
     "description": "Mitochondria-targeted peptide SS-31 investigated for mitochondrial membrane potential and ROS reduction.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-111",
         "batch": "121925-SS-C",
         "date": "Dec 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121925-SS-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 25mg"
+        "variant": "Peptide-31 25mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-112",
         "batch": "090825-SS2-D",
         "date": "Sep 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/090825-SS2-D-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-31 25mg"
+        "variant": "Peptide-31 25mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-113",
         "batch": "010726-SS6-0",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SS6-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-114",
         "batch": "111325-SS6-6",
         "date": "Nov 13, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111325-SS6-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-115",
         "batch": "102525-SS6-3",
         "date": "Oct 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102525-SS6-3.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-116",
         "batch": "071025-SS6-5",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/071025-SS6-5-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-31 60mg"
+        "variant": "Peptide-31 60mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-255",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/01/P31-25-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Peptide-31 25mg"
+        "variant": "Peptide-31 25mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3009,63 +3187,68 @@ const products = [
     "status": "In Stock",
     "description": "Octapeptide analog of SNAP-25 evaluated for SNARE complex inhibition and neuromuscular signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-147",
         "batch": "010726-SNP-8",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SNP-8.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "SNAP-8 10mg"
+        "variant": "SNAP-8 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-148",
         "batch": "121525-SNP-8",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SNP-8.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "SNAP-8 10mg"
+        "variant": "SNAP-8 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-149",
         "batch": "101525-SNP-6",
         "date": "Oct 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-SNP-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "SNAP-8 10mg"
+        "variant": "SNAP-8 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-150",
         "batch": "100625-SNP-C",
         "date": "Oct 6, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-SNP-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "SNAP-8 10mg"
+        "variant": "SNAP-8 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-151",
         "batch": "061725-SNP-1",
         "date": "Jun 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/SNAP_25877-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "SNAP-8 10mg"
+        "variant": "SNAP-8 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-152",
         "batch": "022825-SNAP10",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/SNAP-23377-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "SNAP-8 10mg"
+        "variant": "SNAP-8 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3082,72 +3265,78 @@ const products = [
     "status": "In Stock",
     "description": "Bremelanotide cyclic peptide melanocortin receptor agonist studied for central nervous system pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-126",
         "batch": "030226-PT1-6",
         "date": "Mar 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-PT1-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "PT-141 10mg"
+        "variant": "PT-141 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-127",
         "batch": "120425-PT-8",
         "date": "Dec 4, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/120425-PT-8.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "PT-141 10mg"
+        "variant": "PT-141 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-128",
         "batch": "092525-PT-1",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-PT-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "PT-141 10mg"
+        "variant": "PT-141 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-129",
         "batch": "091025-PT1-1",
         "date": "Sep 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/091025-PT1-1-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "PT-141 10mg"
+        "variant": "PT-141 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-130",
         "batch": "090225-PT10-A",
         "date": "Sep 2, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/090225-PT10-A-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "PT-141 10mg"
+        "variant": "PT-141 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-131",
         "batch": "022825-PT10",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/03/PT-23314-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "PT-141 10mg"
+        "variant": "PT-141 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-132",
         "batch": "020526-PT5-0",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-PT5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "PT-141 5mg"
+        "variant": "PT-141 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3164,90 +3353,98 @@ const products = [
     "status": "In Stock",
     "description": "Essential metabolic coenzyme standard investigated for mitochondrial respiration, sirtuin activation, and PARP repair.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-117",
         "batch": "042326-NAD-6",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-NAD-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-118",
         "batch": "031126-NAD-A",
         "date": "Mar 11, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/031126-NAD-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-119",
         "batch": "121525-NAD-4",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-NAD-4.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-120",
         "batch": "111725-NAD-1",
         "date": "Nov 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111725-NAD-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-121",
         "batch": "100425-NAD-6",
         "date": "Oct 4, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100425-NAD-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-122",
         "batch": "092525-NAD-A",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/NAD-092525-NAD-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-123",
         "batch": "081825-NAD-B",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-NAD-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-124",
         "batch": "061825-NAD-B",
         "date": "Jun 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/061825-NAD-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-125",
         "batch": "060525-NAD-C",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-NAD-C-815x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3264,108 +3461,118 @@ const products = [
     "status": "In Stock",
     "description": "Mitochondrial-derived 16-amino acid peptide investigated for metabolic homeostasis and AMPK activation.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-100",
         "batch": "022526-MOT-6",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-MOT-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-101",
         "batch": "010226-MOT-9",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-MOT-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-102",
         "batch": "122925-MOT-9",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-MOT-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-103",
         "batch": "112425-MOT-9",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-MOT-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-104",
         "batch": "100125-MOT-1",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-MOT-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-105",
         "batch": "092525-MOT-B",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-MOT-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-106",
         "batch": "081825-MOT-B",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-MOT-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-107",
         "batch": "081125-MOT-8",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/MOTS_26975-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-108",
         "batch": "072625-MOT-8",
         "date": "Jul 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/MOTS_26447-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-109",
         "batch": "061925-MOT-1",
         "date": "Jun 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/MOTS_25805-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-110",
         "batch": "060525-MOT-B",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-MOT-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "MOTS-c 10mg"
+        "variant": "MOTS-c 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3382,90 +3589,98 @@ const products = [
     "status": "In Stock",
     "description": "Sterile analytical lipotropic solution containing choline, inositol, methionine, and L-carnitine.",
     "reconstitution": "Ready-to-use analytical solution",
-    "storage": "Store at 15\u201325\u00b0C protected from light. Do not freeze.",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
     "form": "Sterile Solution",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-92",
         "batch": "011226-LPC-B",
         "date": "Jan 12, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/011226-LPC-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-93",
         "batch": "103025-LPC-B",
         "date": "Oct 30, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/103025-LPC-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-94",
         "batch": "102825-LPC-C",
         "date": "Oct 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-LPC-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-95",
         "batch": "102725-LPC-0",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-LPC-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-96",
         "batch": "101525-LCC-C",
         "date": "Oct 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-LCC-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-97",
         "batch": "100825-LPC-B",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-LPC-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-98",
         "batch": "092525-LPC-B",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-LPC-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-99",
         "batch": "111425-LC3-C",
         "date": "Nov 14, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111425-LC3-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-C 30ml"
+        "variant": "LIPO-C 30ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-256",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/LIPOC-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "LIPO-C 10ml"
+        "variant": "LIPO-C 10ml",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3482,54 +3697,58 @@ const products = [
     "status": "In Stock",
     "description": "Sterile analytical solution containing lipotropic factors and B-complex vitamins for metabolic assays.",
     "reconstitution": "Ready-to-use analytical solution",
-    "storage": "Store at 15\u201325\u00b0C protected from light. Do not freeze.",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
     "form": "Sterile Solution",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-80",
         "batch": "103025-LBC-B",
         "date": "Oct 30, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/103025-LBC-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-B 10ml"
+        "variant": "LIPO-B 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-81",
         "batch": "100825-LPB-C",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-LPB-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-B 10ml"
+        "variant": "LIPO-B 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-82",
         "batch": "092525-LPB-C",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-LPB-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-B 10ml"
+        "variant": "LIPO-B 10ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-83",
         "batch": "112525-LB3-3",
         "date": "Nov 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112525-LB3-3.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "LIPO-B 30ml"
+        "variant": "LIPO-B 30ml",
+        "source": "Google Drive"
       },
       {
         "id": "coa-257",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/LIPOB-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "LIPO-B 10ml"
+        "variant": "LIPO-B 10ml",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3546,117 +3765,128 @@ const products = [
     "status": "In Stock",
     "description": "High-yield copper peptide complex standard for extracellular matrix synthesis and gene expression research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-52",
         "batch": "041626-GHK-6",
         "date": "Apr 16, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041626-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-53",
         "batch": "121525-GHK-5",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-GHK-5.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-54",
         "batch": "100825-GHK-6",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-55",
         "batch": "100125-GHK-B",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-GHK-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-56",
         "batch": "081125-GHK-1",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/GHK_26974-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-57",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/GHK-071025-GHK-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-58",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Chromate Labs",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_26117-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-59",
         "batch": "062625-GHK-3",
         "date": "Jun 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_25938-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-60",
         "batch": "040825-GHK-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/GHK-200mg.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-61",
         "batch": "042326-GH5-C",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-GH5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-62",
         "batch": "041326-GH5-1",
         "date": "Apr 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-GH5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-63",
         "batch": "021026-G50-C",
         "date": "Feb 10, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/021025-G50-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3673,63 +3903,68 @@ const products = [
     "status": "In Stock",
     "description": "C-terminal fragment (177-191) of human growth hormone studied for lipolytic pathways without IGF-1 stimulation.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-23",
         "batch": "020226-AOD-7",
         "date": "Feb 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020226-AOD-7.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "AOD-9604 5mg"
+        "variant": "AOD-9604 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-24",
         "batch": "102825-AOD-9",
         "date": "Oct 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-AOD-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "AOD-9604 5mg"
+        "variant": "AOD-9604 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-25",
         "batch": "092525-AOD-D",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-AOD-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "AOD-9604 5mg"
+        "variant": "AOD-9604 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-26",
         "batch": "061925-AOD-D",
         "date": "Jun 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/AOD_25804-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "AOD-9604 5mg"
+        "variant": "AOD-9604 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-27",
         "batch": "060525-AOD-B",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-AOD-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "AOD-9604 5mg"
+        "variant": "AOD-9604 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-28",
         "batch": "022825-AOD-5",
         "date": "Feb 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/AOD_23300.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "AOD-9604 5mg"
+        "variant": "AOD-9604 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3746,153 +3981,168 @@ const products = [
     "status": "In Stock",
     "description": "Stable gastric pentadecapeptide investigated for cytoprotection, angiogenic signaling, and tissue repair.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem.is",
     "coas": [
       {
         "id": "coa-36",
         "batch": "042326-BPC-5",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-BPC-5.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-37",
         "batch": "031326-BPC-1",
         "date": "Mar 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/031326-BPC-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-38",
         "batch": "010226-BPC-1",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-BPC-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-39",
         "batch": "010226-BPC-5",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-BPC-5.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-40",
         "batch": "121525-BPC-C",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-BPC-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-41",
         "batch": "120125-BPC-1",
         "date": "Dec 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/120125-BPC-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-42",
         "batch": "100825-BPC-5",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-BPC-5.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-43",
         "batch": "100125-BPC-1",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-BPC-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-44",
         "batch": "092525-BPC-1",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-BPC-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-45",
         "batch": "081925-BPC-6",
         "date": "Aug 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/BPC-081925-BPC-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-46",
         "batch": "081925-BPC-6",
         "date": "Aug 19, 2025",
         "lab": "Chromate Labs",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/BPC-Green_27267-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-47",
         "batch": "081825-BPC-1",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-BPC-1-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-48",
         "batch": "072625-BPC-1",
         "date": "Jul 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/BPC_26477-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-49",
         "batch": "062625-BPC-1",
         "date": "Jun 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/BPC_25879-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-50",
         "batch": "060525-BPC-D",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-BPC-D-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-51",
         "batch": "040825-BPC5-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/BPC157_23870.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "BPC-157 10mg"
+        "variant": "BPC-157 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -3909,9 +4159,8 @@ const products = [
     "status": "In Stock",
     "description": "Triple agonist (GIP/GLP-1/Glucagon) reference material for advanced metabolic pathway research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -3927,9 +4176,8 @@ const products = [
     "status": "In Stock",
     "description": "Dual GIP and GLP-1 receptor co-agonist standard for comparative incretin receptor assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -3945,9 +4193,8 @@ const products = [
     "status": "In Stock",
     "description": "Triple receptor agonist peptide for comprehensive glycemic and energy balance research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -3963,27 +4210,28 @@ const products = [
     "status": "In Stock",
     "description": "Combined synergistic blend of Thymosin Beta-4 and BPC-157 for regenerative biology studies.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-1",
         "batch": "010726-BT5-0",
         "date": "Jan 7, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-BT5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg"
+        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-2",
         "batch": "110425-BT5-C",
         "date": "Nov 4, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/110425-BT5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg"
+        "variant": "BPC-157 + TB-500 Blend - 5mg/5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4000,144 +4248,158 @@ const products = [
     "status": "In Stock",
     "description": "High-quantity GHRH analog peptide for extended pituitary somatotroph signaling and lipolysis research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-185",
         "batch": "042326-TS1-1",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-TS1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-186",
         "batch": "033126-TS1-6",
         "date": "Mar 31, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/033126-TS1-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-187",
         "batch": "122925-TES-1",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-TES-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-188",
         "batch": "121525-TSM-0",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-TSM-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-189",
         "batch": "120125-TES-C",
         "date": "Dec 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/120125-TES-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-190",
         "batch": "112425-TES-0",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-TES-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-191",
         "batch": "100825-TS1-1",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-TS1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-192",
         "batch": "081825-TSM-0",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-TSM-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-193",
         "batch": "071025-TES-6",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_26113-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-194",
         "batch": "070225-TES-0",
         "date": "Jul 2, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_25803-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-195",
         "batch": "060525-TES-6",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-TES-6-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 10mg"
+        "variant": "Tesamorelin 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-196",
         "batch": "041326-TS5-0",
         "date": "Apr 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-TS5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-197",
         "batch": "030226-TS5-1",
         "date": "Mar 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-TS5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-198",
         "batch": "102725-TE5-C",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-TE5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-199",
         "batch": "081125-TE5-C",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-TE5-C-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Tesamorelin 5mg"
+        "variant": "Tesamorelin 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4154,9 +4416,8 @@ const products = [
     "status": "In Stock",
     "description": "Triple incretin/glucagon receptor agonist reference standard for in-vitro metabolic evaluation.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -4172,9 +4433,8 @@ const products = [
     "status": "In Stock",
     "description": "Dual incretin mimetic peptide standard for receptor kinetics and cellular assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -4190,153 +4450,168 @@ const products = [
     "status": "In Stock",
     "description": "High-synergy dual peptide research blend for matrix remodeling and cytokine modulation research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-52",
         "batch": "041626-GHK-6",
         "date": "Apr 16, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041626-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-53",
         "batch": "121525-GHK-5",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-GHK-5.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-54",
         "batch": "100825-GHK-6",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-55",
         "batch": "100125-GHK-B",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-GHK-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-56",
         "batch": "081125-GHK-1",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/GHK_26974-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-57",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/GHK-071025-GHK-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-58",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Chromate Labs",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_26117-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-59",
         "batch": "062625-GHK-3",
         "date": "Jun 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_25938-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-60",
         "batch": "040825-GHK-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/GHK-200mg.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-61",
         "batch": "042326-GH5-C",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-GH5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-62",
         "batch": "041326-GH5-1",
         "date": "Apr 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-GH5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-63",
         "batch": "021026-G50-C",
         "date": "Feb 10, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/021025-G50-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-76",
         "batch": "112125-KPV-C",
         "date": "Nov 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112125-KPV-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-77",
         "batch": "100825-KPV-B",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-KPV-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-78",
         "batch": "071025-KPV-1",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/KPV-Blue_26260-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-79",
         "batch": "020526-KPV-C",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-KPV-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 5mg"
+        "variant": "KPV 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4353,45 +4628,48 @@ const products = [
     "status": "In Stock",
     "description": "Biological immune response regulator peptide studied for innate and adaptive immune cell signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-153",
         "batch": "022526-TA1-1",
         "date": "Feb 25, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-TA1-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Thymosin Alpha-1 10mg"
+        "variant": "Thymosin Alpha-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-154",
         "batch": "112425-TA1-0",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-TA1-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Thymosin Alpha-1 10mg"
+        "variant": "Thymosin Alpha-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-155",
         "batch": "081925-TA1-0",
         "date": "Aug 19, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081925-TA1-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Thymosin Alpha-1 10mg"
+        "variant": "Thymosin Alpha-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-156",
         "batch": "020526-TA1-9",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-TA1-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Thymosin Alpha-1 5mg"
+        "variant": "Thymosin Alpha-1 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4408,45 +4686,48 @@ const products = [
     "status": "In Stock",
     "description": "High-purity tripeptide standard for anti-inflammatory signaling and epithelial barrier research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-76",
         "batch": "112125-KPV-C",
         "date": "Nov 21, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112125-KPV-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-77",
         "batch": "100825-KPV-B",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-KPV-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-78",
         "batch": "071025-KPV-1",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/KPV-Blue_26260-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "KPV 10mg"
+        "variant": "KPV 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-79",
         "batch": "020526-KPV-C",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-KPV-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "KPV 5mg"
+        "variant": "KPV 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4463,90 +4744,98 @@ const products = [
     "status": "In Stock",
     "description": "Thymosin Beta-4 full-sequence 43-amino acid peptide for actin regulation and cellular repair assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-169",
         "batch": "010226-TB5-0",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010026-TB5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-170",
         "batch": "122925-TB5-0",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-TB5-0.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-171",
         "batch": "121525-TB5-A",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-TB5-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-172",
         "batch": "100125-TB5-A",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-TB5-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-173",
         "batch": "092525-TB5-A",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-TB5-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-174",
         "batch": "081825-TB5-A",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-TB5-A-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-175",
         "batch": "071725-TB5-A",
         "date": "Jul 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/TB-500_26478-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-176",
         "batch": "061725-TB5-C",
         "date": "Jun 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/TB500_25882-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-177",
         "batch": "040825-TB10-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/TB500_23869.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "TB-500 10mg"
+        "variant": "TB-500 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4563,9 +4852,8 @@ const products = [
     "status": "In Stock",
     "description": "High-quantity triple receptor agonist standard for high-throughput metabolic research.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -4581,90 +4869,98 @@ const products = [
     "status": "In Stock",
     "description": "Nicotinamide adenine dinucleotide cellular bioenergetics standard for enzymatic and mitochondrial assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-117",
         "batch": "042326-NAD-6",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-NAD-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-118",
         "batch": "031126-NAD-A",
         "date": "Mar 11, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/03/031126-NAD-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-119",
         "batch": "121525-NAD-4",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-NAD-4.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-120",
         "batch": "111725-NAD-1",
         "date": "Nov 17, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/111725-NAD-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-121",
         "batch": "100425-NAD-6",
         "date": "Oct 4, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100425-NAD-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-122",
         "batch": "092525-NAD-A",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/NAD-092525-NAD-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-123",
         "batch": "081825-NAD-B",
         "date": "Aug 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-NAD-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-124",
         "batch": "061825-NAD-B",
         "date": "Jun 18, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/061825-NAD-B-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-125",
         "batch": "060525-NAD-C",
         "date": "Jun 5, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-NAD-C-815x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "NAD+ 500mg"
+        "variant": "NAD+ 500mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4681,9 +4977,8 @@ const products = [
     "status": "In Stock",
     "description": "Sterile bacteriostatic analytical reconstitution water with 0.9% benzyl alcohol preservative.",
     "reconstitution": "Ready-to-use analytical solution",
-    "storage": "Store at 15\u201325\u00b0C protected from light. Do not freeze.",
+    "storage": "Store at 15–25°C protected from light. Do not freeze.",
     "form": "Sterile Solution",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -4699,117 +4994,128 @@ const products = [
     "status": "In Stock",
     "description": "Analytical bulk raw GHK-Cu copper peptide powder (10g) for laboratory formulation and testing.",
     "reconstitution": "Dissolve in suitable analytical solvent for testing",
-    "storage": "Store dry at 2\u20138\u00b0C or -20\u00b0C in airtight container.",
+    "storage": "Store dry at 2–8°C or -20°C in airtight container.",
     "form": "Bulk Raw Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-52",
         "batch": "041626-GHK-6",
         "date": "Apr 16, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041626-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-53",
         "batch": "121525-GHK-5",
         "date": "Dec 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-GHK-5.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-54",
         "batch": "100825-GHK-6",
         "date": "Oct 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-GHK-6.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-55",
         "batch": "100125-GHK-B",
         "date": "Oct 1, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-GHK-B.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-56",
         "batch": "081125-GHK-1",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/08/GHK_26974-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-57",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/GHK-071025-GHK-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-58",
         "batch": "071025-GHK-1",
         "date": "Jul 10, 2025",
         "lab": "Chromate Labs",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_26117-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-59",
         "batch": "062625-GHK-3",
         "date": "Jun 26, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_25938-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-60",
         "batch": "040825-GHK-A",
         "date": "Apr 8, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/04/GHK-200mg.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "GHK-cu 100mg"
+        "variant": "GHK-cu 100mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-61",
         "batch": "042326-GH5-C",
         "date": "Apr 23, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-GH5-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-62",
         "batch": "041326-GH5-1",
         "date": "Apr 13, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-GH5-1.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-63",
         "batch": "021026-G50-C",
         "date": "Feb 10, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/021025-G50-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "GHK-cu 50mg"
+        "variant": "GHK-cu 50mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4826,9 +5132,8 @@ const products = [
     "status": "In Stock",
     "description": "Analytical bulk raw AHK-Cu copper peptide powder (10g) for follicular and dermatological research.",
     "reconstitution": "Dissolve in suitable analytical solvent for testing",
-    "storage": "Store dry at 2\u20138\u00b0C or -20\u00b0C in airtight container.",
+    "storage": "Store dry at 2–8°C or -20°C in airtight container.",
     "form": "Bulk Raw Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -4844,99 +5149,108 @@ const products = [
     "status": "In Stock",
     "description": "Cyclic melanocortin receptor agonist peptide standard for pigmentary and photobiological assays.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-84",
         "batch": "122925-MT2-D",
         "date": "Dec 29, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-MT2-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-85",
         "batch": "112425-MT2-D",
         "date": "Nov 24, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-MT2-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-86",
         "batch": "092525-MT2-D",
         "date": "Sep 25, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-MT2-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-87",
         "batch": "081125-MT2-0",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT2-0-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-2 10mg"
+        "variant": "Melanotan-2 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-88",
         "batch": "102825-MT1-C",
         "date": "Oct 28, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-MT1-C.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-89",
         "batch": "101525-MT1-9",
         "date": "Oct 15, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-MT1-9.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-90",
         "batch": "100625-MT1-A",
         "date": "Oct 6, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-MT1-A.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-91",
         "batch": "081125-MT1-C",
         "date": "Aug 11, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT1-C-789x1024.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-1 10mg"
+        "variant": "Melanotan-1 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-252",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/MT2-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-II 10mg"
+        "variant": "Melanotan-II 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-253",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/MT1-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "Melanotan-I 10mg"
+        "variant": "Melanotan-I 10mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -4953,9 +5267,8 @@ const products = [
     "status": "In Stock",
     "description": "High-yield dual GIP/GLP-1 receptor agonist peptide standard for extended laboratory projects.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -4971,9 +5284,8 @@ const products = [
     "status": "In Stock",
     "description": "Specialized nootropic research compound formulation investigated for neurotrophic and synaptic signaling.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -4989,45 +5301,48 @@ const products = [
     "status": "In Stock",
     "description": "Bulk NNMT inhibitor standard for concentration-dependent metabolic enzyme investigations.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": [
       {
         "id": "coa-8",
         "batch": "010226-5AM-D",
         "date": "Jan 2, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-5AM-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-9",
         "batch": "102725-5AM-D",
         "date": "Oct 27, 2025",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-5AM-D.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-10",
         "batch": "020526-5AM-7",
         "date": "Feb 5, 2026",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-5AM-7.pdf",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "pdf",
-        "variant": "5-Amino-1MQ 10mg"
+        "variant": "5-Amino-1MQ 10mg",
+        "source": "Google Drive"
       },
       {
         "id": "coa-251",
         "batch": "Verified Product Gallery COA",
         "date": "Verified Lot",
         "lab": "Janoshik Analytical",
-        "url": "https://felixchem.is/wp-content/uploads/2025/09/5AM-5MG-COA.png",
+        "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
         "type": "image",
-        "variant": "5-Amino-1MQ 5mg"
+        "variant": "5-Amino-1MQ 5mg",
+        "source": "Google Drive"
       }
     ]
   },
@@ -5044,9 +5359,8 @@ const products = [
     "status": "In Stock",
     "description": "High-purity triple incretin agonist for comparative endocrine and receptor activation models.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -5062,9 +5376,8 @@ const products = [
     "status": "In Stock",
     "description": "Dual mitochondrial uncoupler and ERR agonist research blend for cellular bioenergetics evaluation.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   },
   {
@@ -5080,14 +5393,13 @@ const products = [
     "status": "In Stock",
     "description": "Dual glucagon/GLP-1 receptor agonist peptide investigated for hepatic and metabolic pathways.",
     "reconstitution": "Reconstitute with Reconstitution Solution.",
-    "storage": "Reconstituted: 2\u20138\u00b0C (56 days) | Dry Powder: -20\u00b0C (1+ year)",
+    "storage": "Reconstituted: 2–8°C (56 days) | Dry Powder: -20°C (1+ year)",
     "form": "Lyophilized Powder",
-    "source": "felixchem_catalog",
     "coas": []
   }
 ];
 
-// Complete Certificates of Analysis (COAs) Database copied from felixchem.is
+// Certificates of Analysis (COAs) Database (Google Drive Repository)
 const COAS_DATABASE = [
   {
     "id": "coa-1",
@@ -5097,9 +5409,9 @@ const COAS_DATABASE = [
     "fullBatch": "010726-BT5-0",
     "date": "Jan 7, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-BT5-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-2",
@@ -5109,9 +5421,9 @@ const COAS_DATABASE = [
     "fullBatch": "110425-BT5-C",
     "date": "Nov 4, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/110425-BT5-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-3",
@@ -5121,9 +5433,9 @@ const COAS_DATABASE = [
     "fullBatch": "022526-DSP-D",
     "date": "Feb 25, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-DSP-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-4",
@@ -5133,9 +5445,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-DSP-D",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-DSP-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-5",
@@ -5145,9 +5457,9 @@ const COAS_DATABASE = [
     "fullBatch": "102125-DSP-9",
     "date": "Oct 21, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102125-DSP-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-6",
@@ -5157,9 +5469,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-DSP-C",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/DSIP-White_27357-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/DSIP-White_27357-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-7",
@@ -5169,9 +5481,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-DSP-1",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-DSP-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-8",
@@ -5181,9 +5493,9 @@ const COAS_DATABASE = [
     "fullBatch": "010226-5AM-D",
     "date": "Jan 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-5AM-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-9",
@@ -5193,9 +5505,9 @@ const COAS_DATABASE = [
     "fullBatch": "102725-5AM-D",
     "date": "Oct 27, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-5AM-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-10",
@@ -5205,9 +5517,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-5AM-7",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-5AM-7.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-11",
@@ -5217,9 +5529,9 @@ const COAS_DATABASE = [
     "fullBatch": "022526-GLO-0",
     "date": "Feb 25, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-GLO-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-12",
@@ -5229,9 +5541,9 @@ const COAS_DATABASE = [
     "fullBatch": "102825-GLO-9",
     "date": "Oct 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-GLO-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-13",
@@ -5241,9 +5553,9 @@ const COAS_DATABASE = [
     "fullBatch": "071025-GLO-9",
     "date": "Jul 10, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/GLOW_26116-740x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/GLOW_26116-740x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-14",
@@ -5253,9 +5565,9 @@ const COAS_DATABASE = [
     "fullBatch": "022526-GLU-C",
     "date": "Feb 25, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-GLU-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-15",
@@ -5265,9 +5577,9 @@ const COAS_DATABASE = [
     "fullBatch": "101525-GLU-C",
     "date": "Oct 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-GLU-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-16",
@@ -5277,9 +5589,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-GLU-1",
     "date": "Jun 5, 2025",
     "lab": "Chromate Labs",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/Chromate_Job_25140-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/Chromate_Job_25140-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-17",
@@ -5289,9 +5601,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-5AM-7",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-GLU-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-18",
@@ -5301,9 +5613,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-EPI-C",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-EPI-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-19",
@@ -5313,9 +5625,9 @@ const COAS_DATABASE = [
     "fullBatch": "112425-EPI-0",
     "date": "Nov 24, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-EPI-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-20",
@@ -5325,9 +5637,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-EPI-X",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-EPI-X-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-EPI-X-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-21",
@@ -5337,9 +5649,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-EPI-9",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-EPI-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-22",
@@ -5349,9 +5661,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-EPI-B",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-EPI-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-23",
@@ -5361,9 +5673,9 @@ const COAS_DATABASE = [
     "fullBatch": "020226-AOD-7",
     "date": "Feb 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020226-AOD-7.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-24",
@@ -5373,9 +5685,9 @@ const COAS_DATABASE = [
     "fullBatch": "102825-AOD-9",
     "date": "Oct 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-AOD-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-25",
@@ -5385,9 +5697,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-AOD-D",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-AOD-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-26",
@@ -5397,9 +5709,9 @@ const COAS_DATABASE = [
     "fullBatch": "061925-AOD-D",
     "date": "Jun 19, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/AOD_25804-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/AOD_25804-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-27",
@@ -5409,9 +5721,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-AOD-B",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-AOD-B-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-AOD-B-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-28",
@@ -5421,9 +5733,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-AOD-5",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/04/AOD_23300.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/04/AOD_23300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-29",
@@ -5433,9 +5745,9 @@ const COAS_DATABASE = [
     "fullBatch": "021326-CJC-1",
     "date": "Feb 13, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/021326-CJC-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-30",
@@ -5445,9 +5757,9 @@ const COAS_DATABASE = [
     "fullBatch": "100825-CJC-1",
     "date": "Oct 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-CJC-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-31",
@@ -5457,9 +5769,9 @@ const COAS_DATABASE = [
     "fullBatch": "100625-CJC-A",
     "date": "Oct 6, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-CJC-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-32",
@@ -5469,9 +5781,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-CJC-8",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-CJC-8.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-33",
@@ -5481,9 +5793,9 @@ const COAS_DATABASE = [
     "fullBatch": "072625-CJC-A",
     "date": "Jul 26, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/CJC-RED_26449-763x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/CJC-RED_26449-763x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-34",
@@ -5493,9 +5805,9 @@ const COAS_DATABASE = [
     "fullBatch": "071725-CJC-1",
     "date": "Jul 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/CJC-Blue_26450-763x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/CJC-Blue_26450-763x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-35",
@@ -5505,9 +5817,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-CJI-1",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-CJI-1-763x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-CJI-1-763x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-36",
@@ -5517,9 +5829,9 @@ const COAS_DATABASE = [
     "fullBatch": "042326-BPC-5",
     "date": "Apr 23, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-BPC-5.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-37",
@@ -5529,9 +5841,9 @@ const COAS_DATABASE = [
     "fullBatch": "031326-BPC-1",
     "date": "Mar 13, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/031326-BPC-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-38",
@@ -5541,9 +5853,9 @@ const COAS_DATABASE = [
     "fullBatch": "010226-BPC-1",
     "date": "Jan 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-BPC-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-39",
@@ -5553,9 +5865,9 @@ const COAS_DATABASE = [
     "fullBatch": "010226-BPC-5",
     "date": "Jan 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-BPC-5.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-40",
@@ -5565,9 +5877,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-BPC-C",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-BPC-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-41",
@@ -5577,9 +5889,9 @@ const COAS_DATABASE = [
     "fullBatch": "120125-BPC-1",
     "date": "Dec 1, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/120125-BPC-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-42",
@@ -5589,9 +5901,9 @@ const COAS_DATABASE = [
     "fullBatch": "100825-BPC-5",
     "date": "Oct 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-BPC-5.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-43",
@@ -5601,9 +5913,9 @@ const COAS_DATABASE = [
     "fullBatch": "100125-BPC-1",
     "date": "Oct 1, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-BPC-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-44",
@@ -5613,9 +5925,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-BPC-1",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-BPC-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-45",
@@ -5625,9 +5937,9 @@ const COAS_DATABASE = [
     "fullBatch": "081925-BPC-6 (Freedom Labs)",
     "date": "Aug 19, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/BPC-081925-BPC-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-46",
@@ -5637,9 +5949,9 @@ const COAS_DATABASE = [
     "fullBatch": "081925-BPC-6 (Chromate Labs)",
     "date": "Aug 19, 2025",
     "lab": "Chromate Labs",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/BPC-Green_27267-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/BPC-Green_27267-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-47",
@@ -5649,9 +5961,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-BPC-1",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-BPC-1-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/81825-BPC-1-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-48",
@@ -5661,9 +5973,9 @@ const COAS_DATABASE = [
     "fullBatch": "072625-BPC-1",
     "date": "Jul 26, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/BPC_26477-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/BPC_26477-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-49",
@@ -5673,9 +5985,9 @@ const COAS_DATABASE = [
     "fullBatch": "062625-BPC-1",
     "date": "Jun 26, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/BPC_25879-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/BPC_25879-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-50",
@@ -5685,9 +5997,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-BPC-D",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-BPC-D-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-BPC-D-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-51",
@@ -5697,9 +6009,9 @@ const COAS_DATABASE = [
     "fullBatch": "040825-BPC5-A",
     "date": "Apr 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/04/BPC157_23870.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/04/BPC157_23870.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-52",
@@ -5709,9 +6021,9 @@ const COAS_DATABASE = [
     "fullBatch": "041626-GHK-6",
     "date": "Apr 16, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/041626-GHK-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-53",
@@ -5721,9 +6033,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-GHK-5",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-GHK-5.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-54",
@@ -5733,9 +6045,9 @@ const COAS_DATABASE = [
     "fullBatch": "100825-GHK-6",
     "date": "Oct 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-GHK-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-55",
@@ -5745,9 +6057,9 @@ const COAS_DATABASE = [
     "fullBatch": "100125-GHK-B",
     "date": "Oct 1, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-GHK-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-56",
@@ -5757,9 +6069,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-GHK-1",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/GHK_26974-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/GHK_26974-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-57",
@@ -5769,9 +6081,9 @@ const COAS_DATABASE = [
     "fullBatch": "071025-GHK-1 (Freedom Labs)",
     "date": "Jul 10, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/GHK-071025-GHK-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-58",
@@ -5781,9 +6093,9 @@ const COAS_DATABASE = [
     "fullBatch": "071025-GHK-1 (Chromate Labs)",
     "date": "Jul 10, 2025",
     "lab": "Chromate Labs",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_26117-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/GHK_26117-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-59",
@@ -5793,9 +6105,9 @@ const COAS_DATABASE = [
     "fullBatch": "062625-GHK-3",
     "date": "Jun 26, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/GHK_25938-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/GHK_25938-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-60",
@@ -5805,9 +6117,9 @@ const COAS_DATABASE = [
     "fullBatch": "040825-GHK-A",
     "date": "Apr 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/04/GHK-200mg.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/04/GHK-200mg.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-61",
@@ -5817,9 +6129,9 @@ const COAS_DATABASE = [
     "fullBatch": "042326-GH5-C",
     "date": "Apr 23, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-GH5-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-62",
@@ -5829,9 +6141,9 @@ const COAS_DATABASE = [
     "fullBatch": "041326-GH5-1",
     "date": "Apr 13, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-GH5-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-63",
@@ -5841,9 +6153,9 @@ const COAS_DATABASE = [
     "fullBatch": "021026-G50-C",
     "date": "Feb 10, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/021025-G50-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-64",
@@ -5853,9 +6165,9 @@ const COAS_DATABASE = [
     "fullBatch": "010226-KLO-9",
     "date": "Jan 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-KLO-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-65",
@@ -5865,9 +6177,9 @@ const COAS_DATABASE = [
     "fullBatch": "122925-KLO-9",
     "date": "Dec 29, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-KLO-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-66",
@@ -5877,9 +6189,9 @@ const COAS_DATABASE = [
     "fullBatch": "112425-KLO-C",
     "date": "Nov 24, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-KLO-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-67",
@@ -5889,9 +6201,9 @@ const COAS_DATABASE = [
     "fullBatch": "100425-KLO-D",
     "date": "Oct 4, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100425-KLO-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-68",
@@ -5901,9 +6213,9 @@ const COAS_DATABASE = [
     "fullBatch": "071025-KLO-7",
     "date": "Jul 10, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/KLOW_26262-718x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/KLOW_26262-718x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-69",
@@ -5913,9 +6225,9 @@ const COAS_DATABASE = [
     "fullBatch": "020226-IPA-6",
     "date": "Feb 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020226-IPA-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-70",
@@ -5925,9 +6237,9 @@ const COAS_DATABASE = [
     "fullBatch": "011426-IPA-D",
     "date": "Jan 14, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/011426-IPA-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-71",
@@ -5937,9 +6249,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-IPA-0",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-IPA-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-72",
@@ -5949,9 +6261,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-IPA-0",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-IPA-0-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081825-IPA-0-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-73",
@@ -5961,9 +6273,9 @@ const COAS_DATABASE = [
     "fullBatch": "071725-IPA-0",
     "date": "Jul 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/IPA_26448-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/IPA_26448-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-74",
@@ -5973,9 +6285,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-IPA-1",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-IPA-1-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-IPA-1-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-75",
@@ -5985,9 +6297,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-IPA-B",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-IPA-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-76",
@@ -5997,9 +6309,9 @@ const COAS_DATABASE = [
     "fullBatch": "112125-KPV-C",
     "date": "Nov 21, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112125-KPV-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-77",
@@ -6009,9 +6321,9 @@ const COAS_DATABASE = [
     "fullBatch": "100825-KPV-B",
     "date": "Oct 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-KPV-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-78",
@@ -6021,9 +6333,9 @@ const COAS_DATABASE = [
     "fullBatch": "071025-KPV-1",
     "date": "Jul 10, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/KPV-Blue_26260-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/KPV-Blue_26260-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-79",
@@ -6033,9 +6345,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-KPV-C",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-KPV-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-80",
@@ -6045,9 +6357,9 @@ const COAS_DATABASE = [
     "fullBatch": "103025-LBC-B",
     "date": "Oct 30, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/103025-LBC-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-81",
@@ -6057,9 +6369,9 @@ const COAS_DATABASE = [
     "fullBatch": "100825-LPB-C",
     "date": "Oct 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-LPB-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-82",
@@ -6069,9 +6381,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-LPB-C",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-LPB-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-83",
@@ -6081,9 +6393,9 @@ const COAS_DATABASE = [
     "fullBatch": "112525-LB3-3",
     "date": "Nov 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112525-LB3-3.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-84",
@@ -6093,9 +6405,9 @@ const COAS_DATABASE = [
     "fullBatch": "122925-MT2-D",
     "date": "Dec 29, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-MT2-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-85",
@@ -6105,9 +6417,9 @@ const COAS_DATABASE = [
     "fullBatch": "112425-MT2-D",
     "date": "Nov 24, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-MT2-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-86",
@@ -6117,9 +6429,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-MT2-D",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-MT2-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-87",
@@ -6129,9 +6441,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-MT2-0",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT2-0-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT2-0-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-88",
@@ -6141,9 +6453,9 @@ const COAS_DATABASE = [
     "fullBatch": "102825-MT1-C",
     "date": "Oct 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-MT1-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-89",
@@ -6153,9 +6465,9 @@ const COAS_DATABASE = [
     "fullBatch": "101525-MT1-9",
     "date": "Oct 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-MT1-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-90",
@@ -6165,9 +6477,9 @@ const COAS_DATABASE = [
     "fullBatch": "100625-MT1-A",
     "date": "Oct 6, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-MT1-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-91",
@@ -6177,9 +6489,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-MT1-C",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT1-C-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081125-MT1-C-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-92",
@@ -6189,9 +6501,9 @@ const COAS_DATABASE = [
     "fullBatch": "011226-LPC-B",
     "date": "Jan 12, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/011226-LPC-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-93",
@@ -6201,9 +6513,9 @@ const COAS_DATABASE = [
     "fullBatch": "103025-LPC-B",
     "date": "Oct 30, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/103025-LPC-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-94",
@@ -6213,9 +6525,9 @@ const COAS_DATABASE = [
     "fullBatch": "102825-LPC-C",
     "date": "Oct 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102825-LPC-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-95",
@@ -6225,9 +6537,9 @@ const COAS_DATABASE = [
     "fullBatch": "102725-LPC-0",
     "date": "Oct 27, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-LPC-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-96",
@@ -6237,9 +6549,9 @@ const COAS_DATABASE = [
     "fullBatch": "101525-LCC-C",
     "date": "Oct 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-LCC-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-97",
@@ -6249,9 +6561,9 @@ const COAS_DATABASE = [
     "fullBatch": "100825-LPC-B",
     "date": "Oct 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-LPC-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-98",
@@ -6261,9 +6573,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-LPC-B",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-LPC-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-99",
@@ -6273,9 +6585,9 @@ const COAS_DATABASE = [
     "fullBatch": "111425-LC3-C",
     "date": "Nov 14, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/111425-LC3-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-100",
@@ -6285,9 +6597,9 @@ const COAS_DATABASE = [
     "fullBatch": "022526-MOT-6",
     "date": "Feb 25, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-MOT-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-101",
@@ -6297,9 +6609,9 @@ const COAS_DATABASE = [
     "fullBatch": "010226-MOT-9",
     "date": "Jan 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-MOT-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-102",
@@ -6309,9 +6621,9 @@ const COAS_DATABASE = [
     "fullBatch": "122925-MOT-9",
     "date": "Dec 29, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-MOT-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-103",
@@ -6321,9 +6633,9 @@ const COAS_DATABASE = [
     "fullBatch": "112425-MOT-9",
     "date": "Nov 24, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-MOT-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-104",
@@ -6333,9 +6645,9 @@ const COAS_DATABASE = [
     "fullBatch": "100125-MOT-1",
     "date": "Oct 1, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-MOT-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-105",
@@ -6345,9 +6657,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-MOT-B",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-MOT-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-106",
@@ -6357,9 +6669,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-MOT-B",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-MOT-B-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081825-MOT-B-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-107",
@@ -6369,9 +6681,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-MOT-8",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/MOTS_26975-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/MOTS_26975-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-108",
@@ -6381,9 +6693,9 @@ const COAS_DATABASE = [
     "fullBatch": "072625-MOT-8",
     "date": "Jul 26, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/MOTS_26447-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/MOTS_26447-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-109",
@@ -6393,9 +6705,9 @@ const COAS_DATABASE = [
     "fullBatch": "061925-MOT-1",
     "date": "Jun 19, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/MOTS_25805-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/MOTS_25805-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-110",
@@ -6405,9 +6717,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-MOT-B",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-MOT-B-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-MOT-B-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-111",
@@ -6417,9 +6729,9 @@ const COAS_DATABASE = [
     "fullBatch": "121925-SS-C",
     "date": "Dec 19, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121925-SS-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-112",
@@ -6429,9 +6741,9 @@ const COAS_DATABASE = [
     "fullBatch": "090825-SS2-D",
     "date": "Sep 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/090825-SS2-D-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/090825-SS2-D-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-113",
@@ -6441,9 +6753,9 @@ const COAS_DATABASE = [
     "fullBatch": "010726-SS6-0",
     "date": "Jan 7, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SS6-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-114",
@@ -6453,9 +6765,9 @@ const COAS_DATABASE = [
     "fullBatch": "111325-SS6-6",
     "date": "Nov 13, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/111325-SS6-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-115",
@@ -6465,9 +6777,9 @@ const COAS_DATABASE = [
     "fullBatch": "102525-SS6-3",
     "date": "Oct 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102525-SS6-3.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-116",
@@ -6477,9 +6789,9 @@ const COAS_DATABASE = [
     "fullBatch": "071025-SS6-5",
     "date": "Jul 10, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/071025-SS6-5-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/071025-SS6-5-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-117",
@@ -6489,9 +6801,9 @@ const COAS_DATABASE = [
     "fullBatch": "042326-NAD-6",
     "date": "Apr 23, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-NAD-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-118",
@@ -6501,9 +6813,9 @@ const COAS_DATABASE = [
     "fullBatch": "031126-NAD-A",
     "date": "Mar 11, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/031126-NAD-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-119",
@@ -6513,9 +6825,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-NAD-4",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-NAD-4.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-120",
@@ -6525,9 +6837,9 @@ const COAS_DATABASE = [
     "fullBatch": "111725-NAD-1",
     "date": "Nov 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/111725-NAD-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-121",
@@ -6537,9 +6849,9 @@ const COAS_DATABASE = [
     "fullBatch": "100425-NAD-6",
     "date": "Oct 4, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100425-NAD-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-122",
@@ -6549,9 +6861,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-NAD-A",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/NAD-092525-NAD-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-123",
@@ -6561,9 +6873,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-NAD-B",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-NAD-B-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081825-NAD-B-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-124",
@@ -6573,9 +6885,9 @@ const COAS_DATABASE = [
     "fullBatch": "061825-NAD-B",
     "date": "Jun 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/061825-NAD-B-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/061825-NAD-B-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-125",
@@ -6585,9 +6897,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-NAD-C",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-NAD-C-815x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-NAD-C-815x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-126",
@@ -6597,9 +6909,9 @@ const COAS_DATABASE = [
     "fullBatch": "030226-PT1-6",
     "date": "Mar 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-PT1-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-127",
@@ -6609,9 +6921,9 @@ const COAS_DATABASE = [
     "fullBatch": "120425-PT-8",
     "date": "Dec 4, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/120425-PT-8.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-128",
@@ -6621,9 +6933,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-PT-1",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-PT-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-129",
@@ -6633,9 +6945,9 @@ const COAS_DATABASE = [
     "fullBatch": "091025-PT1-1",
     "date": "Sep 10, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/091025-PT1-1-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/091025-PT1-1-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-130",
@@ -6645,9 +6957,9 @@ const COAS_DATABASE = [
     "fullBatch": "090225-PT10-A",
     "date": "Sep 2, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/090225-PT10-A-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/090225-PT10-A-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-131",
@@ -6657,9 +6969,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-PT10",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/PT-23314-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/PT-23314-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-132",
@@ -6669,9 +6981,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-PT5-0",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-PT5-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-133",
@@ -6681,9 +6993,9 @@ const COAS_DATABASE = [
     "fullBatch": "010726-SLK-0",
     "date": "Jan 7, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SLK-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-134",
@@ -6693,9 +7005,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-SEL-0",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SEL-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-135",
@@ -6705,9 +7017,9 @@ const COAS_DATABASE = [
     "fullBatch": "101525-SLK-9",
     "date": "Oct 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-SLK-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-136",
@@ -6717,9 +7029,9 @@ const COAS_DATABASE = [
     "fullBatch": "100625-SLK-0",
     "date": "Oct 6, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-SLK-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-137",
@@ -6729,9 +7041,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-SLK-1",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081825SLK-1-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081825SLK-1-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-138",
@@ -6741,9 +7053,9 @@ const COAS_DATABASE = [
     "fullBatch": "072125-SEL-9",
     "date": "Jul 21, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/Selank_26651-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/Selank_26651-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-139",
@@ -6753,9 +7065,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-SEL-5",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-SEL-5-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-SEL-5-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-140",
@@ -6765,9 +7077,9 @@ const COAS_DATABASE = [
     "fullBatch": "010726-SMX-7",
     "date": "Jan 7, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SMX-7.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-141",
@@ -6777,9 +7089,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-SEM-7",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SEM-7.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-142",
@@ -6789,9 +7101,9 @@ const COAS_DATABASE = [
     "fullBatch": "102125-SMX-9",
     "date": "Oct 21, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102125-SMX-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-143",
@@ -6801,9 +7113,9 @@ const COAS_DATABASE = [
     "fullBatch": "100225-SMX-9",
     "date": "Oct 2, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100225-SMX-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-144",
@@ -6813,9 +7125,9 @@ const COAS_DATABASE = [
     "fullBatch": "81825-SMX-9",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-SMX-9-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/81825-SMX-9-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-145",
@@ -6825,9 +7137,9 @@ const COAS_DATABASE = [
     "fullBatch": "072625-SMX-9",
     "date": "Jul 26, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/SEMAX_26479-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/SEMAX_26479-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-146",
@@ -6837,9 +7149,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-SEM-1",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-SEM-1-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-SEM-1-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-147",
@@ -6849,9 +7161,9 @@ const COAS_DATABASE = [
     "fullBatch": "010726-SNP-8",
     "date": "Jan 7, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-SNP-8.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-148",
@@ -6861,9 +7173,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-SNP-8",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SNP-8.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-149",
@@ -6873,9 +7185,9 @@ const COAS_DATABASE = [
     "fullBatch": "101525-SNP-6",
     "date": "Oct 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/101525-SNP-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-150",
@@ -6885,9 +7197,9 @@ const COAS_DATABASE = [
     "fullBatch": "100625-SNP-C",
     "date": "Oct 6, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100625-SNP-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-151",
@@ -6897,9 +7209,9 @@ const COAS_DATABASE = [
     "fullBatch": "061725-SNP-1",
     "date": "Jun 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/SNAP_25877-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/SNAP_25877-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-152",
@@ -6909,9 +7221,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-SNAP10",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/SNAP-23377-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/SNAP-23377-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-153",
@@ -6921,9 +7233,9 @@ const COAS_DATABASE = [
     "fullBatch": "022526-TA1-1",
     "date": "Feb 25, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-TA1-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-154",
@@ -6933,9 +7245,9 @@ const COAS_DATABASE = [
     "fullBatch": "112425-TA1-0",
     "date": "Nov 24, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-TA1-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-155",
@@ -6945,9 +7257,9 @@ const COAS_DATABASE = [
     "fullBatch": "081925-TA1-0",
     "date": "Aug 19, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081925-TA1-0-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081925-TA1-0-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-156",
@@ -6957,9 +7269,9 @@ const COAS_DATABASE = [
     "fullBatch": "020526-TA1-9",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-TA1-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-157",
@@ -6969,9 +7281,9 @@ const COAS_DATABASE = [
     "fullBatch": "021326-SER-C",
     "date": "Feb 13, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/021326-SER-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-158",
@@ -6981,9 +7293,9 @@ const COAS_DATABASE = [
     "fullBatch": "122925-SEM-0",
     "date": "Dec 29, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-SEM-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-159",
@@ -6993,9 +7305,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-SER-C",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SER-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-160",
@@ -7005,9 +7317,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-SER-0",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-SER-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-161",
@@ -7017,9 +7329,9 @@ const COAS_DATABASE = [
     "fullBatch": "81825-SER-8",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-SER-8-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/81825-SER-8-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-162",
@@ -7029,21 +7341,21 @@ const COAS_DATABASE = [
     "fullBatch": "060525-SER-1",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-SER-1-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-SER-1-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-163",
     "compound": "Sermorelin",
-    "variant": "Sermorelin 5mg\u200b",
+    "variant": "Sermorelin 5mg​",
     "batch": "020526-SER-B",
     "fullBatch": "020526-SER-B",
     "date": "Feb 5, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/020526-SER-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-164",
@@ -7053,9 +7365,9 @@ const COAS_DATABASE = [
     "fullBatch": "121925-C20-6",
     "date": "Dec 19, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121925-C20-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-165",
@@ -7065,9 +7377,9 @@ const COAS_DATABASE = [
     "fullBatch": "090425-C20-6",
     "date": "Sep 4, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/090425-C20-6-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/090425-C20-6-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-166",
@@ -7077,9 +7389,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-C20-D",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-C20-D-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081125-C20-D-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-167",
@@ -7089,9 +7401,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-C20-7",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/060525-C20-7-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/060525-C20-7-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-168",
@@ -7101,9 +7413,9 @@ const COAS_DATABASE = [
     "fullBatch": "040825-C20-A",
     "date": "Apr 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/04/C20-23829.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/04/C20-23829.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-169",
@@ -7113,9 +7425,9 @@ const COAS_DATABASE = [
     "fullBatch": "010226-TB5-0",
     "date": "Jan 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010026-TB5-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-170",
@@ -7125,9 +7437,9 @@ const COAS_DATABASE = [
     "fullBatch": "122925-TB5-0",
     "date": "Dec 29, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-TB5-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-171",
@@ -7137,9 +7449,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-TB5-A",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-TB5-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-172",
@@ -7149,9 +7461,9 @@ const COAS_DATABASE = [
     "fullBatch": "100125-TB5-A",
     "date": "Oct 1, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100125-TB5-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-173",
@@ -7161,9 +7473,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-TB5-A",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-TB5-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-174",
@@ -7173,9 +7485,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-TB5-A",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-TB5-A-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/81825-TB5-A-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-175",
@@ -7185,9 +7497,9 @@ const COAS_DATABASE = [
     "fullBatch": "071725-TB5-A",
     "date": "Jul 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/TB-500_26478-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/TB-500_26478-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-176",
@@ -7197,9 +7509,9 @@ const COAS_DATABASE = [
     "fullBatch": "061725-TB5-C",
     "date": "Jun 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/TB500_25882-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/TB500_25882-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-177",
@@ -7209,9 +7521,9 @@ const COAS_DATABASE = [
     "fullBatch": "040825-TB10-A",
     "date": "Apr 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/04/TB500_23869.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/04/TB500_23869.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-178",
@@ -7221,9 +7533,9 @@ const COAS_DATABASE = [
     "fullBatch": "030226-C10-B",
     "date": "Mar 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-C10-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-179",
@@ -7233,9 +7545,9 @@ const COAS_DATABASE = [
     "fullBatch": "010226-C10-1",
     "date": "Jan 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010226-C10-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-180",
@@ -7245,9 +7557,9 @@ const COAS_DATABASE = [
     "fullBatch": "121925-C10-1",
     "date": "Dec 19, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121925-C10-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-181",
@@ -7257,9 +7569,9 @@ const COAS_DATABASE = [
     "fullBatch": "81825-C10-B",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/81825-C10-B-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/81825-C10-B-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-182",
@@ -7269,9 +7581,9 @@ const COAS_DATABASE = [
     "fullBatch": "061725-C10-9",
     "date": "Jun 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/C10_25753-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/C10_25753-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-183",
@@ -7281,9 +7593,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-C10-9",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-C10-9-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-C10-9-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-184",
@@ -7293,9 +7605,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-C10",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/C10-23285-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/C10-23285-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-185",
@@ -7305,9 +7617,9 @@ const COAS_DATABASE = [
     "fullBatch": "042326-TS1-1",
     "date": "Apr 23, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-TS1-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-186",
@@ -7317,9 +7629,9 @@ const COAS_DATABASE = [
     "fullBatch": "033126-TS1-6",
     "date": "Mar 31, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/033126-TS1-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-187",
@@ -7329,9 +7641,9 @@ const COAS_DATABASE = [
     "fullBatch": "122925-TES-1",
     "date": "Dec 29, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/122925-TES-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-188",
@@ -7341,9 +7653,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-TSM-0",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-TSM-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-189",
@@ -7353,9 +7665,9 @@ const COAS_DATABASE = [
     "fullBatch": "120125-TES-C",
     "date": "Dec 1, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/120125-TES-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-190",
@@ -7365,9 +7677,9 @@ const COAS_DATABASE = [
     "fullBatch": "112425-TES-0",
     "date": "Nov 24, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/112425-TES-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-191",
@@ -7377,9 +7689,9 @@ const COAS_DATABASE = [
     "fullBatch": "100825-TS1-1",
     "date": "Oct 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/100825-TS1-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-192",
@@ -7389,9 +7701,9 @@ const COAS_DATABASE = [
     "fullBatch": "081825-TSM-0",
     "date": "Aug 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081825-TSM-0-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081825-TSM-0-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-193",
@@ -7401,9 +7713,9 @@ const COAS_DATABASE = [
     "fullBatch": "071025-TES-6",
     "date": "Jul 10, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_26113-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/TESA_26113-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-194",
@@ -7413,9 +7725,9 @@ const COAS_DATABASE = [
     "fullBatch": "070225-TES-0",
     "date": "Jul 2, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/TESA_25803-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/TESA_25803-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-195",
@@ -7425,9 +7737,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-TES-6",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-TES-6-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-TES-6-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-196",
@@ -7437,9 +7749,9 @@ const COAS_DATABASE = [
     "fullBatch": "041326-TS5-0",
     "date": "Apr 13, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/041326-TS5-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-197",
@@ -7449,9 +7761,9 @@ const COAS_DATABASE = [
     "fullBatch": "030226-TS5-1",
     "date": "Mar 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-TS5-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-198",
@@ -7461,9 +7773,9 @@ const COAS_DATABASE = [
     "fullBatch": "102725-TE5-C",
     "date": "Oct 27, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-TE5-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-199",
@@ -7473,9 +7785,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-TE5-C",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/081125-TE5-C-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/081125-TE5-C-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-200",
@@ -7485,9 +7797,9 @@ const COAS_DATABASE = [
     "fullBatch": "102725-C5-6",
     "date": "Oct 27, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/102725-C5-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-201",
@@ -7497,9 +7809,9 @@ const COAS_DATABASE = [
     "fullBatch": "090825-C05-D",
     "date": "Sep 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/090825-C05-D-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2026/02/090825-C05-D-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-202",
@@ -7509,9 +7821,9 @@ const COAS_DATABASE = [
     "fullBatch": "061725-C5-B",
     "date": "Jun 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/C5_25752-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/C5_25752-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-203",
@@ -7521,9 +7833,9 @@ const COAS_DATABASE = [
     "fullBatch": "030426-R50-0",
     "date": "Mar 4, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/030426-R50-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-204",
@@ -7533,9 +7845,9 @@ const COAS_DATABASE = [
     "fullBatch": "022526-R50-6",
     "date": "Feb 25, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-R50-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-205",
@@ -7545,9 +7857,9 @@ const COAS_DATABASE = [
     "fullBatch": "090925-R50-4",
     "date": "Sep 9, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/R50-TransGold_27786-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/R50-TransGold_27786-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-206",
@@ -7557,9 +7869,9 @@ const COAS_DATABASE = [
     "fullBatch": "082125-R50-D",
     "date": "Aug 21, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/R50_27060-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/R50_27060-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-207",
@@ -7569,9 +7881,9 @@ const COAS_DATABASE = [
     "fullBatch": "071525-R50-4",
     "date": "Jul 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/R50_26035-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/R50_26035-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-208",
@@ -7581,9 +7893,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-R50-8",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-R50-8-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-R50-8-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-209",
@@ -7593,9 +7905,9 @@ const COAS_DATABASE = [
     "fullBatch": "042326-R20-6",
     "date": "Apr 23, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/04/042326-R20-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-210",
@@ -7605,9 +7917,9 @@ const COAS_DATABASE = [
     "fullBatch": "030426-R20-A",
     "date": "Mar 4, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/030426-R20-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-211",
@@ -7617,9 +7929,9 @@ const COAS_DATABASE = [
     "fullBatch": "022526-R20-C",
     "date": "Feb 25, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/022526-R20-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-212",
@@ -7629,9 +7941,9 @@ const COAS_DATABASE = [
     "fullBatch": "091125-R20-C",
     "date": "Sep 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/R20-White_27893-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/R20-White_27893-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-213",
@@ -7641,9 +7953,9 @@ const COAS_DATABASE = [
     "fullBatch": "082825-R20-8",
     "date": "Aug 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/R20-Pink_27319-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/R20-Pink_27319-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-214",
@@ -7653,9 +7965,9 @@ const COAS_DATABASE = [
     "fullBatch": "062625-R20-6",
     "date": "Jun 26, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/R20_25751-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/R20_25751-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-215",
@@ -7665,9 +7977,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-R20-4",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-R20-4-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-R20-4-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-216",
@@ -7677,9 +7989,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-R20",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/R20-23289-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/R20-23289-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-217",
@@ -7689,9 +8001,9 @@ const COAS_DATABASE = [
     "fullBatch": "012026-R10-3",
     "date": "Jan 20, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/012026-R10-3.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-218",
@@ -7701,9 +8013,9 @@ const COAS_DATABASE = [
     "fullBatch": "011426-R10-9",
     "date": "Jan 14, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/011426-R10-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-219",
@@ -7713,9 +8025,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-R10-1",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/121525-R10-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-220",
@@ -7725,9 +8037,9 @@ const COAS_DATABASE = [
     "fullBatch": "082825-R10-A",
     "date": "Aug 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/R10-Red_27320-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/R10-Red_27320-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-221",
@@ -7737,9 +8049,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-R10-9 (First Test)",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/R10Purple_27785-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/R10Purple_27785-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-222",
@@ -7749,9 +8061,9 @@ const COAS_DATABASE = [
     "fullBatch": "081125-R10-9 (Second Test)",
     "date": "Aug 11, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/08/R10-Purple_27125-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/08/R10-Purple_27125-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-223",
@@ -7761,9 +8073,9 @@ const COAS_DATABASE = [
     "fullBatch": "070225-R10-1",
     "date": "Jul 2, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/R10_25750-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/R10_25750-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-224",
@@ -7773,9 +8085,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-R10-D",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-R10-D-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-R10-D-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-225",
@@ -7785,9 +8097,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-R10",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/R10-23288-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/R10-23288-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-226",
@@ -7797,9 +8109,9 @@ const COAS_DATABASE = [
     "fullBatch": "030226-S15-9",
     "date": "Mar 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-S15-9.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-227",
@@ -7809,9 +8121,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-S15-6",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-S15-6.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-228",
@@ -7821,9 +8133,9 @@ const COAS_DATABASE = [
     "fullBatch": "111825-S15-D",
     "date": "Nov 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/11825-S15-D.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-229",
@@ -7833,9 +8145,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-S15-B",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-B-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-B-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-230",
@@ -7845,9 +8157,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-S15-4",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-4-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-4-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-231",
@@ -7857,9 +8169,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-S15-3",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-3-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-S15-3-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-232",
@@ -7869,9 +8181,9 @@ const COAS_DATABASE = [
     "fullBatch": "040825-S15-W",
     "date": "Apr 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/04/S15-23832-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/04/S15-23832-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-233",
@@ -7881,9 +8193,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-S15",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/S15-23283-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/S15-23283-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-234",
@@ -7893,9 +8205,9 @@ const COAS_DATABASE = [
     "fullBatch": "010726-S10-B",
     "date": "Jan 7, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/010726-S10-B.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-235",
@@ -7905,9 +8217,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-S10-A",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-S10-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-236",
@@ -7917,9 +8229,9 @@ const COAS_DATABASE = [
     "fullBatch": "111825-S10-C",
     "date": "Nov 18, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/111825-S10-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-237",
@@ -7929,9 +8241,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-S10-0",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-S10-0.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-238",
@@ -7941,9 +8253,9 @@ const COAS_DATABASE = [
     "fullBatch": "061725-S10-C",
     "date": "Jun 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/S10_25749-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/S10_25749-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-239",
@@ -7953,9 +8265,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-S10-C",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S10-C-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-S10-C-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-240",
@@ -7965,9 +8277,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-S10",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/S10-23282-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/S10-23282-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-241",
@@ -7977,9 +8289,9 @@ const COAS_DATABASE = [
     "fullBatch": "030226-S5-A",
     "date": "Mar 2, 2026",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/03/030226-S5-A.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-242",
@@ -7989,9 +8301,9 @@ const COAS_DATABASE = [
     "fullBatch": "121525-S5-C",
     "date": "Dec 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/121525-S5-C.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-243",
@@ -8001,9 +8313,9 @@ const COAS_DATABASE = [
     "fullBatch": "111525-S5-F",
     "date": "Nov 15, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/111525-S5-F.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-244",
@@ -8013,9 +8325,9 @@ const COAS_DATABASE = [
     "fullBatch": "111425-S5-1",
     "date": "Nov 14, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/111425-S5-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-245",
@@ -8025,9 +8337,9 @@ const COAS_DATABASE = [
     "fullBatch": "092525-S5-1",
     "date": "Sep 25, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/092525-S5-1.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-246",
@@ -8037,9 +8349,9 @@ const COAS_DATABASE = [
     "fullBatch": "061725-S5-1",
     "date": "Jun 17, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/07/S5-25727-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/07/S5-25727-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-247",
@@ -8049,9 +8361,9 @@ const COAS_DATABASE = [
     "fullBatch": "060525-S5-5",
     "date": "Jun 5, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/06/060525-S5-5-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/06/060525-S5-5-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-248",
@@ -8061,9 +8373,9 @@ const COAS_DATABASE = [
     "fullBatch": "040825-S05-W",
     "date": "Apr 8, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/04/S5-23831.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/04/S5-23831.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-249",
@@ -8073,9 +8385,9 @@ const COAS_DATABASE = [
     "fullBatch": "022825-S5",
     "date": "Feb 28, 2025",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/03/S5-23281-789x1024.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/03/S5-23281-789x1024.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-250",
@@ -8085,9 +8397,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/BPCTB-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/BPCTB-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-251",
@@ -8097,9 +8409,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/5AM-5MG-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/5AM-5MG-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-252",
@@ -8109,9 +8421,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/MT2-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/MT2-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-253",
@@ -8121,9 +8433,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/MT1-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/MT1-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-254",
@@ -8133,9 +8445,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/P31-60-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/P31-60-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-255",
@@ -8145,9 +8457,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/01/P31-25-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/P31-25-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-256",
@@ -8157,9 +8469,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/LIPOC-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/LIPOC-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-257",
@@ -8169,9 +8481,9 @@ const COAS_DATABASE = [
     "fullBatch": "Verified Product Gallery COA",
     "date": "Verified Lot",
     "lab": "Janoshik Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2025/09/LIPOB-COA.png",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "image",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/09/LIPOB-COA.png"
+    "source": "Google Drive"
   },
   {
     "id": "coa-258",
@@ -8181,9 +8493,9 @@ const COAS_DATABASE = [
     "fullBatch": "Hospira Sterile Analytical Standard",
     "date": "Verified Lot",
     "lab": "Hospira Analytical",
-    "url": "https://felixchem.is/wp-content/uploads/2026/02/HospiraBacWaterCOA.pdf",
+    "url": "https://drive.google.com/drive/home?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
     "type": "pdf",
-    "thumbnail": "https://felixchem.is/wp-content/uploads/2025/01/Favicon-300x300.png"
+    "source": "Google Drive"
   }
 ];
 
@@ -8200,6 +8512,9 @@ let coaSelectedType = "All";
 let coaPageSize = 18;
 let coaCurrentVisibleCount = 18;
 
+// Active Google Drive URL (configurable via localStorage if user links specific folder)
+let activeGoogleDriveUrl = localStorage.getItem("felix_drive_url") || CONFIG.GOOGLE_DRIVE_URL;
+
 // DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
   initScrollProgress();
@@ -8211,6 +8526,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupEventListeners();
   initModal();
   initCoaLightbox();
+  initDriveConnector();
 });
 
 // Scroll Progress Bar
@@ -8220,7 +8536,7 @@ function initScrollProgress() {
   window.addEventListener("scroll", () => {
     const total = document.documentElement.scrollHeight - window.innerHeight;
     const progress = total > 0 ? (window.scrollY / total) * 100 : 0;
-    bar.style.width = `${progress}%`;
+    bar.style.width = progress + "%";
   });
 }
 
@@ -8298,7 +8614,7 @@ function renderCatalog() {
   const filtered = getFilteredProducts();
 
   if (countEl) {
-    countEl.textContent = `Showing ${filtered.length} of ${products.length} research materials`;
+    countEl.textContent = "Showing " + filtered.length + " of " + products.length + " research materials";
   }
 
   if (filtered.length === 0) {
@@ -8319,12 +8635,12 @@ function renderCatalog() {
   grid.innerHTML = filtered.map(p => {
     const coaCount = Array.isArray(p.coas) ? p.coas.length : 0;
     const coaBadge = coaCount > 0 ? `
-      <button type="button" class="card-coa-btn" onclick="openProductModal('${p.id}'); event.stopPropagation();" title="${coaCount} verified lab analysis reports">
+      <button type="button" class="card-coa-btn" onclick="openProductModal('${p.id}'); event.stopPropagation();" title="${coaCount} verified lab analysis reports in Google Drive">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
           <polyline points="9 12 11 14 15 10"></polyline>
         </svg>
-        <span>${coaCount} Verified ${coaCount === 1 ? 'COA' : 'COAs'}</span>
+        <span>${coaCount} Verified COA${coaCount === 1 ? '' : 's'}</span>
       </button>
     ` : '';
 
@@ -8352,7 +8668,7 @@ function renderCatalog() {
           </div>
           <div class="spec-mini-item">
             <span class="mini-label">Storage:</span>
-            <span class="mini-val">${p.storage.includes('2–8') ? '2–8°C / -20°C' : 'Controlled Room Temp'}</span>
+            <span class="mini-val">${p.storage && p.storage.includes('2–8') ? '2–8°C / -20°C' : 'Controlled Room Temp'}</span>
           </div>
         </div>
 
@@ -8380,6 +8696,47 @@ function renderCatalog() {
       </article>
     `;
   }).join("");
+}
+
+// Google Drive Folder Connector
+function initDriveConnector() {
+  const saveBtn = document.getElementById("btnSaveDriveUrl");
+  const driveInput = document.getElementById("driveFolderUrlInput");
+  const driveDirectLink = document.getElementById("coaDriveFolderBtn");
+  const resetBtn = document.getElementById("btnResetDriveUrl");
+
+  if (driveInput) {
+    driveInput.value = activeGoogleDriveUrl;
+  }
+  if (driveDirectLink) {
+    driveDirectLink.href = activeGoogleDriveUrl;
+  }
+
+  if (saveBtn && driveInput) {
+    saveBtn.addEventListener("click", () => {
+      const val = driveInput.value.trim();
+      if (val && (val.includes("drive.google.com") || val.startsWith("http"))) {
+        activeGoogleDriveUrl = val;
+        localStorage.setItem("felix_drive_url", val);
+        if (driveDirectLink) driveDirectLink.href = val;
+        showToast("Updated Google Drive repository URL successfully!", "success");
+        renderCoaCards();
+      } else {
+        showToast("Please enter a valid Google Drive link.", "warning");
+      }
+    });
+  }
+
+  if (resetBtn && driveInput) {
+    resetBtn.addEventListener("click", () => {
+      activeGoogleDriveUrl = CONFIG.GOOGLE_DRIVE_URL;
+      localStorage.removeItem("felix_drive_url");
+      driveInput.value = activeGoogleDriveUrl;
+      if (driveDirectLink) driveDirectLink.href = activeGoogleDriveUrl;
+      showToast("Reset Google Drive repository URL to default.", "info");
+      renderCoaCards();
+    });
+  }
 }
 
 // Initialize Certificates of Analysis (COAs) Section
@@ -8453,7 +8810,7 @@ function populateCoaCompoundFilter() {
   });
 
   select.innerHTML = `
-    <option value="All">All Compounds (${COAS_DATABASE.length} COAs)</option>
+    <option value="All">All Compounds (${COAS_DATABASE.length} Batches)</option>
     ${sortedCompounds.map(comp => `
       <option value="${comp}">${comp} (${compoundCounts[comp]} reports)</option>
     `).join("")}
@@ -8493,7 +8850,6 @@ function getFilteredCoas() {
 function renderCoaCards() {
   const grid = document.getElementById("coaCardsGrid");
   const countEl = document.getElementById("coaResultsCount");
-  const loadMoreBtn = document.getElementById("loadMoreCoasBtn");
   const paginationRow = document.getElementById("coaPaginationRow");
   if (!grid) return;
 
@@ -8501,7 +8857,7 @@ function renderCoaCards() {
   const visible = filtered.slice(0, coaCurrentVisibleCount);
 
   if (countEl) {
-    countEl.textContent = `Showing ${visible.length} of ${filtered.length} analytical reports`;
+    countEl.textContent = "Showing " + visible.length + " of " + filtered.length + " Google Drive verified reports";
   }
 
   if (paginationRow) {
@@ -8527,37 +8883,19 @@ function renderCoaCards() {
 
   grid.innerHTML = visible.map(c => {
     const isPdf = c.type === "pdf";
-    const labBadgeClass = c.lab.includes("Chromate") ? "badge-lab-chromate" : "badge-lab-janoshik";
+    const labBadgeClass = c.lab && c.lab.includes("Chromate") ? "badge-lab-chromate" : "badge-lab-janoshik";
 
-    const previewBlock = isPdf ? `
+    const previewBlock = `
       <div class="coa-card-preview pdf-preview" onclick="openCoaLightbox('${c.id}')">
         <div class="pdf-icon-wrap">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
             <polyline points="14 2 14 8 20 8"></polyline>
             <line x1="9" y1="15" x2="15" y2="15"></line>
           </svg>
-          <span class="pdf-doc-tag">PDF Document</span>
+          <span class="pdf-doc-tag">Google Drive Archive</span>
         </div>
-        <div class="preview-hover-hint">Click to Inspect Report</div>
-      </div>
-    ` : `
-      <div class="coa-card-preview" onclick="openCoaLightbox('${c.id}')">
-        <img 
-          src="${c.url}" 
-          alt="${c.compound} Certificate of Analysis - Batch ${c.batch}"
-          loading="lazy"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        />
-        <div class="img-fallback-placeholder" style="display:none;">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            <circle cx="8.5" cy="8.5" r="1.5"></circle>
-            <polyline points="21 15 16 10 5 21"></polyline>
-          </svg>
-          <span>Analytical HPLC Report</span>
-        </div>
-        <div class="preview-hover-hint">Click to Enlarge</div>
+        <div class="preview-hover-hint">Inspect Lot Data</div>
       </div>
     `;
 
@@ -8570,7 +8908,7 @@ function renderCoaCards() {
             </svg>
             <span>${c.lab}</span>
           </span>
-          <span class="coa-format-tag">${isPdf ? 'PDF Report' : 'HPLC / MS'}</span>
+          <span class="coa-format-tag">Verified HPLC / MS</span>
         </div>
 
         ${previewBlock}
@@ -8593,15 +8931,15 @@ function renderCoaCards() {
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
-              <span>View Report</span>
+              <span>Inspect Lot</span>
             </button>
-            <a href="${c.url}" target="_blank" rel="noopener noreferrer" class="btn-coa-direct" title="Open source file on felixchem.is">
+            <a href="${activeGoogleDriveUrl}" target="_blank" rel="noopener noreferrer" class="btn-coa-direct" title="Open in Google Drive">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-              <span>Source</span>
+              <span>Google Drive</span>
             </a>
           </div>
         </div>
@@ -8646,37 +8984,75 @@ window.openCoaLightbox = function(coaId) {
 
   if (!modal || !bodyEl) return;
 
-  if (titleEl) titleEl.textContent = `${coa.compound} — ${coa.variant}`;
-  if (metaEl) metaEl.textContent = `Batch / Lot: ${coa.fullBatch} • Verified: ${coa.date}`;
+  if (titleEl) titleEl.textContent = coa.compound + " — " + coa.variant;
+  if (metaEl) metaEl.textContent = "Batch / Lot: " + coa.fullBatch + " • Verified: " + coa.date;
   if (labEl) labEl.textContent = coa.lab;
   if (linkEl) {
-    linkEl.href = coa.url;
-    linkEl.setAttribute("download", `${coa.compound}-${coa.batch}.${coa.type === 'pdf' ? 'pdf' : 'png'}`);
+    linkEl.href = activeGoogleDriveUrl;
   }
 
-  if (coa.type === "pdf") {
-    bodyEl.innerHTML = `
-      <div class="lightbox-pdf-container">
-        <iframe src="${coa.url}" class="lightbox-pdf-frame" title="${coa.compound} Certificate of Analysis PDF"></iframe>
-        <div class="lightbox-pdf-fallback">
-          <p>Browsers with strict PDF sandbox restrictions can open this document directly:</p>
-          <a href="${coa.url}" target="_blank" rel="noopener noreferrer" class="btn-cta-primary">
-            Open PDF in Full Window
-          </a>
+  const waRequestUrl = "https://wa.me/" + CONFIG.PHONE_CLEAN + "?text=" + encodeURIComponent("Hello Felix Chemical Supply, please provide the full analytical certificate for Lot: " + coa.fullBatch + " (" + coa.compound + ").");
+
+  bodyEl.innerHTML = `
+    <div class="lightbox-drive-card" style="padding: 24px; background: #ffffff; border-radius: 12px;">
+      <div class="drive-doc-badge" style="display:inline-flex; align-items:center; gap:8px; background:#eff6ff; color:#1d4ed8; padding:6px 12px; border-radius:20px; font-size:13px; font-weight:600; margin-bottom:16px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <polyline points="9 12 11 14 15 10"></polyline>
+        </svg>
+        <span>Google Drive Verified Laboratory Archive</span>
+      </div>
+
+      <div class="drive-doc-details" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-bottom:24px; background:#f8fafc; padding:18px; border-radius:10px; border:1px solid #e2e8f0;">
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:600;">Compound &amp; Variant</div>
+          <div style="font-size:15px; font-weight:700; color:#0f172a; margin-top:2px;">${coa.compound}</div>
+          <div style="font-size:12px; color:#475569;">${coa.variant}</div>
+        </div>
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:600;">Lot / Batch Number</div>
+          <div style="font-size:15px; font-weight:700; color:#0284c7; margin-top:2px; font-family:monospace;">${coa.fullBatch}</div>
+        </div>
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:600;">Testing Laboratory</div>
+          <div style="font-size:14px; font-weight:600; color:#0f172a; margin-top:2px;">${coa.lab}</div>
+        </div>
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:600;">Test Verification Date</div>
+          <div style="font-size:14px; font-weight:600; color:#0f172a; margin-top:2px;">${coa.date}</div>
+        </div>
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:600;">Analytical Standard</div>
+          <div style="font-size:13px; font-weight:500; color:#334155; margin-top:2px;">HPLC Purity &amp; Mass Spectrometry</div>
+        </div>
+        <div>
+          <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:600;">Cloud Archive Status</div>
+          <div style="font-size:13px; font-weight:600; color:#16a34a; margin-top:2px;">Indexed in Google Drive</div>
         </div>
       </div>
-    `;
-  } else {
-    bodyEl.innerHTML = `
-      <div class="lightbox-img-container">
-        <img 
-          src="${coa.url}" 
-          alt="${coa.compound} Certificate of Analysis (Batch ${coa.batch})" 
-          class="lightbox-full-img"
-        />
+
+      <div style="background:#eff6ff; border:1px solid #bfdbfe; border-radius:8px; padding:14px; margin-bottom:20px; font-size:13px; color:#1e40af; line-height:1.5;">
+        <strong>Google Drive Verification Notice:</strong> This analytical certificate is hosted on Felix Chemical Supply's official Google Drive repository. Click the button below to view the cloud folder or request an instant copy directly via WhatsApp.
       </div>
-    `;
-  }
+
+      <div style="display:flex; flex-wrap:wrap; gap:12px;">
+        <a href="${activeGoogleDriveUrl}" target="_blank" rel="noopener noreferrer" class="btn-cta-primary" style="display:inline-flex; align-items:center; gap:8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>Open in Google Drive Archive</span>
+        </a>
+        <a href="${waRequestUrl}" target="_blank" rel="noopener noreferrer" class="btn-cta-secondary" style="display:inline-flex; align-items:center; gap:8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          <span>Request via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  `;
 
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
@@ -8720,8 +9096,8 @@ window.openProductModal = function(productId) {
   const modalContent = document.getElementById("productModalBody");
   if (!modal || !modalContent) return;
 
-  const waText = encodeURIComponent(`Hello Felix Chemical Supply, I would like to order: ${p.name} (${p.quantity}, Price: ${p.price}, SKU: ${p.sku}).`);
-  const waLink = `https://wa.me/${CONFIG.PHONE_CLEAN}?text=${waText}`;
+  const waText = encodeURIComponent("Hello Felix Chemical Supply, I would like to order: " + p.name + " (" + p.quantity + ", Price: " + p.price + ", SKU: " + p.sku + ").");
+  const waLink = "https://wa.me/" + CONFIG.PHONE_CLEAN + "?text=" + waText;
 
   const coaList = Array.isArray(p.coas) ? p.coas : [];
   const coaSectionHtml = coaList.length > 0 ? `
@@ -8732,11 +9108,11 @@ window.openProductModal = function(productId) {
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             <polyline points="9 12 11 14 15 10"></polyline>
           </svg>
-          <h4 class="modal-section-heading" style="margin-bottom:0;">Verified Certificates of Analysis (${coaList.length} Batches)</h4>
+          <h4 class="modal-section-heading" style="margin-bottom:0;">Verified COAs (${coaList.length} Batches in Google Drive)</h4>
         </div>
-        <span class="modal-coa-badge-source">Janoshik / Chromate Verified</span>
+        <span class="modal-coa-badge-source">Janoshik Lab Verified</span>
       </div>
-      <p class="modal-coa-subtext">Click any lot number below to view the full HPLC chromatogram and mass spectrometry laboratory report:</p>
+      <p class="modal-coa-subtext">Click any lot number below to inspect batch specifications or access the Google Drive repository:</p>
       
       <div class="modal-coa-chips-grid">
         ${coaList.map(c => `
@@ -8750,7 +9126,7 @@ window.openProductModal = function(productId) {
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
               </svg>
-              <span>View Report</span>
+              <span>Inspect</span>
             </button>
           </div>
         `).join("")}
@@ -8759,7 +9135,7 @@ window.openProductModal = function(productId) {
   ` : `
     <div class="modal-section-box modal-coa-archive-box" style="background:#f8fafc; border-color:#e2e8f0;">
       <h4 class="modal-section-heading" style="color:var(--fx-text-sub);">Quality Control &amp; Testing</h4>
-      <p class="modal-desc-text">Synthesized in accordance with institutional laboratory standards. Individual batch COAs for this compound are available upon request through WhatsApp or Telegram customer service.</p>
+      <p class="modal-desc-text">Synthesized in accordance with institutional laboratory standards. Third-party testing documentation is archived in our Google Drive repository and available upon request.</p>
     </div>
   `;
 
@@ -8811,7 +9187,7 @@ window.openProductModal = function(productId) {
       <div class="modal-actions-row">
         <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-modal-whatsapp">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1 3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
           </svg>
           <span>Order via WhatsApp</span>
         </a>
@@ -8995,20 +9371,20 @@ function handleOrderSubmit(e) {
     return;
   }
 
-  const orderMessage = `*FELIX CHEMICAL SUPPLY — NEW RESEARCH INQUIRY*
----------------------------------------
-*Researcher / Institution:* ${name}
-*WhatsApp / Contact:* ${phone}
-*Selected Compound:* ${product}
-*Quantity Requested:* ${quantity}
-*Shipping Address:* ${address}
-*Payment Currency:* ${cryptoChoice}
-*Transaction ID / TXID:* ${txid}
-*Special Instructions:* ${notes || "None"}
----------------------------------------
-_This inquiry is submitted for in-vitro laboratory research and analytical evaluation only._`;
+  const orderMessage = "*FELIX CHEMICAL SUPPLY — NEW RESEARCH INQUIRY*\n" +
+"---------------------------------------\n" +
+"*Researcher / Institution:* " + name + "\n" +
+"*WhatsApp / Contact:* " + phone + "\n" +
+"*Selected Compound:* " + product + "\n" +
+"*Quantity Requested:* " + quantity + "\n" +
+"*Shipping Address:* " + address + "\n" +
+"*Payment Currency:* " + cryptoChoice + "\n" +
+"*Transaction ID / TXID:* " + txid + "\n" +
+"*Special Instructions:* " + (notes || "None") + "\n" +
+"---------------------------------------\n" +
+"_This inquiry is submitted for in-vitro laboratory research and analytical evaluation only._";
 
-  const waUrl = `https://wa.me/${CONFIG.PHONE_CLEAN}?text=${encodeURIComponent(orderMessage)}`;
+  const waUrl = "https://wa.me/" + CONFIG.PHONE_CLEAN + "?text=" + encodeURIComponent(orderMessage);
 
   showToast("Preparing order for WhatsApp verification...", "success");
 
@@ -9034,15 +9410,15 @@ window.selectProductForOrder = function(productId) {
 
   const quantityInput = document.getElementById("orderQuantity");
   if (quantityInput && !quantityInput.value) {
-    quantityInput.value = `1 Unit (${product.quantity})`;
+    quantityInput.value = "1 Unit (" + product.quantity + ")";
   }
 
-  const orderSection = document.getElementById("order");
+  const orderSection = document.getElementById("order") || document.getElementById("payment");
   if (orderSection) {
     orderSection.scrollIntoView({ behavior: "smooth" });
   }
 
-  showToast(`Selected ${product.name} in Order Form`, "info");
+  showToast("Selected " + product.name + " in Order Form", "info");
 };
 
 // Copy Current Payment Address
@@ -9054,12 +9430,12 @@ window.copyCurrentAddress = function(address, name) {
     tempInput.select();
     document.execCommand("copy");
     document.body.removeChild(tempInput);
-    showToast(`Copied ${name} address to clipboard!`, "success");
+    showToast("Copied " + name + " address to clipboard!", "success");
     return;
   }
 
   navigator.clipboard.writeText(address).then(() => {
-    showToast(`Copied ${name} address to clipboard!`, "success");
+    showToast("Copied " + name + " address to clipboard!", "success");
   }).catch(() => {
     showToast("Failed to copy. Please copy manually.", "warning");
   });
@@ -9095,19 +9471,16 @@ function showToast(message, type = "info") {
   if (!container) return;
 
   const toast = document.createElement("div");
-  toast.className = `toast-message toast-${type}`;
+  toast.className = "toast-message toast-" + type;
   
-  let iconSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>`;
+  let iconSvg = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>';
   if (type === "success") {
-    iconSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>`;
+    iconSvg = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>';
   } else if (type === "warning") {
-    iconSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>`;
+    iconSvg = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>';
   }
 
-  toast.innerHTML = `
-    ${iconSvg}
-    <span>${message}</span>
-  `;
+  toast.innerHTML = iconSvg + "<span>" + message + "</span>";
 
   container.appendChild(toast);
 

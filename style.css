@@ -1,6 +1,6 @@
 /* ==========================================================================
    FELIX CHEMICAL SUPPLY — Official Color Scheme & Stylesheet
-   - Exact Color Scheme from felixchem.is:
+   - Exact Color Scheme from Felix Chemical Supply:
      * Primary Dark Navy: #112E51 / #0B3954
      * Accent Sky Blue: #5EB2E6
      * Dark Button Hover: #112E51
@@ -18,7 +18,7 @@
    ========================================================================== */
 
 :root {
-  /* Exact Colors from felixchem.is */
+  /* Exact Colors from Felix Chemical Supply */
   --fx-primary: #5EB2E6;
   --fx-primary-hover: #112E51;
   --fx-navy: #112E51;
@@ -150,7 +150,7 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   TOP DISCLAIMER BANNER (Exact styling & text from felixchem.is)
+   TOP DISCLAIMER BANNER (Exact styling & text from Felix Chemical Supply)
    ========================================================================== */
 .top-disclaimer-banner {
   background: #ffffff;
@@ -212,7 +212,7 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   HEADER & NAVIGATION BAR (felixchem.is theme)
+   HEADER & NAVIGATION BAR (Felix Chemical Supply theme)
    ========================================================================== */
 .site-header {
   background: var(--fx-bg-card);
@@ -619,7 +619,7 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   PRODUCT GRID & CARDS (Strictly No Vials, Exact felixchem.is theme)
+   PRODUCT GRID & CARDS (Strictly No Vials, Exact Felix Chemical Supply theme)
    ========================================================================== */
 .product-grid {
   display: grid;
@@ -811,7 +811,7 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   PAYMENT INFORMATION SECTION (felixchem.is theme)
+   PAYMENT INFORMATION SECTION (Felix Chemical Supply theme)
    ========================================================================== */
 .payment-section {
   margin-bottom: 50px;
@@ -1367,7 +1367,7 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   TOP DISCLAIMER DRAWER & TOGGLE (Exact felixchem.is styling)
+   TOP DISCLAIMER DRAWER & TOGGLE (Exact Felix Chemical Supply styling)
    ========================================================================== */
 .btn-toggle-disclaimer {
   background: #ffffff;
@@ -1435,7 +1435,7 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   DEDICATED COMPLIANCE & DISCLAIMER SECTION (Exact felixchem.is Format)
+   DEDICATED COMPLIANCE & DISCLAIMER SECTION (Exact Felix Chemical Supply Format)
    ========================================================================== */
 .compliance-section {
   margin-bottom: 36px;
@@ -1532,7 +1532,7 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   PRODUCT CARD RICH DETAILS & PRICE (felixchem.is Exact Details)
+   PRODUCT CARD RICH DETAILS & PRICE (Felix Chemical Supply Exact Details)
    ========================================================================== */
 .card-title-price-row {
   display: flex;
@@ -1886,7 +1886,7 @@ input, select, textarea {
 
 /* ==========================================================================
    CERTIFICATES OF ANALYSIS (COA) SECTION & VIEWER STYLES
-   Copied directly from felixchem.is quality assurance archives
+   Copied directly from Felix Chemical Supply quality assurance archives
    ========================================================================== */
 
 .coa-section {
@@ -2551,4 +2551,20 @@ input, select, textarea {
     justify-content: space-between;
     margin-top: 10px;
   }
+}
+
+
+/* ==========================================================================
+   PURCHASE OPTIONS SECTION (Above Products)
+   ========================================================================== */
+.purchase-options-section {
+  margin-bottom: 48px;
+}
+
+.drive-hub-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.drive-hub-card:hover {
+  box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.12);
 }
