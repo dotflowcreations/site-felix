@@ -8329,80 +8329,51 @@ function renderCatalog() {
     ` : '';
 
     return `
-      <article class="product-card xstore-product-card" id="card-${p.id}">
-        <!-- Top Badges & Category Header -->
-        <div class="xstore-card-header">
-          <div class="xstore-badge-group">
-            <span class="xstore-badge-stock">${p.status || 'In Stock'}</span>
-            <span class="xstore-badge-purity">≥99% HPLC</span>
-          </div>
-          <span class="xstore-card-category">${p.category}</span>
+      <article class="product-card" id="card-${p.id}">
+        <div class="card-top-bar">
+          <span class="tag-category">${p.category}</span>
+          <span class="tag-status-available">${p.status || 'In Stock'}</span>
         </div>
 
-        <!-- Molecular / Chemical Emblem Box -->
-        <div class="xstore-card-media" onclick="openProductModal('${p.id}')" title="Click to view specifications for ${p.name}">
-          <div class="chemical-emblem-wrap">
-            <svg class="xstore-emblem-svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
-              <polygon points="24 4 41 14 41 34 24 44 7 34 7 14" stroke="currentColor" fill="none" opacity="0.15"></polygon>
-              <circle cx="24" cy="24" r="5" fill="currentColor" opacity="0.3"></circle>
-              <line x1="24" y1="4" x2="24" y2="19"></line>
-              <line x1="41" y1="34" x2="28" y2="27"></line>
-              <line x1="7" y1="34" x2="20" y2="27"></line>
-            </svg>
-            <span class="emblem-code">${p.sku.split('-')[0] || 'FLX'}</span>
-          </div>
-          <button type="button" class="btn-xstore-quick-overlay" onclick="openProductModal('${p.id}'); event.stopPropagation();">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            <span>Quick View</span>
-          </button>
-        </div>
-
-        <!-- Product Core Info -->
-        <div class="xstore-card-body">
-          <h3 class="product-title xstore-title" title="${p.name}" onclick="openProductModal('${p.id}')">${p.name}</h3>
-          
-          <div class="product-sub-meta xstore-meta">
+        <div class="card-main-info">
+          <h3 class="product-title" title="${p.name}">${p.name}</h3>
+          <div class="product-sub-meta">
             <span class="sku-text">SKU: ${p.sku}</span>
-            <span class="quantity-badge xstore-qty">${p.quantity}</span>
+            <span class="quantity-badge">${p.quantity}</span>
           </div>
           
-          <p class="product-desc-concise xstore-desc">${p.description}</p>
-          
-          <div class="card-specs-preview xstore-specs">
-            <div class="spec-mini-item">
-              <span class="mini-label">Form:</span>
-              <span class="mini-val">${p.form || 'Lyophilized Powder'}</span>
-            </div>
-            <div class="spec-mini-item">
-              <span class="mini-label">Storage:</span>
-              <span class="mini-val">${p.storage.includes('2–8') ? '2–8°C / -20°C' : 'Controlled Room Temp'}</span>
-            </div>
+          <p class="product-desc-concise">${p.description}</p>
+        </div>
+
+        <div class="card-specs-preview">
+          <div class="spec-mini-item">
+            <span class="mini-label">Form:</span>
+            <span class="mini-val">${p.form || 'Lyophilized Powder'}</span>
+          </div>
+          <div class="spec-mini-item">
+            <span class="mini-label">Storage:</span>
+            <span class="mini-val">${p.storage.includes('2–8') ? '2–8°C / -20°C' : 'Controlled Room Temp'}</span>
           </div>
         </div>
 
-        <!-- Price & COAs Row -->
-        <div class="card-price-row xstore-price-row">
+        <div class="card-price-row">
           <div class="price-block">
-            <span class="product-price xstore-price">${p.price}</span>
+            <span class="product-price">${p.price}</span>
             <span class="unit-label">per unit</span>
           </div>
           ${coaBadge}
         </div>
 
-        <!-- XStore WooCommerce Action Buttons -->
-        <div class="card-action-grid xstore-action-row">
-          <button type="button" class="btn-card-details btn-xstore-details" onclick="openProductModal('${p.id}')">
+        <div class="card-action-grid">
+          <button type="button" class="btn-card-details" onclick="openProductModal('${p.id}')">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="12" y1="16" x2="12" y2="12"></line>
               <line x1="12" y1="8" x2="12.01" y2="8"></line>
             </svg>
-            <span>Specs &amp; COAs</span>
+            <span>Specs ${coaCount > 0 ? '& COAs' : ''}</span>
           </button>
-          <button type="button" class="btn-card-inquire-full btn-xstore-select" onclick="selectProductForOrder('${p.id}')">
+          <button type="button" class="btn-card-inquire-full" onclick="selectProductForOrder('${p.id}')">
             Select for Order
           </button>
         </div>
@@ -8922,72 +8893,12 @@ function setupEventListeners() {
   const pills = document.querySelectorAll(".filter-pill-btn");
   pills.forEach(pill => {
     pill.addEventListener("click", () => {
-      const cat = pill.getAttribute("data-category");
-      setShopCategory(cat);
+      pills.forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+      currentCategory = pill.getAttribute("data-category");
+      renderCatalog();
     });
   });
-
-  // XStore Sidebar Category Links
-  const sidebarCatLinks = document.querySelectorAll(".xstore-cat-link");
-  sidebarCatLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      const cat = link.getAttribute("data-category");
-      setShopCategory(cat);
-      const sidebar = document.getElementById("xstoreSidebar");
-      if (sidebar) sidebar.classList.remove("mobile-open");
-    });
-  });
-
-  // XStore Footer Category Links
-  const footerCatLinks = document.querySelectorAll(".footer-cat-link");
-  footerCatLinks.forEach(link => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      const cat = link.getAttribute("data-cat");
-      setShopCategory(cat);
-      const catalogEl = document.getElementById("catalog");
-      if (catalogEl) {
-        catalogEl.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-
-  // XStore View Switcher (3 cols vs 4 cols)
-  const viewSwitchers = document.querySelectorAll(".btn-grid-switch");
-  const productGrid = document.getElementById("productGrid");
-  viewSwitchers.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const cols = btn.getAttribute("data-cols");
-      viewSwitchers.forEach(b => {
-        b.classList.remove("active");
-        b.setAttribute("aria-pressed", "false");
-      });
-      btn.classList.add("active");
-      btn.setAttribute("aria-pressed", "true");
-
-      if (productGrid) {
-        productGrid.classList.remove("cols-2", "cols-3", "cols-4");
-        productGrid.classList.add(`cols-${cols}`);
-      }
-    });
-  });
-
-  // XStore Mobile Sidebar Toggle & Close
-  const toggleMobileSidebarBtn = document.getElementById("toggleMobileSidebar");
-  const closeMobileSidebarBtn = document.getElementById("closeMobileSidebar");
-  const xstoreSidebar = document.getElementById("xstoreSidebar");
-
-  if (toggleMobileSidebarBtn && xstoreSidebar) {
-    toggleMobileSidebarBtn.addEventListener("click", () => {
-      xstoreSidebar.classList.toggle("mobile-open");
-    });
-  }
-
-  if (closeMobileSidebarBtn && xstoreSidebar) {
-    closeMobileSidebarBtn.addEventListener("click", () => {
-      xstoreSidebar.classList.remove("mobile-open");
-    });
-  }
 
   const cryptoTabs = document.querySelectorAll(".crypto-tab-btn");
   cryptoTabs.forEach(tab => {
@@ -9154,33 +9065,6 @@ window.copyCurrentAddress = function(address, name) {
   });
 };
 
-// Set Shop Category and sync pills + sidebar
-window.setShopCategory = function(category) {
-  currentCategory = category || "All";
-
-  // Sync horizontal pills
-  const pills = document.querySelectorAll(".filter-pill-btn");
-  pills.forEach(p => {
-    if (p.getAttribute("data-category") === currentCategory) {
-      p.classList.add("active");
-    } else {
-      p.classList.remove("active");
-    }
-  });
-
-  // Sync sidebar links
-  const sidebarLinks = document.querySelectorAll(".xstore-cat-link");
-  sidebarLinks.forEach(lnk => {
-    if (lnk.getAttribute("data-category") === currentCategory) {
-      lnk.classList.add("active");
-    } else {
-      lnk.classList.remove("active");
-    }
-  });
-
-  renderCatalog();
-};
-
 // Reset Filters
 window.resetFilters = function() {
   currentCategory = "All";
@@ -9193,7 +9077,16 @@ window.resetFilters = function() {
   const sortSelect = document.getElementById("catalogSort");
   if (sortSelect) sortSelect.value = "name-asc";
 
-  setShopCategory("All");
+  const pills = document.querySelectorAll(".filter-pill-btn");
+  pills.forEach(p => {
+    if (p.getAttribute("data-category") === "All") {
+      p.classList.add("active");
+    } else {
+      p.classList.remove("active");
+    }
+  });
+
+  renderCatalog();
 };
 
 // Toast Notification System
@@ -9230,81 +9123,4 @@ function showToast(message, type = "info") {
       }
     }, 300);
   }, 3500);
-}
-
-// ==========================================
-// COMPLIANCE DISCLAIMER POP-OUT MENU & MODAL
-// ==========================================
-window.toggleComplianceDrawer = function(area) {
-  const drawerId = area === "order" ? "complianceDrawerOrder" : "complianceDrawerCatalog";
-  const btnId = area === "order" ? "btnToggleOrderCompliance" : "btnToggleCatalogCompliance";
-  
-  const drawer = document.getElementById(drawerId);
-  const btn = document.getElementById(btnId);
-  if (!drawer || !btn) return;
-
-  const isHidden = drawer.style.display === "none" || !drawer.classList.contains("open");
-  if (isHidden) {
-    drawer.style.display = "block";
-    requestAnimationFrame(() => {
-      drawer.classList.add("open");
-    });
-    btn.setAttribute("aria-expanded", "true");
-    btn.classList.add("active");
-    const statusText = btn.querySelector(".toggle-text-status");
-    if (statusText) statusText.textContent = "Close Disclaimer Menu";
-  } else {
-    drawer.classList.remove("open");
-    drawer.style.display = "none";
-    btn.setAttribute("aria-expanded", "false");
-    btn.classList.remove("active");
-    const statusText = btn.querySelector(".toggle-text-status");
-    if (statusText) statusText.textContent = "View Terms & Disclaimer";
-  }
-};
-
-window.openComplianceModal = function() {
-  const modal = document.getElementById("complianceModal");
-  if (modal) {
-    modal.classList.add("active");
-    document.body.classList.add("modal-open");
-  }
-};
-
-window.closeComplianceModal = function() {
-  const modal = document.getElementById("complianceModal");
-  if (modal) {
-    modal.classList.remove("active");
-    document.body.classList.remove("modal-open");
-  }
-};
-
-// Modal backdrop and escape key listeners for compliance modal
-const complianceModalEl = document.getElementById("complianceModal");
-if (complianceModalEl) {
-  complianceModalEl.addEventListener("click", (e) => {
-    if (e.target === complianceModalEl) {
-      closeComplianceModal();
-    }
-  });
-}
-
-// Top disclaimer toggle button listener
-const topToggleBtn = document.getElementById("toggleDisclaimerBtn");
-const topDrawer = document.getElementById("topDisclaimerFull");
-if (topToggleBtn && topDrawer) {
-  topToggleBtn.addEventListener("click", () => {
-    const isExpanded = topToggleBtn.getAttribute("aria-expanded") === "true";
-    if (isExpanded) {
-      topDrawer.classList.remove("open");
-      topToggleBtn.setAttribute("aria-expanded", "false");
-      const span = topToggleBtn.querySelector("span");
-      if (span) span.textContent = "View Full Regulatory & 21CFR Notice";
-    } else {
-      topDrawer.classList.add("open");
-      topToggleBtn.setAttribute("aria-expanded", "true");
-      const span = topToggleBtn.querySelector("span");
-      if (span) span.textContent = "Collapse Regulatory Notice";
-    }
-  });
 }
