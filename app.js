@@ -11681,11 +11681,37 @@ function setupEventListeners() {
   const mobileBtn = document.getElementById("mobileMenuToggle");
   const nav = document.getElementById("siteNav");
   if (mobileBtn && nav) {
-    mobileBtn.addEventListener("click", () => {
-      if (nav.classList.contains("mobile-open")) {
+    mobileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = nav.classList.toggle("mobile-open");
+      mobileBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      mobileBtn.classList.toggle("active", isOpen);
+    });
+
+    // Close mobile menu when a nav link is clicked
+    nav.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
         nav.classList.remove("mobile-open");
-      } else {
-        nav.classList.add("mobile-open");
+        mobileBtn.setAttribute("aria-expanded", "false");
+        mobileBtn.classList.remove("active");
+      });
+    });
+
+    // Close on click outside
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && !mobileBtn.contains(e.target) && nav.classList.contains("mobile-open")) {
+        nav.classList.remove("mobile-open");
+        mobileBtn.setAttribute("aria-expanded", "false");
+        mobileBtn.classList.remove("active");
+      }
+    });
+
+    // Close on escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && nav.classList.contains("mobile-open")) {
+        nav.classList.remove("mobile-open");
+        mobileBtn.setAttribute("aria-expanded", "false");
+        mobileBtn.classList.remove("active");
       }
     });
   }

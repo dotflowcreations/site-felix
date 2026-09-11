@@ -1318,15 +1318,105 @@ input, select, textarea {
 }
 
 /* ==========================================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN (All Devices: Mobile 320px+, Tablets, Desktops)
    ========================================================================== */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  background: var(--fx-primary);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: var(--radius-xs);
+  font-weight: 700;
+  font-size: 0.9rem;
+  z-index: 9999;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(17, 46, 81, 0.2);
+  transition: top 0.2s ease;
+}
+.skip-to-content:focus {
+  top: 16px;
+}
+
+@keyframes mobileNavSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 860px) {
   .site-nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 20px;
+    gap: 10px;
+    border-bottom: 2px solid var(--fx-border);
+    box-shadow: 0 20px 35px -5px rgba(17, 46, 81, 0.15);
+    z-index: 1000;
+  }
+
+  .site-nav.mobile-open {
+    display: flex;
+    animation: mobileNavSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .site-nav .nav-link {
+    padding: 12px 18px;
+    border-radius: var(--radius-xs);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    border: 1px solid var(--fx-border-subtle);
+    background: var(--fx-bg-subtle);
+    color: var(--fx-navy);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+
+  .site-nav .nav-link:hover,
+  .site-nav .nav-link:active {
+    background: #ffffff;
+    border-color: var(--fx-primary);
+    color: var(--fx-primary);
+    padding-left: 22px;
   }
 
   .mobile-menu-btn {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: var(--radius-xs);
+    background: var(--fx-bg-subtle);
+    border: 1px solid var(--fx-border);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .mobile-menu-btn:hover,
+  .mobile-menu-btn.active {
+    background: var(--fx-primary);
+    border-color: var(--fx-primary);
+    color: #ffffff;
+  }
+
+  .mobile-menu-btn.active svg {
+    stroke: #ffffff;
   }
 
   .hero-title {
@@ -1342,17 +1432,57 @@ input, select, textarea {
   }
 
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   }
 }
 
-@media (max-width: 520px) {
-  .header-actions .btn-whatsapp-sm {
-    display: none;
+@media (max-width: 768px) {
+  /* Prevent iOS Safari automatic zooming on input focus */
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .disclaimer-banner-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .filter-pills-wrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 6px;
+    padding-top: 2px;
   }
   
-  .stats-strip {
-    grid-template-columns: 1fr 1fr;
+  .filter-pills-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill-btn {
+    flex-shrink: 0;
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .search-and-sort-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input-wrapper,
+  .sort-select {
+    width: 100%;
   }
 
   .hero-cta-group {
@@ -1362,6 +1492,131 @@ input, select, textarea {
 
   .btn-cta-primary, .btn-cta-secondary {
     width: 100%;
+    justify-content: center;
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .header-actions .btn-whatsapp-sm {
+    display: none;
+  }
+
+  .header-container {
+    padding: 10px 14px;
+  }
+
+  .brand-title {
+    font-size: 0.95rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.68rem;
+  }
+
+  .brand-logo-img {
+    height: 30px;
+  }
+
+  .hero-banner {
+    padding: 28px 14px 20px;
+  }
+
+  .hero-title {
+    font-size: 1.55rem;
+    line-height: 1.25;
+  }
+
+  .stats-strip {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .stat-item {
+    padding: 10px 12px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .product-card {
+    padding: 16px;
+  }
+
+  .product-card-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card-action-btn,
+  .card-coa-btn {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .address-flex {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .address-code-block {
+    min-width: 0;
+    width: 100%;
+    font-size: 0.82rem;
+    padding: 8px 10px;
+  }
+
+  .btn-copy-address {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .crypto-tab-btn {
+    min-height: 44px;
+  }
+
+  .contact-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-direct-btn {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  .modal-container,
+  .coa-lightbox-container {
+    width: 96%;
+    max-width: 96%;
+    max-height: 92vh;
+    padding: 16px;
+    margin: 8px auto;
+  }
+
+  .modal-close-btn {
+    width: 44px;
+    height: 44px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .form-actions-row {
+    flex-direction: column;
+  }
+
+  .btn-order-submit,
+  .btn-telegram-order {
+    width: 100%;
+    min-height: 46px;
     justify-content: center;
   }
 }
@@ -2559,12 +2814,4 @@ input, select, textarea {
    ========================================================================== */
 .purchase-options-section {
   margin-bottom: 48px;
-}
-
-.drive-hub-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.drive-hub-card:hover {
-  box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.12);
 }
