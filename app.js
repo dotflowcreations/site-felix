@@ -10895,8 +10895,8 @@ let coaPageSize = 18;
 let coaCurrentVisibleCount = 18;
 
 
-// DOM Ready
-document.addEventListener("DOMContentLoaded", () => {
+// DOM Ready initialization safe for interactive or loaded states
+function startApp() {
   initScrollProgress();
   initHeader();
   renderCatalog();
@@ -10907,7 +10907,13 @@ document.addEventListener("DOMContentLoaded", () => {
   initModal();
   initCoaLightbox();
   initDriveConnector();
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", startApp);
+} else {
+  startApp();
+}
 
 // Scroll Progress Bar
 function initScrollProgress() {
