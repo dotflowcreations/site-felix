@@ -1,6 +1,6 @@
 {
   "name": "Felix Chemical Supply",
-  "description": "Direct institutional catalog of high-purity research peptides, specialty compounds, and 259+ third-party verified Certificates of Analysis.",
+  "description": "Institutional repository of third-party verified Certificates of Analysis (259+ COAs) and analytical testing reports for research compounds.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
