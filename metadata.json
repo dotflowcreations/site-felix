@@ -1,6 +1,6 @@
 {
   "name": "Felix Chemical Supply",
-  "description": "Institutional repository of third-party verified Certificates of Analysis (259+ COAs) and analytical testing reports for research compounds.",
+  "description": "Official repository of Felix Chemical Supply, featuring 259+ third-party verified Certificates of Analysis (COAs), HPLC purity reports, and laboratory testing archives.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
