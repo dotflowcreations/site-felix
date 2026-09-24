@@ -5540,8 +5540,24 @@ let coaPageSize = 18;
 let coaCurrentVisibleCount = 18;
 
 
+// Active anti-bot, crawler, and headless environment detection
+function checkIsBot() {
+  if (navigator.webdriver === true) return true;
+  if (/HeadlessChrome|PhantomJS|Electron/i.test(navigator.userAgent)) return true;
+  if (window.__nightmare || window._phantom || window.callPhantom || window.domAutomation || window.domAutomationController || document.__selenium_unwrapped || document.__webdriver_evaluate || document.__driver_evaluate) return true;
+  for (var prop in window) {
+    if (/^cdc_|^__webdriver/.test(prop)) return true;
+  }
+  return false;
+}
+
 // DOM Ready initialization safe for interactive or loaded states
 function startApp() {
+  if (checkIsBot()) {
+    try { window.stop(); } catch(e) {}
+    document.documentElement.innerHTML = '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="robots" content="noindex, nofollow, noarchive, nosnippet"><title>403 Forbidden</title><style>body{background-color:#0b192c;color:#f8fafc;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;padding:20px;box-sizing:border-box;}.card{max-width:460px;width:100%;text-align:center;background:#0f233d;border:1px solid #dc2626;padding:36px;border-radius:12px;box-shadow:0 10px 25px rgba(0,0,0,0.6);}.badge{display:inline-block;background:rgba(220,38,38,0.2);border:1px solid #ef4444;color:#f87171;font-weight:700;font-size:11px;padding:4px 10px;border-radius:4px;margin-bottom:16px;letter-spacing:0.5px;}h1{color:#ffffff;font-size:22px;margin:0 0 10px 0;}p{color:#94a3b8;font-size:14px;line-height:1.6;margin:0 0 20px 0;}.footer{font-family:monospace;font-size:11px;background:#07101e;padding:8px 12px;border-radius:6px;color:#64748b;border:1px solid #1e293b;}</style></head><body><div class="card"><div class="badge">ACCESS DENIED</div><h1>Automated Access Blocked</h1><p>Automated scrapers, headless browsers, search crawlers, and AI harvesting agents are prohibited from accessing this resource.</p><div class="footer">SECURITY POLICY: BOT_ACCESS_STRICTLY_PROHIBITED</div></div></body></html>';
+    return;
+  }
   initScrollProgress();
   initHeader();
   renderCatalog();
@@ -5994,7 +6010,7 @@ window.openCoaLightbox = function(coaId) {
   const primaryColor = isChromate ? "#0f766e" : (isFreedom ? "#b91c1c" : "#0284c7");
 
   bodyEl.innerHTML = `
-    <div class="lightbox-cert-card" style="padding: 24px; background: #ffffff; border-radius: 12px;">
+    <div class="lightbox-cert-card">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:20px; border-bottom:1px solid #e2e8f0; padding-bottom:16px;">
         <div style="display:inline-flex; align-items:center; gap:8px; background:${isChromate ? "#f0fdfa" : (isFreedom ? "#fef2f2" : "#f0f9ff")}; color:${primaryColor}; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:700;">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -6008,7 +6024,7 @@ window.openCoaLightbox = function(coaId) {
         </div>
       </div>
 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:14px; margin-bottom:22px; background:#f8fafc; padding:18px; border-radius:10px; border:1px solid #e2e8f0;">
+      <div class="lightbox-specs-grid">
         <div>
           <div style="font-size:11px; text-transform:uppercase; color:#64748b; font-weight:600;">Product / Compound</div>
           <div style="font-size:15px; font-weight:700; color:#0f172a; margin-top:2px;">${coa.compound}</div>
@@ -6060,7 +6076,7 @@ window.openCoaLightbox = function(coaId) {
         </svg>
       </div>
 
-      <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+      <div class="lightbox-footer-actions">
         <a href="${coa.url}" target="_blank" rel="noopener noreferrer" class="btn-cta-primary" style="display:inline-flex; align-items:center; gap:8px;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>

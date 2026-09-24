@@ -1,7 +1,156 @@
-User-agent: *
-Allow: /
-Allow: /coas/
-Allow: /assets/
-Disallow: /api/
+# ==============================================================================
+# FELIX CHEMICAL SUPPLY - STRICT ACCESS RESTRICTION POLICY
+# Automated crawling, scraping, indexing, and bot access are strictly prohibited.
+# ==============================================================================
 
-Sitemap: https://ais-pre-a7kexbfgexhddgx2trdc23-56951267298.europe-west2.run.app/sitemap.xml
+# Global wildcard: Block all crawlers and automated user-agents
+User-agent: *
+Disallow: /
+
+# Major Search Engine Spiders
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /
+
+User-agent: Googlebot-Video
+Disallow: /
+
+User-agent: Mediapartners-Google
+Disallow: /
+
+User-agent: AdsBot-Google
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: MSNBot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Baiduspider-image
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: YandexDirect
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: Applebot
+Disallow: /
+
+# AI Crawlers & Large Language Model Harvesters
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Cohere-ai
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+# Commercial SEO Crawlers & Web Scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Rogerbot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: SerpstatBot
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+# Archive Crawlers & Data Scrapers
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
